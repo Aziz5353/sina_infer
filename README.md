@@ -5,14 +5,15 @@ Inference service for **Sina**, an Arabic-poetry chatbot. FastAPI + LangGraph + 
 ## Structure
 
 ```
-api/         # FastAPI routers (chat, health, web UI)
-config/      # constants, settings, logging
-inference/   # LangGraph: state, graph builder, streaming, nodes/
-  nodes/       analyzer, retrieve, search, generate, refuse
-model/       # Pydantic request/response schemas
-util/        # arabic_normalization, shared helpers
-ui/          # single-file chat web UI served at /
-main.py      # FastAPI app + lifespan that builds the graph
+src/
+  api/         # FastAPI routers (chat, health, web UI)
+  config/      # constants, settings, logging
+  inference/   # LangGraph: state, graph builder, streaming, nodes/
+    nodes/       analyzer, retrieve, search, generate, refuse
+  model/       # Pydantic request/response schemas
+  util/        # arabic_normalization, shared helpers
+  ui/          # single-file chat web UI served at /
+  main.py      # FastAPI app + lifespan that builds the graph
 ```
 
 ## Graph
@@ -67,7 +68,7 @@ Do **not** commit `.env` — keys belong only in the local file.
 Local:
 
 ```bash
-uvicorn main:app --reload
+uvicorn src.main:app --reload
 ```
 
 Docker (joins the `sina_rag_default` network so it can reach `sina-postgres`):

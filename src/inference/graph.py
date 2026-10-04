@@ -2,13 +2,13 @@ from typing import Literal
 
 from langgraph.graph import END, START, StateGraph
 
-from inference.nodes.analyzer import analyzer_node
-from inference.nodes.contextualize import contextualize_node
-from inference.nodes.generate import generate_node
-from inference.nodes.refuse import refuse_node
-from inference.nodes.retrieve import retrieve_node
-from inference.nodes.search import search_node
-from inference.state import SinaState
+from src.inference.nodes.analyzer import analyzer_node
+from src.inference.nodes.contextualize import contextualize_node
+from src.inference.nodes.generate import generate_node
+from src.inference.nodes.refuse import refuse_node
+from src.inference.nodes.retrieve import retrieve_node
+from src.inference.nodes.search import search_node
+from src.inference.state import SinaState
 
 
 def _route_from_analyzer(state: SinaState) -> Literal["retrieve", "search", "generate", "refuse"]:

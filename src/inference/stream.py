@@ -4,7 +4,7 @@ from typing import AsyncIterator
 from langchain_core.messages import AIMessageChunk
 from langgraph.graph.state import CompiledStateGraph
 
-from inference.state import SinaState
+from src.inference.state import SinaState
 
 # Only these nodes' LLM tokens are forwarded to the SSE stream.
 # Other nodes (e.g. analyzer) also produce AIMessageChunks but their

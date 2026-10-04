@@ -2,7 +2,7 @@ import logging
 from logging.handlers import RotatingFileHandler
 from pathlib import Path
 
-from config.settings import settings
+from src.config.settings import settings
 
 _LOG_FORMAT = "%(asctime)s | %(levelname)-5s | %(name)-32s | %(message)s"
 _LOG_DATEFMT = "%H:%M:%S"

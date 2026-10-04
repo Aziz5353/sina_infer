@@ -4,9 +4,9 @@ from urllib.parse import urlparse
 
 from langchain_tavily import TavilySearch
 
-from config.settings import settings
-from inference.pipeline_definition import pipeline
-from inference.state import SinaState
+from src.config.settings import settings
+from src.inference.pipeline_definition import pipeline
+from src.inference.state import SinaState
 
 logger = logging.getLogger(__name__)
 

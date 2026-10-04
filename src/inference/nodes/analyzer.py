@@ -5,9 +5,9 @@ from typing import Literal, cast
 from langchain_core.messages import HumanMessage, SystemMessage
 from pydantic import BaseModel, Field
 
-from config.constants import ANALYZER_PROMPT
-from inference.pipeline_definition import pipeline
-from inference.state import SinaState
+from src.config.constants import ANALYZER_PROMPT
+from src.inference.pipeline_definition import pipeline
+from src.inference.state import SinaState
 
 logger = logging.getLogger(__name__)
 

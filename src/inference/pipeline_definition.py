@@ -6,7 +6,7 @@ from langchain_openai import ChatOpenAI
 from langchain_postgres import PGVector
 from langchain_tavily import TavilySearch
 
-from config.settings import settings
+from src.config.settings import settings
 
 logger = logging.getLogger(__name__)
 

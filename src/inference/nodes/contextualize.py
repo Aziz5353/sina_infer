@@ -3,10 +3,10 @@ import time
 
 from langchain_core.messages import HumanMessage, SystemMessage
 
-from config.constants import CONTEXTUALIZE_PROMPT
-from config.settings import settings
-from inference.pipeline_definition import pipeline
-from inference.state import SinaState
+from src.config.constants import CONTEXTUALIZE_PROMPT
+from src.config.settings import settings
+from src.inference.pipeline_definition import pipeline
+from src.inference.state import SinaState
 
 logger = logging.getLogger(__name__)
 

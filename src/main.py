@@ -5,13 +5,13 @@ from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from api.chat import chat_router
-from api.health import health_router
-from api.ui import ui_router
-from config.logger import setup_logger
-from config.settings import settings
-from inference.graph import build_graph
-from inference.pipeline_definition import pipeline
+from src.api.chat import chat_router
+from src.api.health import health_router
+from src.api.ui import ui_router
+from src.config.logger import setup_logger
+from src.config.settings import settings
+from src.inference.graph import build_graph
+from src.inference.pipeline_definition import pipeline
 
 
 warnings.filterwarnings(

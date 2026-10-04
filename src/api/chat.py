@@ -4,9 +4,9 @@ from fastapi import APIRouter, HTTPException, Request
 from fastapi.responses import StreamingResponse
 from langgraph.graph.state import CompiledStateGraph
 
-from model.chat_request import ChatRequest
-from inference.state import SinaState
-from inference.stream import run_model_stream
+from src.model.chat_request import ChatRequest
+from src.inference.state import SinaState
+from src.inference.stream import run_model_stream
 
 logger = logging.getLogger(__name__)
 chat_router = APIRouter()
