@@ -1,0 +1,30 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Build artifacts
+target/
+dist/
+*.class
+
+# IDE files
+.idea/
+*.iml
+
+**/Al-Muallqat_result_*
+pgdata/
+hf_cache/
+
+.venv
+__pycache__/
+
+**/debug/
+
+TODO.txt
+*.PDF
+
+# logs
+logs
+
+# env
+.env

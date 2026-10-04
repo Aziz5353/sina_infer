@@ -1,0 +1,23 @@
+services:
+  api:
+    build: .
+    image: sina-infer:latest
+    container_name: sina-infer
+    env_file: .env
+    ports:
+      - "8000:8000"
+    volumes:
+      # Persist the BAAI/bge-m3 download (~2GB) across container restarts.
+      - hf-cache:/cache/huggingface
+      - ./logs:/app/logs
+    networks:
+      - default
+      - rag
+
+networks:
+  rag:
+    external: true
+    name: sina_rag_default
+
+volumes:
+  hf-cache:
