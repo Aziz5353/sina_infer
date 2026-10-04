@@ -7,9 +7,4 @@ services:
     ports:
       - "8000:8000"
     volumes:
-      # Persist the BAAI/bge-m3 download (~2GB) across container restarts.
-      - hf-cache:/cache/huggingface
       - ./logs:/app/logs
-
-volumes:
-  hf-cache:

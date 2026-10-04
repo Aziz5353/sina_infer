@@ -1,9 +1,9 @@
 from typing import Literal, NotRequired, TypedDict
 
-from langchain_core.documents import Document
 
-
-Route = Literal["retrieve", "search", "generate", "refuse"]
+Route = Literal["search", "clarify", "refuse"]
+QueryType = Literal["patient_case", "clinical_question"]
+ClarifyReason = Literal["case_gap", "evidence_gap"]
 
 
 class HistoryTurn(TypedDict):
@@ -12,17 +12,18 @@ class HistoryTurn(TypedDict):
 
 
 class SinaState(TypedDict):
-    question: str
-    original_question: str
+    message: str
     history: NotRequired[list[HistoryTurn]]
+    standalone_message: NotRequired[str]
     route: NotRequired[Route]
-    rewritten_query: NotRequired[str | None]
-    poet_name: NotRequired[str | None]
-    poet_era: NotRequired[str | None]
-    poem_category: NotRequired[list[str] | None]
-    poem_meter: NotRequired[str | None]
-    poem_rhyme: NotRequired[str | None]
-    retrieved_docs: NotRequired[list[Document]]
-    search_results: NotRequired[list[dict]]
+    query_type: NotRequired[QueryType]
+    case: NotRequired[dict]
+    missing_critical_info: NotRequired[list[str]]
+    red_flags: NotRequired[list[str]]
+    search_queries: NotRequired[list[str]]
+    web_results: NotRequired[list[dict]]
+    search_attempts: NotRequired[int]
+    evidence_gaps: NotRequired[list[str]]
+    clarify_reason: NotRequired[ClarifyReason]
     refusal_reason: NotRequired[str | None]
     answer: NotRequired[str]

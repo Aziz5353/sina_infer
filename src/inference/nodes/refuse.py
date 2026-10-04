@@ -13,15 +13,14 @@ logger = logging.getLogger(__name__)
 async def refuse_node(state: SinaState) -> dict:
     t0 = time.perf_counter()
     reason = state.get("refusal_reason") or "out_of_scope"
-    logger.info(f"refuse | reason={reason}")
+    message = state.get("standalone_message") or state["message"]
     response = await pipeline.refuse_llm.ainvoke(
         [
             SystemMessage(content=REFUSAL_PROMPT),
-            HumanMessage(content=f"reason: {reason}\nquestion: {state['question']}"),
+            HumanMessage(content=f"reason: {reason}\nmessage: {message}"),
         ]
     )
     took = time.perf_counter() - t0
-    logger.info(
-        f"refuse | answer_chars={len(response.content)} took={took:.2f}s"
-    )
+    logger.info(f"refuse | answer_chars={len(response.content)} took={took:.2f}s")
+    logger.debug(f"refuse | reason={reason!r}")
     return {"answer": response.content}

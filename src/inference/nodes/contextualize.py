@@ -15,24 +15,24 @@ def _render_history(history: list[dict], max_turns: int) -> str:
     recent = history[-max_turns:]
     lines = []
     for turn in recent:
-        speaker = "المستخدم" if turn.get("role") == "user" else "المساعد"
+        speaker = "Doctor" if turn.get("role") == "user" else "Assistant"
         lines.append(f"{speaker}: {turn.get('content', '')}")
     return "\n".join(lines)
 
 
 async def contextualize_node(state: SinaState) -> dict:
-    question = state["question"]
+    message = state["message"]
     history = state.get("history") or []
 
     if not history:
         logger.debug("contextualize | skipped (no history)")
-        return {}
+        return {"standalone_message": message}
 
     t0 = time.perf_counter()
     rendered_history = _render_history(history, settings.CONTEXTUALIZE_HISTORY_TURNS)
     user_content = (
         f"<history>\n{rendered_history}\n</history>\n\n"
-        f"<question>\n{question}\n</question>"
+        f"<message>\n{message}\n</message>"
     )
     response = await pipeline.contextualize_llm.ainvoke(
         [
@@ -40,10 +40,11 @@ async def contextualize_node(state: SinaState) -> dict:
             HumanMessage(content=user_content),
         ]
     )
-    standalone = (response.content or "").strip() or question
+    standalone = (response.content or "").strip() or message
     took = time.perf_counter() - t0
     logger.info(
         f"contextualize | turns={len(history)} "
-        f"original={question!r} standalone={standalone!r} took={took:.2f}s"
+        f"original_chars={len(message)} standalone_chars={len(standalone)} took={took:.2f}s"
     )
-    return {"question": standalone}
+    logger.debug(f"contextualize | original={message!r} standalone={standalone!r}")
+    return {"standalone_message": standalone}

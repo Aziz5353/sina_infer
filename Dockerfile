@@ -19,8 +19,7 @@ FROM python:3.12-slim
 ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1 \
     VIRTUAL_ENV=/opt/venv \
-    PATH="/opt/venv/bin:$PATH" \
-    HF_HOME=/cache/huggingface
+    PATH="/opt/venv/bin:$PATH"
 
 COPY --from=builder /opt/venv /opt/venv
 

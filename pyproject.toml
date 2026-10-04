@@ -4,23 +4,20 @@ version = "0.1.0"
 requires-python = ">=3.12"
 dependencies = [
     "fastapi>=0.115.0",
-    "langchain-huggingface>=0.1.0",
     "langchain-openai>=0.2.0",
-    "langchain-postgres>=0.0.12",
     "langchain-tavily>=0.1.0",
     "langgraph>=0.2.0",
-    "psycopg[binary]>=3.2.0",
     "pydantic>=2.0.0",
     "python-dotenv>=1.0.0",
-    "sentence-transformers>=3.0.0",
-    "torch>=2.0.0",
     "uvicorn>=0.47.0",
 ]
 
-[[tool.uv.index]]
-name = "pytorch-cpu"
-url = "https://download.pytorch.org/whl/cpu"
-explicit = true
+[dependency-groups]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.24.0",
+]
 
-[tool.uv.sources]
-torch = { index = "pytorch-cpu" }
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"

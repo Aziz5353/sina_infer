@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>سينا</title>
+  <title>Sina · سينا</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Noto+Naskh+Arabic:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.1.6/purify.min.js"></script>
   <style>
@@ -106,7 +106,9 @@
       background: var(--surface); border-radius: 20px; padding: 10px 18px;
       max-width: 80%; white-space: pre-wrap; overflow-wrap: anywhere;
     }
-    .msg.assistant .content { overflow-wrap: anywhere; font-family: "Noto Naskh Arabic", "IBM Plex Sans Arabic", serif; font-size: 17px; line-height: 2; }
+    .msg.assistant .content { overflow-wrap: anywhere; font-size: 16px; line-height: 1.75; }
+    .content ul, .content ol { padding-inline-start: 22px; }
+    .content h1, .content h2, .content h3 { font-size: 17px; margin: 18px 0 8px; }
     .content > :first-child { margin-top: 0; }
     .content > :last-child { margin-bottom: 0; }
     .content p { margin: 0 0 12px; }
@@ -199,12 +201,10 @@
     </header>
 
     <section class="empty" id="empty">
-      <h1>بماذا يمكنني مساعدتك في الشعر العربي؟</h1>
+      <h1>صف الحالة السريرية أو اطرح سؤالك</h1>
       <div class="suggestions">
-        <button class="suggestion">أنشدني أبياتاً للمتنبي في الحكمة</button>
-        <button class="suggestion">من هو امرؤ القيس وما أشهر معلقاته؟</button>
-        <button class="suggestion">اذكر قصيدة في الرثاء من العصر العباسي</button>
-        <button class="suggestion">ما معنى بيت «على قدر أهل العزم تأتي العزائم»؟</button>
+        <button class="suggestion" dir="auto">45M, 2h crushing chest pain radiating to left arm, diaphoretic, BP 150/95</button>
+        <button class="suggestion" dir="auto">ما جرعة amoxicillin للأطفال في acute otitis media؟</button>
       </div>
     </section>
 
@@ -214,13 +214,13 @@
 
     <div class="composer-wrap">
       <form class="composer" id="composer">
-        <textarea id="input" rows="1" placeholder="اسأل سينا عن الشعر..." dir="auto" autofocus></textarea>
+        <textarea id="input" rows="1" placeholder="صف الحالة أو اسأل عن جرعة أو إرشاد سريري..." dir="auto" autofocus></textarea>
         <button class="send" id="send" type="submit" disabled aria-label="إرسال">
           <svg id="sendIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
           <svg id="stopIcon" class="hidden" viewBox="0 0 24 24" fill="currentColor"><rect x="7" y="7" width="10" height="10" rx="1.5"/></svg>
         </button>
       </form>
-      <div class="disclaimer">قد يخطئ سينا. تحقّق من المعلومات المهمة.</div>
+      <div class="disclaimer">سينا أداة دعم للقرار السريري فقط، والحكم السريري للطبيب المعالج هو المرجع.</div>
     </div>
   </main>
 
@@ -249,7 +249,13 @@
 
     function renderMarkdown(text) {
       if (window.marked && window.DOMPurify) {
-        return DOMPurify.sanitize(marked.parse(text, { breaks: true, gfm: true }));
+        const tpl = document.createElement("template");
+        tpl.innerHTML = DOMPurify.sanitize(marked.parse(text, { breaks: true, gfm: true }));
+        // Doctors mix Arabic and English: let every block pick its own direction.
+        tpl.content
+          .querySelectorAll("p, li, h1, h2, h3, h4, h5, h6, blockquote, td, th")
+          .forEach((el) => el.setAttribute("dir", "auto"));
+        return tpl.innerHTML;
       }
       const div = document.createElement("div");
       div.textContent = text;

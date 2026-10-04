@@ -1,9 +1,6 @@
 import logging
-import time
 
-from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_openai import ChatOpenAI
-from langchain_postgres import PGVector
 from langchain_tavily import TavilySearch
 
 from src.config.settings import settings
@@ -14,12 +11,11 @@ logger = logging.getLogger(__name__)
 class PipelineDefinition:
     analyzer_llm: ChatOpenAI
     contextualize_llm: ChatOpenAI
+    assess_llm: ChatOpenAI
     generate_llm: ChatOpenAI
+    clarify_llm: ChatOpenAI
     refuse_llm: ChatOpenAI
-    embeddings: HuggingFaceEmbeddings
-    vector_store: PGVector
-    search_primary: TavilySearch
-    search_fallback: TavilySearch
+    search: TavilySearch
 
     def __init__(self) -> None:
         self._initialized = False
@@ -39,11 +35,22 @@ class PipelineDefinition:
             model=settings.CONTEXTUALIZE_MODEL,
             temperature=0,
         )
+        self.assess_llm = ChatOpenAI(
+            api_key=settings.OPENAI_API_KEY,
+            base_url=settings.OPENAI_BASE_URL,
+            model=settings.ASSESS_MODEL,
+        )
         self.generate_llm = ChatOpenAI(
             api_key=settings.OPENAI_API_KEY,
             base_url=settings.OPENAI_BASE_URL,
             model=settings.GENERATE_MODEL,
             temperature=settings.GENERATE_TEMPERATURE,
+            streaming=True,
+        )
+        self.clarify_llm = ChatOpenAI(
+            api_key=settings.OPENAI_API_KEY,
+            base_url=settings.OPENAI_BASE_URL,
+            model=settings.CLARIFY_MODEL,
             streaming=True,
         )
         self.refuse_llm = ChatOpenAI(
@@ -54,36 +61,17 @@ class PipelineDefinition:
         )
         logger.info("pipeline | LLM clients initialized")
 
-        t0 = time.perf_counter()
-        self.embeddings = HuggingFaceEmbeddings(
-            model_name=settings.HF_EMBEDDING_MODEL_NAME,
-            model_kwargs={"device": settings.HF_EMBEDDING_DEVICE},
-            encode_kwargs={"normalize_embeddings": True},
+        # The whitelist is also passed on every call (see nodes/search.py) so the
+        # restriction does not depend on this instance alone.
+        self.search = TavilySearch(
+            tavily_api_key=settings.TAVILY_API_KEY,
+            max_results=settings.SEARCH_MAX_RESULTS,
+            include_domains=settings.SEARCH_ALLOWED_DOMAINS,
+            search_depth="advanced",
+            include_raw_content=False,
         )
-        logger.info(f"pipeline | embeddings loaded in {time.perf_counter() - t0:.2f}s")
-
-        t1 = time.perf_counter()
-        self.vector_store = PGVector(
-            embeddings=self.embeddings,
-            collection_name=settings.PGVECTOR_COLLECTION,
-            connection=settings.PGVECTOR_CONNECTION,
-            use_jsonb=True,
-            async_mode=True,
-        )
-        logger.info(f"pipeline | vector store ready in {time.perf_counter() - t1:.2f}s")
-
-        base_kwargs: dict = {
-            "max_results": settings.SEARCH_MAX_RESULTS,
-            "include_raw_content": False,
-        }
-        primary_kwargs = dict(base_kwargs)
-        if settings.SEARCH_ALLOWED_DOMAINS:
-            primary_kwargs["include_domains"] = settings.SEARCH_ALLOWED_DOMAINS
-
-        self.search_primary = TavilySearch(**primary_kwargs)
-        self.search_fallback = TavilySearch(**base_kwargs)
         logger.info(
-            f"pipeline | search domains={settings.SEARCH_ALLOWED_DOMAINS or '-'} "
+            f"pipeline | search domains={settings.SEARCH_ALLOWED_DOMAINS} "
             f"max_results={settings.SEARCH_MAX_RESULTS}"
         )
 

@@ -32,8 +32,7 @@ async def chat(request: Request, req: ChatRequest):
 
     try:
         initial_state = SinaState(
-            question=req.message,
-            original_question=req.message,
+            message=req.message,
             history=[h.model_dump() for h in req.history],
         )
 

@@ -9,7 +9,7 @@ from src.inference.state import SinaState
 # Only these nodes' LLM tokens are forwarded to the SSE stream.
 # Other nodes (e.g. analyzer) also produce AIMessageChunks but their
 # output is internal (structured JSON, etc.) and must not reach the client.
-STREAMABLE_NODES = {"generate", "refuse"}
+STREAMABLE_NODES = {"generate", "clarify", "refuse"}
 
 
 async def run_model_stream(
