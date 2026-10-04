@@ -1,0 +1,489 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>سينا</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Noto+Naskh+Arabic:wght@400;600&display=swap" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.1.6/purify.min.js"></script>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --sidebar: #f9f9f9;
+      --surface: #f4f4f4;
+      --hover: #ececec;
+      --border: #e5e5e5;
+      --text: #0d0d0d;
+      --muted: #6b6b6b;
+      --accent: #0d0d0d;
+      --accent-text: #ffffff;
+      --danger: #d03b3b;
+      --shadow: 0 0 0 1px rgba(0,0,0,.06), 0 2px 12px rgba(0,0,0,.06);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #212121;
+        --sidebar: #171717;
+        --surface: #2f2f2f;
+        --hover: #2a2a2a;
+        --border: #3a3a3a;
+        --text: #ececec;
+        --muted: #a0a0a0;
+        --accent: #ececec;
+        --accent-text: #0d0d0d;
+        --shadow: 0 0 0 1px rgba(255,255,255,.06);
+      }
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; margin: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: "IBM Plex Sans Arabic", system-ui, sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      display: flex;
+      overflow: hidden;
+    }
+    button { font: inherit; color: inherit; cursor: pointer; border: 0; background: none; }
+    svg { width: 20px; height: 20px; flex: none; }
+
+    /* Sidebar */
+    .sidebar {
+      width: 260px;
+      background: var(--sidebar);
+      display: flex;
+      flex-direction: column;
+      padding: 8px;
+      gap: 8px;
+      flex: none;
+      transition: margin .2s ease;
+    }
+    body.sidebar-closed .sidebar { margin-inline-start: -260px; }
+    .sidebar-top { display: flex; align-items: center; justify-content: space-between; }
+    .icon-btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 36px; height: 36px; border-radius: 8px; color: var(--muted);
+    }
+    .icon-btn:hover { background: var(--hover); color: var(--text); }
+    .new-chat {
+      display: flex; align-items: center; gap: 10px;
+      padding: 8px 10px; border-radius: 8px; font-weight: 500; width: 100%;
+    }
+    .new-chat:hover { background: var(--hover); }
+    .conv-label { font-size: 12px; color: var(--muted); padding: 12px 10px 4px; }
+    .conv-list { flex: 1; overflow-y: auto; display: flex; flex-direction: column; gap: 2px; }
+    .conv {
+      display: flex; align-items: center; border-radius: 8px; padding: 0 4px 0 0;
+    }
+    .conv:hover, .conv.active { background: var(--hover); }
+    .conv-title {
+      flex: 1; text-align: start; padding: 7px 6px; font-size: 14px;
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    .conv .icon-btn { width: 28px; height: 28px; visibility: hidden; }
+    .conv:hover .icon-btn, .conv.active .icon-btn { visibility: visible; }
+    .conv .icon-btn:hover { color: var(--danger); background: transparent; }
+    .conv .icon-btn svg { width: 16px; height: 16px; }
+
+    /* Main */
+    .main { flex: 1; display: flex; flex-direction: column; min-width: 0; position: relative; }
+    .header {
+      height: 52px; display: flex; align-items: center; gap: 4px; padding: 0 8px; flex: none;
+    }
+    .brand { font-weight: 600; font-size: 18px; padding: 0 6px; }
+    body:not(.sidebar-closed) .header .open-sidebar { display: none; }
+
+    .scroll { flex: 1; overflow-y: auto; }
+    .thread { max-width: 768px; margin: 0 auto; padding: 16px 16px 32px; display: flex; flex-direction: column; gap: 28px; }
+
+    .msg { display: flex; flex-direction: column; }
+    .msg.user { align-items: flex-end; }
+    .msg.user .bubble {
+      background: var(--surface); border-radius: 20px; padding: 10px 18px;
+      max-width: 80%; white-space: pre-wrap; overflow-wrap: anywhere;
+    }
+    .msg.assistant .content { overflow-wrap: anywhere; font-family: "Noto Naskh Arabic", "IBM Plex Sans Arabic", serif; font-size: 17px; line-height: 2; }
+    .content > :first-child { margin-top: 0; }
+    .content > :last-child { margin-bottom: 0; }
+    .content p { margin: 0 0 12px; }
+    .content pre { background: var(--surface); padding: 12px; border-radius: 8px; overflow-x: auto; direction: ltr; }
+    .content code { font-size: 14px; }
+    .content blockquote { margin: 8px 0; padding-inline-start: 14px; border-inline-start: 3px solid var(--border); color: var(--muted); }
+    .content a { color: inherit; }
+    .content.error { color: var(--danger); font-family: inherit; font-size: 15px; }
+    .actions { display: flex; gap: 2px; margin-top: 6px; }
+    .actions .icon-btn { width: 30px; height: 30px; }
+    .actions svg { width: 16px; height: 16px; }
+
+    .cursor::after {
+      content: ""; display: inline-block; width: 10px; height: 10px; border-radius: 50%;
+      background: var(--text); margin-inline-start: 4px; vertical-align: middle;
+      animation: pulse 1s ease-in-out infinite;
+    }
+    @keyframes pulse { 50% { opacity: .25; transform: scale(.8); } }
+
+    /* Empty state */
+    .empty {
+      flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center;
+      gap: 24px; padding: 16px; text-align: center;
+    }
+    .empty h1 { font-size: 28px; font-weight: 500; margin: 0; }
+    .suggestions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; max-width: 640px; width: 100%; }
+    .suggestion {
+      border: 1px solid var(--border); border-radius: 14px; padding: 12px 14px; text-align: start;
+      font-size: 14px; color: var(--muted);
+    }
+    .suggestion:hover { background: var(--hover); color: var(--text); }
+    .hidden { display: none !important; }
+
+    /* Composer */
+    .composer-wrap { padding: 0 16px 12px; flex: none; }
+    .composer {
+      max-width: 768px; margin: 0 auto; background: var(--surface); border-radius: 26px;
+      display: flex; align-items: flex-end; gap: 8px; padding: 8px 8px 8px 8px; padding-inline-start: 18px;
+      box-shadow: var(--shadow);
+    }
+    .composer textarea {
+      flex: 1; resize: none; border: 0; outline: 0; background: transparent; color: var(--text);
+      font: inherit; max-height: 200px; padding: 6px 0; line-height: 1.6;
+    }
+    .composer textarea::placeholder { color: var(--muted); }
+    .send {
+      width: 36px; height: 36px; border-radius: 50%; background: var(--accent); color: var(--accent-text);
+      display: inline-flex; align-items: center; justify-content: center; flex: none;
+    }
+    .send:disabled { opacity: .3; cursor: default; }
+    .send svg { width: 18px; height: 18px; }
+    .disclaimer { text-align: center; font-size: 12px; color: var(--muted); padding-top: 8px; }
+
+    .backdrop { display: none; }
+    @media (max-width: 768px) {
+      .sidebar { position: fixed; inset-block: 0; inset-inline-start: 0; z-index: 20; box-shadow: var(--shadow); }
+      .backdrop { display: block; position: fixed; inset: 0; background: rgba(0,0,0,.4); z-index: 10; }
+      body.sidebar-closed .backdrop { display: none; }
+      .header .open-sidebar { display: inline-flex !important; }
+      .suggestions { grid-template-columns: 1fr; }
+      .msg.user .bubble { max-width: 90%; }
+    }
+  </style>
+</head>
+<body>
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-top">
+      <button class="icon-btn" id="closeSidebar" title="إغلاق الشريط الجانبي" aria-label="إغلاق الشريط الجانبي">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M15 4v16"/></svg>
+      </button>
+      <button class="icon-btn" id="newChatIcon" title="محادثة جديدة" aria-label="محادثة جديدة">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+      </button>
+    </div>
+    <button class="new-chat" id="newChat">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+      محادثة جديدة
+    </button>
+    <div class="conv-label">المحادثات</div>
+    <nav class="conv-list" id="convList"></nav>
+  </aside>
+  <div class="backdrop" id="backdrop"></div>
+
+  <main class="main">
+    <header class="header">
+      <button class="icon-btn open-sidebar" id="openSidebar" title="فتح الشريط الجانبي" aria-label="فتح الشريط الجانبي">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M15 4v16"/></svg>
+      </button>
+      <span class="brand">سينا</span>
+    </header>
+
+    <section class="empty" id="empty">
+      <h1>بماذا يمكنني مساعدتك في الشعر العربي؟</h1>
+      <div class="suggestions">
+        <button class="suggestion">أنشدني أبياتاً للمتنبي في الحكمة</button>
+        <button class="suggestion">من هو امرؤ القيس وما أشهر معلقاته؟</button>
+        <button class="suggestion">اذكر قصيدة في الرثاء من العصر العباسي</button>
+        <button class="suggestion">ما معنى بيت «على قدر أهل العزم تأتي العزائم»؟</button>
+      </div>
+    </section>
+
+    <div class="scroll hidden" id="scroll">
+      <div class="thread" id="thread"></div>
+    </div>
+
+    <div class="composer-wrap">
+      <form class="composer" id="composer">
+        <textarea id="input" rows="1" placeholder="اسأل سينا عن الشعر..." dir="auto" autofocus></textarea>
+        <button class="send" id="send" type="submit" disabled aria-label="إرسال">
+          <svg id="sendIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+          <svg id="stopIcon" class="hidden" viewBox="0 0 24 24" fill="currentColor"><rect x="7" y="7" width="10" height="10" rx="1.5"/></svg>
+        </button>
+      </form>
+      <div class="disclaimer">قد يخطئ سينا. تحقّق من المعلومات المهمة.</div>
+    </div>
+  </main>
+
+  <script>
+    const STORAGE_KEY = "sina.conversations";
+    const API_URL = "chat";
+
+    const $ = (id) => document.getElementById(id);
+    const els = {
+      convList: $("convList"), thread: $("thread"), scroll: $("scroll"), empty: $("empty"),
+      input: $("input"), send: $("send"), sendIcon: $("sendIcon"), stopIcon: $("stopIcon"),
+      composer: $("composer"),
+    };
+
+    let conversations = load();
+    let activeId = null;
+    let controller = null;
+
+    function load() {
+      try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || []; } catch { return []; }
+    }
+    function save() {
+      try { localStorage.setItem(STORAGE_KEY, JSON.stringify(conversations)); } catch {}
+    }
+    const active = () => conversations.find((c) => c.id === activeId);
+
+    function renderMarkdown(text) {
+      if (window.marked && window.DOMPurify) {
+        return DOMPurify.sanitize(marked.parse(text, { breaks: true, gfm: true }));
+      }
+      const div = document.createElement("div");
+      div.textContent = text;
+      return div.innerHTML.replace(/\n/g, "<br>");
+    }
+
+    function renderSidebar() {
+      els.convList.innerHTML = "";
+      for (const c of conversations) {
+        const row = document.createElement("div");
+        row.className = "conv" + (c.id === activeId ? " active" : "");
+        const title = document.createElement("button");
+        title.className = "conv-title";
+        title.textContent = c.title;
+        title.dir = "auto";
+        title.onclick = () => openConversation(c.id);
+        const del = document.createElement("button");
+        del.className = "icon-btn";
+        del.title = "حذف";
+        del.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4h8v2M19 6l-1 14H6L5 6"/></svg>';
+        del.onclick = (e) => { e.stopPropagation(); deleteConversation(c.id); };
+        row.append(title, del);
+        els.convList.append(row);
+      }
+    }
+
+    function renderThread() {
+      const conv = active();
+      const hasMessages = conv && conv.messages.length;
+      els.empty.classList.toggle("hidden", !!hasMessages);
+      els.scroll.classList.toggle("hidden", !hasMessages);
+      els.thread.innerHTML = "";
+      if (hasMessages) conv.messages.forEach((m) => els.thread.append(messageEl(m)));
+      scrollToBottom();
+    }
+
+    function messageEl(m) {
+      const wrap = document.createElement("div");
+      wrap.className = "msg " + m.role;
+      if (m.role === "user") {
+        const b = document.createElement("div");
+        b.className = "bubble";
+        b.dir = "auto";
+        b.textContent = m.content;
+        wrap.append(b);
+      } else {
+        const c = document.createElement("div");
+        c.className = "content" + (m.error ? " error" : "");
+        c.dir = "auto";
+        c.innerHTML = renderMarkdown(m.content);
+        wrap.append(c);
+        if (m.content && !m.error) wrap.append(actionsEl(m));
+      }
+      return wrap;
+    }
+
+    function actionsEl(m) {
+      const bar = document.createElement("div");
+      bar.className = "actions";
+      const copy = document.createElement("button");
+      copy.className = "icon-btn";
+      copy.title = "نسخ";
+      const copyIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>';
+      copy.innerHTML = copyIcon;
+      copy.onclick = async () => {
+        try { await navigator.clipboard.writeText(m.content); } catch {}
+        copy.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l5 5L20 7"/></svg>';
+        setTimeout(() => (copy.innerHTML = copyIcon), 1500);
+      };
+      bar.append(copy);
+      return bar;
+    }
+
+    function scrollToBottom() {
+      els.scroll.scrollTop = els.scroll.scrollHeight;
+    }
+    function nearBottom() {
+      return els.scroll.scrollHeight - els.scroll.scrollTop - els.scroll.clientHeight < 80;
+    }
+
+    function openConversation(id) {
+      if (controller) return;
+      activeId = id;
+      renderSidebar();
+      renderThread();
+      if (window.innerWidth <= 768) document.body.classList.add("sidebar-closed");
+      els.input.focus();
+    }
+
+    function newConversation() {
+      if (controller) return;
+      activeId = null;
+      renderSidebar();
+      renderThread();
+      els.input.focus();
+    }
+
+    function deleteConversation(id) {
+      if (controller && id === activeId) return;
+      conversations = conversations.filter((c) => c.id !== id);
+      save();
+      if (id === activeId) activeId = null;
+      renderSidebar();
+      renderThread();
+    }
+
+    function setStreaming(on) {
+      els.sendIcon.classList.toggle("hidden", on);
+      els.stopIcon.classList.toggle("hidden", !on);
+      els.send.setAttribute("aria-label", on ? "إيقاف" : "إرسال");
+      updateSendState();
+    }
+    function updateSendState() {
+      els.send.disabled = !controller && !els.input.value.trim();
+    }
+
+    async function send(text) {
+      text = text.trim();
+      if (!text || controller) return;
+
+      let conv = active();
+      if (!conv) {
+        conv = { id: crypto.randomUUID ? crypto.randomUUID() : String(Date.now()), title: text.slice(0, 40), messages: [] };
+        conversations.unshift(conv);
+        activeId = conv.id;
+      } else {
+        // Move to top of the list.
+        conversations = [conv, ...conversations.filter((c) => c !== conv)];
+      }
+
+      const history = conv.messages
+        .filter((m) => !m.error && m.content)
+        .map(({ role, content }) => ({ role, content }));
+      conv.messages.push({ role: "user", content: text });
+      const reply = { role: "assistant", content: "" };
+      conv.messages.push(reply);
+      save();
+      renderSidebar();
+      renderThread();
+
+      const replyEl = els.thread.lastElementChild;
+      const contentEl = replyEl.querySelector(".content");
+      contentEl.classList.add("cursor");
+
+      controller = new AbortController();
+      setStreaming(true);
+
+      try {
+        const res = await fetch(API_URL, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ message: text, history }),
+          signal: controller.signal,
+        });
+        if (!res.ok || !res.body) throw new Error(`HTTP ${res.status}`);
+
+        const reader = res.body.getReader();
+        const decoder = new TextDecoder();
+        let buffer = "";
+        let done = false;
+        while (!done) {
+          const { value, done: streamDone } = await reader.read();
+          if (streamDone) break;
+          buffer += decoder.decode(value, { stream: true });
+          const events = buffer.split("\n\n");
+          buffer = events.pop();
+          for (const evt of events) {
+            const data = evt.split("\n").filter((l) => l.startsWith("data:")).map((l) => l.slice(5).trim()).join("");
+            if (!data) continue;
+            if (data === "[DONE]") { done = true; break; }
+            try {
+              const { content } = JSON.parse(data);
+              if (content) {
+                const stick = nearBottom();
+                reply.content += content;
+                contentEl.innerHTML = renderMarkdown(reply.content);
+                if (stick) scrollToBottom();
+              }
+            } catch {}
+          }
+        }
+      } catch (err) {
+        if (err.name !== "AbortError" && !reply.content) {
+          reply.error = true;
+          reply.content = "تعذّر الحصول على إجابة. حاول مرة أخرى.";
+          contentEl.classList.add("error");
+          contentEl.innerHTML = renderMarkdown(reply.content);
+        }
+      } finally {
+        controller = null;
+        contentEl.classList.remove("cursor");
+        if (!reply.content) {
+          conv.messages.pop();
+          replyEl.remove();
+        } else if (!reply.error) {
+          replyEl.append(actionsEl(reply));
+        }
+        save();
+        setStreaming(false);
+      }
+    }
+
+    // Events
+    els.composer.addEventListener("submit", (e) => {
+      e.preventDefault();
+      if (controller) { controller.abort(); return; }
+      const text = els.input.value;
+      els.input.value = "";
+      autoGrow();
+      send(text);
+    });
+    els.input.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" && !e.shiftKey && !e.isComposing) {
+        e.preventDefault();
+        if (!controller) els.composer.requestSubmit();
+      }
+    });
+    function autoGrow() {
+      els.input.style.height = "auto";
+      els.input.style.height = Math.min(els.input.scrollHeight, 200) + "px";
+      updateSendState();
+    }
+    els.input.addEventListener("input", autoGrow);
+
+    document.querySelectorAll(".suggestion").forEach((b) => (b.onclick = () => send(b.textContent)));
+    $("newChat").onclick = newConversation;
+    $("newChatIcon").onclick = newConversation;
+    $("closeSidebar").onclick = () => document.body.classList.add("sidebar-closed");
+    $("openSidebar").onclick = () => document.body.classList.remove("sidebar-closed");
+    $("backdrop").onclick = () => document.body.classList.add("sidebar-closed");
+
+    if (window.innerWidth <= 768) document.body.classList.add("sidebar-closed");
+    renderSidebar();
+    renderThread();
+  </script>
+</body>
+</html>

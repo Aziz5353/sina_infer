@@ -7,6 +7,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from api.chat import chat_router
 from api.health import health_router
+from api.ui import ui_router
 from config.logger import setup_logger
 from config.settings import settings
 from inference.graph import build_graph
@@ -42,3 +43,4 @@ app.add_middleware(
 )
 app.include_router(health_router)
 app.include_router(chat_router)
+app.include_router(ui_router)

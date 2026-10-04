@@ -5,12 +5,13 @@ Inference service for **Sina**, an Arabic-poetry chatbot. FastAPI + LangGraph + 
 ## Structure
 
 ```
-api/         # FastAPI routers (chat endpoint)
+api/         # FastAPI routers (chat, health, web UI)
 config/      # constants, settings, logging
 inference/   # LangGraph: state, graph builder, streaming, nodes/
   nodes/       analyzer, retrieve, search, generate, refuse
 model/       # Pydantic request/response schemas
 util/        # arabic_normalization, shared helpers
+ui/          # single-file chat web UI served at /
 main.py      # FastAPI app + lifespan that builds the graph
 ```
 
@@ -77,6 +78,7 @@ docker compose up --build
 
 ## Endpoints
 
+- `GET /` — ChatGPT-style web UI (RTL Arabic, streaming, conversations saved in the browser's localStorage). Open http://localhost:8000 after starting the server.
 - `POST /chat` — body `{ "message": "...", "history": [{ "role": "user" | "assistant", "content": "..." }] }`, returns an SSE stream of the generated answer. `history` is optional.
 
 ## Tuning
