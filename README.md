@@ -96,7 +96,7 @@ Required:
 | `CLARIFY_MODEL` | Clarifying questions, e.g. `gpt-4o-mini` |
 | `REFUSE_MODEL` | Refusal message, e.g. `gpt-4o-mini` |
 | `TAVILY_API_KEY` | Web-search credentials |
-| `SEARCH_ALLOWED_DOMAINS` | Comma-separated whitelist, e.g. `ncbi.nlm.nih.gov,who.int,cdc.gov,nice.org.uk`. **The app fails at startup if it is empty.** Subdomains are allowed (`pubmed.ncbi.nlm.nih.gov` matches `ncbi.nlm.nih.gov`). |
+| `SEARCH_ALLOWED_DOMAINS` | JSON list whitelist, e.g. `'["ncbi.nlm.nih.gov", "who.int", "cdc.gov"]'`. Wrap it in single quotes so it can span several lines. **The app fails at startup if it is empty.** Subdomains are allowed (`pubmed.ncbi.nlm.nih.gov` matches `ncbi.nlm.nih.gov`). |
 
 Optional:
 

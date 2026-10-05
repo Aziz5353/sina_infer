@@ -1,3 +1,4 @@
+import json
 import os
 
 from dotenv import load_dotenv
@@ -36,11 +37,11 @@ class Settings:
 
         # Search Settings
         # Sina never searches outside this whitelist, so an empty list is fatal.
-        self.SEARCH_ALLOWED_DOMAINS = _csv(os.environ.get("SEARCH_ALLOWED_DOMAINS", ""))
+        self.SEARCH_ALLOWED_DOMAINS = json.loads(os.environ.get("SEARCH_ALLOWED_DOMAINS", "[]"))
         if not self.SEARCH_ALLOWED_DOMAINS:
             raise ValueError(
                 "SEARCH_ALLOWED_DOMAINS must list at least one domain "
-                "(comma-separated); Sina does not search the open web."
+                "(as a JSON list); Sina does not search the open web."
             )
         self.SEARCH_MAX_RESULTS = int(os.environ.get("SEARCH_MAX_RESULTS", "5"))
         self.SEARCH_MIN_RESULTS = int(os.environ.get("SEARCH_MIN_RESULTS", "2"))
