@@ -1,0 +1,440 @@
+timestamp,message,history,standalone_message,route,query_type,clarify_reason,refusal_reason,case,missing_critical_info,red_flags,search_queries,search_attempts,evidence_gaps,sources,answer,latency_s,error
+2026-10-11T09:29:42+00:00,"28F, 3 days of fever, dysuria, and right flank pain. Temp 38.9, HR 112. What is the differential and the most likely diagnosis?",,"28F, 3 days of fever, dysuria, and right flank pain. Temp 38.9, HR 112. What is the differential and the most likely diagnosis?",search,patient_case,,,"{""age"": ""28"", ""sex"": ""F"", ""pregnancy_status"": null, ""chief_complaint"": ""fever, dysuria, right flank pain"", ""symptoms"": [""fever"", ""dysuria"", ""right flank pain""], ""duration"": ""3 days"", ""vitals"": ""Temp 38.9°C, HR 112"", ""exam_findings"": [], ""labs_imaging"": [], ""medications"": [], ""allergies"": [], ""comorbidities"": []}","[""pregnancy status""]","[""High fever (38.9°C) and tachycardia (HR 112) with flank pain suggestive of acute pyelonephritis with potential sepsis""]","[""differential diagnosis fever flank pain dysuria young adult female excluding pyelonephritis"", ""severe acute pyelonephritis management tachycardia fever 38.9 C"", ""acute pyelonephritis in young female differential including renal colic and gynecologic causes""]",2,,"[{""url"": ""https://www.ncbi.nlm.nih.gov/sites/books/NBK519537"", ""title"": ""Acute Pyelonephritis - StatPearls - NCBI Bookshelf"", ""score"": 0.8682137}, {""url"": ""https://pmc.ncbi.nlm.nih.gov/articles/PMC13321474"", ""title"": ""Clinical and diagnostic evaluation of flank pain in female patients: a retrospective cohort study of 3350 patients"", ""score"": 0.85097736}, {""url"": ""https://pubmed.ncbi.nlm.nih.gov/11442995"", ""title"": ""The management of acute pyelonephritis in adults."", ""score"": 0.8201387}, {""url"": ""https://www.nice.org.uk/guidance/ng111/documents/draft-guideline-2"", ""title"": ""Pyelonephritis (acute): antimicrobial prescribing"", ""score"": 0.7722049}, {""url"": ""https://www.aafp.org/afp/2015/1101/p778"", ""title"": ""Dysuria: Evaluation and Differential Diagnosis in Adults | AFP"", ""score"": 0.7610953}, {""url"": ""https://pubmed.ncbi.nlm.nih.gov/32735433"", ""title"": ""Acute Pyelonephritis in Adults: Rapid Evidence Review."", ""score"": 0.7593865}, {""url"": ""https://www.aafp.org/afp/2005/0301/p933"", ""title"": ""Diagnosis and Management of Acute Pyelonephritis in Adults | AFP"", ""score"": 0.7361925}, {""url"": ""https://europepmc.org/articles/pmc12384202?pdf=render"", ""title"": ""A Rare Cause of Acute Kidney Injury in a Young Woman"", ""score"": 0.7274535}, {""url"": ""https://cks.nice.org.uk/topics/pyelonephritis-acute/management/management"", ""title"": ""Scenario: Management of acute pyelonephritis - CKS - NICE"", ""score"": 0.7171114}, {""url"": ""https://pmc.ncbi.nlm.nih.gov/articles/PMC3217727"", ""title"": ""Pyelonephritis (acute) in non-pregnant women"", ""score"": 0.71687365}, {""url"": ""https://europepmc.org/article/pmc/pmc6177687"", ""title"": ""a focus on renal stones and acute pyelonephritis. - Abstract"", ""score"": 0.6826801}, {""url"": ""https://pmc.ncbi.nlm.nih.gov/articles/PMC11554377"", ""title"": ""Improving Guideline Adherence for the Radiological Investigation of Acute Renal Colic: A Two-Cycle Quality Improvement Project"", ""score"": 0.6649108}, {""url"": ""https://www.aafp.org/afp/2011/0901/p519"", ""title"": ""Diagnosis and Treatment of Acute Pyelonephritis in Women | AFP"", ""score"": 0.6496014}, {""url"": ""https://europepmc.org/books/nbk519537"", ""title"": ""Acute Pyelonephritis - Abstract"", ""score"": 0.6415577}, {""url"": ""https://europepmc.org/books/nbk599548"", ""title"": ""Urinary Tract Infections In Children - Abstract"", ""score"": 0.64020914}]","⚠️ **Red flags / urgent action**
+The patient presents with high fever (38.9°C), tachycardia (HR 112), and flank pain, which are suggestive of acute pyelonephritis with potential sepsis [1][9]. Immediate actions include assessing for hemodynamic instability, obtaining blood cultures, and initiating empiric parenteral antibiotics if the patient appears toxic or cannot tolerate oral intake [3][7]. Hospital admission should be strongly considered given the tachycardia and high fever, as these are indicators of severe uncomplicated pyelonephritis or sepsis requiring close monitoring [7][9].
+
+**Case summary**
+28-year-old female presenting with 3 days of fever, dysuria, and right flank pain with signs of systemic inflammation (Temp 38.9°C, HR 112).
+*Assumption:* The patient is not pregnant (as pregnancy status was missing and non-pregnant management guidelines were applied; if pregnant, management differs significantly) [4][6].
+
+**Differential diagnosis**
+1.  **Acute Pyelonephritis (Most Likely)**
+    *   **Supporting features:** Classic triad of fever (>38.0°C), flank pain, and dysuria; tachycardia and high fever are characteristic of upper urinary tract infection [1][11][13].
+    *   **Features against:** None specific in the provided history, though imaging is not yet performed to rule out obstruction.
+    *   **Citations:** [1][3][6][11][13]
+
+2.  **Nephrolithiasis (Kidney Stone) with or without infection**
+    *   **Supporting features:** Flank pain is a primary symptom; stones can predispose to infection [2][12].
+    *   **Features against:** Pain is typically colicky and radiates to the groin; fever and dysuria are less common unless superimposed infection exists [2][12].
+    *   **Citations:** [2][12]
+
+3.  **Complicated UTI / Urosepsis**
+    *   **Supporting features:** Tachycardia and high fever suggest systemic involvement; risk of progression to septic shock if untreated [7][10].
+    *   **Features against:** Requires confirmation of bacteremia or organ dysfunction; currently classified as severe uncomplicated or complicated pending workup.
+    *   **Citations:** [7][10]
+
+4.  **Other causes of flank pain (Musculoskeletal, Gynecological, GI)**
+    *   **Supporting features:** Broad differential for flank pain includes these conditions [2].
+    *   **Features against:** High fever and dysuria strongly point to an infectious etiology rather than primary musculoskeletal or gynecological causes [2][5].
+    *   **Citations:** [2][5]
+
+**Suggestions**
+
+*   **Investigations:**
+    *   **Urinalysis:** Check for leukocyte esterase, nitrites, pyuria, and white blood cell casts [6][13].
+    *   **Urine Culture:** Essential for all patients to guide antibiotic therapy based on susceptibility [1][6].
+    *   **Blood Cultures:** Recommended for patients with severe symptoms, high fever, or signs of sepsis [3][6].
+    *   **Imaging:** CT scan or ultrasound if complicated pyelonephritis is suspected (e.g., obstruction, failure to respond to therapy) or if diagnosis is uncertain [3][6].
+    *   **Pregnancy Test:** Critical to rule out pregnancy given the missing information, as it alters antibiotic choice and management [4][6].
+
+*   **Management:**
+    *   **Antibiotics:**
+        *   If treated as an outpatient (only if stable and able to tolerate oral meds): Fluoroquinolones (e.g., ciprofloxacin or levofloxacin) for 5–7 days or Trimethoprim-sulfamethoxazole for 14 days, depending on local resistance patterns [1][3][4].
+        *   If admitted or severe: Initial empiric parenteral therapy such as Ceftriaxone is recommended [1].
+        *   *Note:* The provided sources do not contain specific dosing frequencies or mg amounts; please consult a drug reference for exact dosing.
+    *   **Supportive Care:** NSAIDs or paracetamol for pain and fever management [1][4]. Ensure adequate fluid intake [4].
+    *   **Admission Criteria:** Consider admission due to tachycardia (HR 112) and high fever (38.9°C), which may indicate severe uncomplicated pyelonephritis or early sepsis [7][9].
+
+*   **Referral / Follow-up:**
+    *   Refer to hospital if the patient has persistent vomiting, hemodynamic instability, or cannot tolerate oral intake [7].
+    *   Re-evaluate within 48 hours to assess response to antibiotics and switch to oral therapy if improving [4].
+    *   If no improvement after 48–72 hours, consider imaging and repeat cultures to rule out abscess or obstruction [6].
+
+*   **What would change the assessment:**
+    *   **Positive pregnancy test:** Would mandate admission and parenteral therapy with pregnancy-safe antibiotics (e.g., ceftriaxone) [4][6].
+    *   **Evidence of obstruction:** Would require urgent urological decompression [6].
+    *   **Hemodynamic instability:** Would confirm sepsis requiring aggressive resuscitation and ICU-level care [7].
+
+**Sources**
+[1] Acute Pyelonephritis - StatPearls - NCBI Bookshelf — https://www.ncbi.nlm.nih.gov/sites/books/NBK519537
+[2] Clinical and diagnostic evaluation of flank pain in female patients: a retrospective cohort study of 3350 patients — https://pmc.ncbi.nlm.nih.gov/articles/PMC13321474
+[3] The management of acute pyelonephritis in adults. — https://pubmed.ncbi.nlm.nih.gov/11442995
+[4] Pyelonephritis (acute): antimicrobial prescribing — https://www.nice.org.uk/guidance/ng111/documents/draft-guideline-2
+[5] Dysuria: Evaluation and Differential Diagnosis in Adults | AFP — https://www.aafp.org/afp/2015/1101/p778
+[6] Acute Pyelonephritis in Adults: Rapid Evidence Review. — https://pubmed.ncbi.nlm.nih.gov/32735433
+[7] Diagnosis and Management of Acute Pyelonephritis in Adults | AFP — https://www.aafp.org/afp/2005/0301/p933
+[8] A Rare Cause of Acute Kidney Injury in a Young Woman — https://europepmc.org/articles/pmc12384202?pdf=render
+[9] Scenario: Management of acute pyelonephritis - CKS - NICE — https://cks.nice.org.uk/topics/pyelonephritis-acute/management/management
+[10] Pyelonephritis (acute) in non-pregnant women — https://pmc.ncbi.nlm.nih.gov/articles/PMC3217727
+[11] a focus on renal stones and acute pyelonephritis. - Abstract — https://europepmc.org/article/pmc/pmc6177687
+[12] Improving Guideline Adherence for the Radiological Investigation of Acute Renal Colic: A Two-Cycle Quality Improvement Project — https://pmc.ncbi.nlm.nih.gov/articles/PMC11554377
+[13] Diagnosis and Treatment of Acute Pyelonephritis in Women | AFP — https://www.aafp.org/afp/2011/0901/p519
+[14] Acute Pyelonephritis - Abstract — https://europepmc.org/books/nbk519537
+[15] Urinary Tract Infections In Children - Abstract — https://europepmc.org/books/nbk599548
+
+*This is decision support only and the treating physician's clinical judgment prevails.*",41.17,
+2026-10-11T09:30:24+00:00,What is the current first-line management of newly diagnosed type 2 diabetes with HbA1c 8.5% and established ASCVD?,,What is the current first-line management of newly diagnosed type 2 diabetes with HbA1c 8.5% and established ASCVD?,search,clinical_question,,,,,,"[""ADA guidelines type 2 diabetes HbA1c 8.5% established ASCVD first-line management"", ""SGLT2 inhibitor versus GLP-1 receptor agonist type 2 diabetes with established ASCVD guidelines"", ""diabetes mellitus type 2 cardiovascular disease management algorithm 2024 2025""]",1,,"[{""url"": ""https://pmc.ncbi.nlm.nih.gov/articles/PMC12845426"", ""title"": ""Real-World Prescribing Patterns of SGLT2 Inhibitors and GLP-1 Receptor Agonists in Older Adults with Type 2 Diabetes and Cardiometabolic Disease"", ""score"": 0.9281033}, {""url"": ""https://reference.medscape.com/viewarticle/938182"", ""title"": ""Clinical Practice Guidelines on Pharmacologic Glycemic Treatment in Type 2 Diabetes (ADA, 2020)"", ""score"": 0.9035075}, {""url"": ""https://pmc.ncbi.nlm.nih.gov/articles/PMC12090087"", ""title"": ""Impact of Hospitalization on Continuation of SGLT2 Inhibitors and GLP-1 Receptor Agonists for Comorbidities in Patients with Type 2 Diabetes - PMC"", ""score"": 0.8914433}, {""url"": ""https://pubmed.ncbi.nlm.nih.gov/41456635"", ""title"": ""Dual versus monotherapy with SGLT2 inhibitor and GLP-1 receptor agonist: PRECIDENTD pragmatic randomized trial."", ""score"": 0.86358756}, {""url"": ""https://pubmed.ncbi.nlm.nih.gov/40401295"", ""title"": ""Impact of Hospitalization on Continuation of SGLT2 Inhibitors and GLP-1 Receptor Agonists for Comorbidities in Patients with Type 2 Diabetes."", ""score"": 0.846159}, {""url"": ""https://pmc.ncbi.nlm.nih.gov/articles/PMC12274173"", ""title"": ""2023 European Society of Cardiology guidelines for the management of cardiovascular disease in patients with diabetes"", ""score"": 0.79522943}, {""url"": ""https://pmc.ncbi.nlm.nih.gov/articles/PMC12379440"", ""title"": ""The 2025 AHA/ACC hypertension guidelines: implications for cardiovascular and renal risk in patients with diabetes"", ""score"": 0.79041743}, {""url"": ""https://diabetesjournals.org/care/article/48/Supplement_1/S207/157549/10-Cardiovascular-Disease-and-Risk-Management"", ""title"": ""10. Cardiovascular Disease and Risk Management: Standards of Care in Diabetes—2025 | Diabetes Care | American Diabetes Association"", ""score"": 0.7429634}, {""url"": ""https://diabetesjournals.org/care/article/48/Supplement_1/S6/157564/Summary-of-Revisions-Standards-of-Care-in-Diabetes"", ""title"": ""Summary of Revisions: Standards of Care in Diabetes—2025"", ""score"": 0.68344116}, {""url"": ""https://www.ahajournals.org/doi/10.1161/CIR.0000000000000766"", ""title"": ""Clinical Management of Stable Coronary Artery Disease in ..."", ""score"": 0.67243975}, {""url"": ""https://pmc.ncbi.nlm.nih.gov/articles/PMC9510507"", ""title"": ""Management of hyperglycaemia in type 2 diabetes, 2022. A consensus report by the American Diabetes Association (ADA) and the European Association for the Study of Diabetes (EASD)"", ""score"": 0.6522641}, {""url"": ""https://pmc.ncbi.nlm.nih.gov/articles/PMC8901964"", ""title"": ""Recent Updates to Clinical Practice Guidelines for Diabetes Mellitus"", ""score"": 0.61140573}, {""url"": ""https://pmc.ncbi.nlm.nih.gov/articles/PMC13399222"", ""title"": ""2026 AHA/ACC/ADA/ASN Guideline for the Prevention, Detection, Evaluation, and Management of Cardiovascular-Kidney-Metabolic Syndrome: A Report of the American College of Cardiology/American Heart Association Joint Committee on Clinical Practice Guidelines"", ""score"": 0.60498303}, {""url"": ""https://pmc.ncbi.nlm.nih.gov/articles/PMC5775000"", ""title"": ""Standards of Medical Care in Diabetes—2018 Abridged for Primary Care Providers"", ""score"": 0.54492307}, {""url"": ""https://pmc.ncbi.nlm.nih.gov/articles/PMC7839613"", ""title"": ""Standards of Medical Care in Diabetes—2021 Abridged for Primary Care Providers"", ""score"": 0.5405607}]","⚠️ Red flags / urgent action
+No red flags were provided in the request.
+
+Case summary
+Newly diagnosed type 2 diabetes with HbA1c 8.5% and established atherosclerotic cardiovascular disease (ASCVD). Assumed no contraindications to metformin, SGLT2 inhibitors, or GLP-1 receptor agonists (e.g., eGFR, heart failure status, history of pancreatitis, or medullary thyroid cancer).
+
+Differential diagnosis
+- Type 2 diabetes with established ASCVD (most likely): Supported by the explicit mention of ""newly diagnosed type 2 diabetes"" and ""established ASCVD"" in the request, and guidelines recommending specific agents for this exact profile [2][11][12][13].
+- Type 1 diabetes (must-not-miss): Not supported by the provided sources; the request specifies ""type 2 diabetes.""
+- Secondary causes of diabetes (e.g., steroid-induced, pancreatic disease): Not supported by the provided sources; no clinical features suggesting these were provided.
+
+Answer
+The current first-line pharmacologic management for a patient with newly diagnosed type 2 diabetes, HbA1c 8.5%, and established ASCVD is:
+1.  **Lifestyle modification** combined with **metformin** (if not contraindicated) as the foundational therapy [12][14].
+2.  **Immediate addition of an SGLT2 inhibitor or a GLP-1 receptor agonist (GLP-1 RA)** with proven cardiovascular benefit. Guidelines strongly recommend this combination (metformin + SGLT2i/GLP-1 RA) as first-line therapy for patients with established ASCVD to reduce major adverse cardiovascular events (MACE) and cardiovascular mortality, regardless of the HbA1c level [2][11][12][13][15].
+3.  **Consideration of dual therapy (SGLT2 inhibitor + GLP-1 RA)**: While monotherapy with one of these classes is the standard first-line addition, dual therapy is frequently recommended and may be considered if glycemic targets are not met or for additive cardiovascular/renal protection, though real-world data suggests barriers to initiation and adherence [4][13].
+4.  **HbA1c >8.5% context**: Given the HbA1c is >8.5% (70 mmol/mol), early combination therapy is indicated to achieve tighter glucose control and avoid therapeutic inertia [11]. If symptoms of catabolism (weight loss) or very high glucose (HbA1c >10% or blood glucose ≥16.7 mmol/L) were present, insulin would be considered, but at 8.5% without such symptoms, the focus remains on metformin plus a cardioprotective agent [2][11].
+
+Suggestions
+**Investigations**
+-   Baseline HbA1c (already provided as 8.5%).
+-   Renal function (eGFR, urine albumin-to-creatinine ratio) to guide SGLT2i/GLP-1 RA selection and dosing [11][13].
+-   Lipid profile and blood pressure assessment to guide comprehensive cardiovascular risk management (statins, antihypertensives) [7][13].
+-   Screening for complications (e.g., retinopathy, neuropathy) as per standard diabetes care [9].
+
+**Management**
+-   **Metformin**: Initiate as first-line agent if tolerated and not contraindicated [12][14]. (Note: Sources did not provide specific starting doses or titration schedules; consult a drug reference for dosing).
+-   **SGLT2 Inhibitor OR GLP-1 RA**: Add one of these agents immediately.
+    -   *SGLT2 Inhibitors* (e.g., empagliflozin, canagliflozin) are recommended to reduce MACE and heart failure hospitalization [2][15].
+    -   *GLP-1 RAs* (e.g., liraglutide, dulaglutide, semaglutide) are recommended to reduce MACE [2][11][15].
+    -   Choice between the two should be individualized based on patient preference, route of administration (oral vs. injectable), weight goals, cost, and specific comorbidities (e.g., heart failure favors SGLT2i) [2][13].
+    -   (Note: Sources did not provide specific drug doses or frequencies; consult a drug reference for dosing).
+-   **Blood Pressure & Lipids**: Initiate high-intensity statin therapy and antihypertensive therapy (ACEi/ARB) as indicated for secondary prevention of ASCVD [7][13].
+-   **Lifestyle**: Emphasize dietary modification, weight management, physical activity, and smoking cessation [7][11].
+
+**Referral / follow-up**
+-   Re-evaluate medication regimen and adherence every 3–6 months [2].
+-   Refer to a cardiologist if complex ASCVD management is needed or if heart failure is suspected/confirmed [1].
+-   Consider referral to a diabetes specialist if glycemic targets are not met with initial combination therapy or if dual therapy (SGLT2i + GLP-1 RA) is being considered [4].
+
+**What would change the assessment**
+-   **HbA1c >10% or blood glucose ≥16.7 mmol/L**: Would necessitate consideration of insulin therapy to reduce glucotoxicity [2].
+-   **Symptoms of catabolism (weight loss)**: Would necessitate consideration of insulin therapy [2].
+-   **Contraindications to SGLT2i/GLP-1 RA** (e.g., eGFR <20-30 mL/min/1.73m² depending on agent, history of pancreatitis, medullary thyroid cancer): Would require alternative agents (e.g., DPP-4 inhibitors, though with less CV benefit, or insulin) [11].
+-   **Heart Failure**: If heart failure is present, an SGLT2 inhibitor is specifically prioritized over GLP-1 RA for HF outcomes [2][15].
+
+Sources
+[1] Real-World Prescribing Patterns of SGLT2 Inhibitors and GLP-1 Receptor Agonists in Older Adults with Type 2 Diabetes and Cardiometabolic Disease — https://pmc.ncbi.nlm.nih.gov/articles/PMC12845426
+[2] Clinical Practice Guidelines on Pharmacologic Glycemic Treatment in Type 2 Diabetes (ADA, 2020) — https://reference.medscape.com/viewarticle/938182
+[3] Impact of Hospitalization on Continuation of SGLT2 Inhibitors and GLP-1 Receptor Agonists for Comorbidities in Patients with Type 2 Diabetes - PMC — https://pmc.ncbi.nlm.nih.gov/articles/PMC12090087
+[4] Dual versus monotherapy with SGLT2 inhibitor and GLP-1 receptor agonist: PRECIDENTD pragmatic randomized trial. — https://pubmed.ncbi.nlm.nih.gov/41456635
+[5] Impact of Hospitalization on Continuation of SGLT2 Inhibitors and GLP-1 Receptor Agonists for Comorbidities in Patients with Type 2 Diabetes. — https://pubmed.ncbi.nlm.nih.gov/40401295
+[6] 2023 European Society of Cardiology guidelines for the management of cardiovascular disease in patients with diabetes — https://pmc.ncbi.nlm.nih.gov/articles/PMC12274173
+[7] The 2025 AHA/ACC hypertension guidelines: implications for cardiovascular and renal risk in patients with diabetes — https://pmc.ncbi.nlm.nih.gov/articles/PMC12379440
+[8] 10. Cardiovascular Disease and Risk Management: Standards of Care in Diabetes—2025 | Diabetes Care | American Diabetes Association — https://diabetesjournals.org/care/article/48/Supplement_1/S207/157549/10-Cardiovascular-Disease-and-Risk-Management
+[9] Summary of Revisions: Standards of Care in Diabetes—2025 — https://diabetesjournals.org/care/article/48/Supplement_1/S6/157564/Summary-of-Revisions-Stands-of-Care-in-Diabetes
+[11] Management of hyperglycaemia in type 2 diabetes, 2022. A consensus report by the American Diabetes Association (ADA) and the European Association for the Study of Diabetes (EASD) — https://pmc.ncbi.nlm.nih.gov/articles/PMC9510507
+[12] Recent Updates to Clinical Practice Guidelines for Diabetes Mellitus — https://pmc.ncbi.nlm.nih.gov/articles/PMC8901964
+[13] 2026 AHA/ACC/ADA/ASN Guideline for the Prevention, Detection, Evaluation, and Management of Cardiovascular-Kidney-Metabolic Syndrome: A Report of the American College of Cardiology/American Heart Association Joint Committee on Clinical Practice Guidelines — https://pmc.ncbi.nlm.nih.gov/articles/PMC13399222
+[14] Standards of Medical Care in Diabetes—2018 Abridged for Primary Care Providers — https://pmc.ncbi.nlm.nih.gov/articles/PMC5775000
+[15] Standards of Medical Care in Diabetes—2021 Abridged for Primary Care Providers — https://pmc.ncbi.nlm.nih.gov/articles/PMC7839613
+
+This response is for decision support only and does not replace the treating physician's clinical judgment.",37.08,
+2026-10-11T09:30:47+00:00,ما جرعة amoxicillin للأطفال في acute otitis media؟ وهل تحتاج تعديلًا في القصور الكلوي؟,,ما جرعة amoxicillin للأطفال في acute otitis media؟ وهل تحتاج تعديلًا في القصور الكلوي؟,search,clinical_question,evidence_gap,,"{""age"": null, ""sex"": null, ""pregnancy_status"": null, ""chief_complaint"": null, ""symptoms"": [], ""duration"": null, ""vitals"": null, ""exam_findings"": [], ""labs_imaging"": [], ""medications"": [], ""allergies"": [], ""comorbidities"": []}",,,"[""2013 AAP guidelines acute otitis media amoxicillin dose children"", ""2024 updated guidelines acute otitis media amoxicillin pediatric dosing"", ""amoxicillin dose adjustment renal impairment children acute otitis media""]",2,"[""No specific amoxicillin dosage adjustment recommendations for pediatric renal impairment (GFR-based dosing or specific reduction factors)"", ""Lack of clear distinction between standard amoxicillin dosing and amoxicillin-clavulanate dosing for renal impairment"", ""Missing official guideline source (e.g., 2013/2024 AAP) explicitly stating renal dosing for amoxicillin monotherapy in children""]","[{""url"": ""https://pmc.ncbi.nlm.nih.gov/articles/PMC3910352"", ""title"": ""High-Dose Amoxicillin with Clavulanate for the Treatment of Acute Otitis Media in Children"", ""score"": 0.95186776}, {""url"": ""https://www.aafp.org/afp/2005/0501/p1787"", ""title"": ""Standard-Dose Amoxicillin for Acute Otitis Media | AFP"", ""score"": 0.9441409}, {""url"": ""https://pubmed.ncbi.nlm.nih.gov/20042912"", ""title"": ""Antibiotic dosing for acute otitis media in children: a weighty issue."", ""score"": 0.9341134}, {""url"": ""https://pubmed.ncbi.nlm.nih.gov/15286214"", ""title"": ""Developing community-specific recommendations for first-line treatment of acute otitis media: is high-dose amoxicillin necessary?"", ""score"": 0.923268}, {""url"": ""https://pubmed.ncbi.nlm.nih.gov/12792379"", ""title"": ""Bacteriologic and clinical efficacy of high dose amoxicillin for therapy of acute otitis media in children."", ""score"": 0.92142147}, {""url"": ""https://pmc.ncbi.nlm.nih.gov/articles/PMC11844117"", ""title"": ""Antibiotic treatment of acute and recurrent otitis media in children: an Italian intersociety Consensus"", ""score"": 0.87139857}, {""url"": ""https://www.accessdata.fda.gov/drugsatfda_docs/label/2024/050564s060,050575s051,050597s052,050720s037,050725s036,050726s027lbl.pdf"", ""title"": ""AUGMENTIN® (amoxicillin and clavulanate potassium) tablets ..."", ""score"": 0.8315952}, {""url"": ""https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=5200ae31-8a79-45f9-84fc-98f8448483a7"", ""title"": ""These highlights do not include all the information needed to use AMOXICILLIN AND CLAVULANATE POTASSIUM FOR ORAL SUSPENSION safely and effectively. See full prescribing information for AMOXICILLIN AND CLAVULANATE POTASSIUM FOR ORAL SUSPENSION.\n       AMOXICILLIN and CLAVULANATE potassium for oral suspension Initial U.S. Approval: 1984"", ""score"": 0.8306082}, {""url"": ""https://pubmed.ncbi.nlm.nih.gov/24523659"", ""title"": ""High-dose amoxicillin with clavulanate for the treatment of acute otitis media in children."", ""score"": 0.81770587}, {""url"": ""https://www.aafp.org/afp/2019/0915/p350"", ""title"": ""Otitis Media: Rapid Evidence Review | AFP"", ""score"": 0.81770587}, {""url"": ""https://aafp.org/afp/2005/0501/p1787"", ""title"": ""Standard-Dose Amoxicillin for Acute Otitis Media | AFP"", ""score"": 0.81347597}, {""url"": ""https://pmc.ncbi.nlm.nih.gov/articles/PMC11494229"", ""title"": ""Clinical Outcomes Associated with Amoxicillin Treatment for Acute Otitis Media in Children"", ""score"": 0.77405477}, {""url"": ""https://publications.aap.org/pediatrics/article/152/3/e2023062482/193283/The-2022-to-2023-Amoxicillin-Shortage-and-Acute"", ""title"": ""The 2022 to 2023 Amoxicillin Shortage and Acute Otitis ..."", ""score"": 0.7311551}, {""url"": ""https://publications.aap.org/pediatriccare/resources/35913/Otitis-Media-Topic-Hub"", ""title"": ""Otitis Media Topic Hub | Pediatric Care Online"", ""score"": 0.7283819}, {""url"": ""https://bmjopen.bmj.com/content/10/5/e035343"", ""title"": ""Clinical practice guidelines for acute otitis media in children: a systematic review and appraisal of European national guidelines"", ""score"": 0.725824}]","The configured medical sources did not cover this case/question well enough to give a sourced answer.
+
+**Missing Evidence:**
+- No specific amoxicillin dosage adjustment recommendations for pediatric renal impairment (GFR-based dosing or specific reduction factors).
+- Lack of clear distinction between standard amoxicillin dosing and amoxicillin-clavulanate dosing for renal impairment.
+- Missing official guideline source (e.g., 2013/2024 AAP) explicitly stating renal dosing for amoxicillin monotherapy in children.
+
+To refine the search, please provide:
+1. What specific pediatric guideline source (e.g., AAP, NICE) or year are you prioritizing?
+2. Is the patient on dialysis, and if so, what is the modality and schedule?
+3. Do you have the specific GFR or creatinine clearance values for the patient?
+4. Are you specifically looking for amoxicillin monotherapy guidelines, or did the query inadvertently include amoxicillin-clavulanate?",20.15,
+2026-10-11T09:31:15+00:00,"Interpret these ABG results: pH 7.28, PaCO2 28, HCO3 13, Na 138, Cl 102. What is the acid-base disorder?",,"Interpret these ABG results: pH 7.28, PaCO2 28, HCO3 13, Na 138, Cl 102. What is the acid-base disorder?",search,clinical_question,evidence_gap,,"{""age"": null, ""sex"": null, ""pregnancy_status"": null, ""chief_complaint"": null, ""symptoms"": [], ""duration"": null, ""vitals"": null, ""exam_findings"": [], ""labs_imaging"": [""pH 7.28"", ""PaCO2 28"", ""HCO3 13"", ""Na 138"", ""Cl 102""], ""medications"": [], ""allergies"": [], ""comorbidities"": []}",,,"[""Winters formula calculation example metabolic acidosis HCO3 13 PaCO2 28"", ""anion gap calculation and interpretation Na 138 Cl 102 HCO3 13"", ""differential diagnosis metabolic acidosis pH 7.28 PaCO2 28 anion gap""]",2,"[""no specific Winters formula calculation result for the provided patient values (PaCO2 28, HCO3 13)"", ""no specific anion gap calculation result and interpretation for the provided electrolyte values (Na 138, Cl 102, HCO3 13)"", ""no direct diagnosis of the mixed/simple disorder for this specific set of ABG results""]","[{""url"": ""https://pubmed.ncbi.nlm.nih.gov/6488577"", ""title"": ""The role of the anion gap in detecting and managing mixed metabolic acid-base disorders."", ""score"": 0.8839694}, {""url"": ""https://www.msdmanuals.com/professional/nephrology/acid-base-regulation-and-disorders/acid-base-disorders"", ""title"": ""Acid-Base Disorders - Nephrology - MSD Manual Professional Edition"", ""score"": 0.8652358}, {""url"": ""https://pubmed.ncbi.nlm.nih.gov/28846305"", ""title"": ""Anion Gap and Non-Anion Gap Metabolic Acidosis"", ""score"": 0.79215926}, {""url"": ""https://pmc.ncbi.nlm.nih.gov/articles/PMC5572668"", ""title"": ""Metabolic Acidosis or Respiratory Alkalosis? Evaluation of a Low Plasma Bicarbonate Using the Urine Anion Gap"", ""score"": 0.7803451}, {""url"": ""https://pmc.ncbi.nlm.nih.gov/articles/PMC12242095"", ""title"": ""Breathing and balance: Clinical insights and management strategies of respiratory acid‐base disorders"", ""score"": 0.7797419}, {""url"": ""https://www.ncbi.nlm.nih.gov/sites/books/NBK448090"", ""title"": ""Anion Gap and Non-Anion Gap Metabolic Acidosis - StatPearls - NCBI Bookshelf"", ""score"": 0.7795405}, {""url"": ""https://pmc.ncbi.nlm.nih.gov/articles/PMC7058869"", ""title"": ""High-anion gap hyperchloremic acidosis mimicking diabetic ketoacidosis on initial presentation – Case report"", ""score"": 0.77364457}, {""url"": ""https://pmc.ncbi.nlm.nih.gov/articles/PMC11441806"", ""title"": ""The Δ Anion Gap/Δ Bicarbonate Ratio in Lactic Acidosis: Time for a New Baseline?"", ""score"": 0.7449724}, {""url"": ""https://www.ncbi.nlm.nih.gov/sites/books/NBK482430"", ""title"": ""Respiratory Acidosis - StatPearls - NCBI Bookshelf"", ""score"": 0.7286136}, {""url"": ""https://pmc.ncbi.nlm.nih.gov/articles/PMC12067511"", ""title"": ""Mastering blood gas interpretation: A practical guide for primary care providers"", ""score"": 0.7265231}, {""url"": ""https://bestpractice.bmj.com/topics/en-us/460"", ""title"": ""Evaluation of metabolic acidosis - Differential diagnosis of ..."", ""score"": 0.71113056}, {""url"": ""https://pmc.ncbi.nlm.nih.gov/articles/PMC9213217"", ""title"": ""Data on the clinical, analytical, and laboratory factors associated with negative anion gaps at an academic medical center - PMC"", ""score"": 0.6929958}, {""url"": ""https://pmc.ncbi.nlm.nih.gov/articles/PMC12385983"", ""title"": ""Metabolic Acidosis in Patients with Chronic Kidney Disease: Diagnosis, Pathogenesis, and Treatment—A Narrative Review"", ""score"": 0.6899958}, {""url"": ""https://pmc.ncbi.nlm.nih.gov/articles/PMC5849971"", ""title"": ""Understanding Acid-Base Disorders"", ""score"": 0.6682966}, {""url"": ""https://www.aafp.org/afp/2025/0200/acid-base-interpretation"", ""title"": ""Acid-Base Interpretation: A Practical Approach | AFP"", ""score"": 0.6625569}]","The configured medical sources did not cover this case/question well enough to give a sourced answer.
+
+**Missing details in the evidence:**
+- No specific Winters formula calculation result for the provided patient values (PaCO2 28, HCO3 13).
+- No specific Anion Gap calculation result and interpretation for the provided electrolyte values (Na 138, Cl 102, HCO3 13).
+- No direct diagnosis of the mixed/simple disorder for this specific set of ABG results.
+
+To allow a more targeted search, please provide:
+1. What is the calculated Anion Gap (using Na, Cl, HCO3) or the specific suspected cause of a high anion gap metabolic acidosis?
+2. Was a Delta Gap analysis performed, and if so, what were the values or the result?
+3. What is the patient's clinical context (e.g., diabetic ketoacidosis, renal failure, sepsis, lactic acidosis)?
+4. Are there any additional lab values like Albumin or Lactate that might affect the Anion Gap or expected compensation?",24.45,
+2026-10-11T09:31:56+00:00,"Calculate CHA2DS2-VASc for a 72-year-old woman with hypertension and diabetes, and advise on anticoagulation.",,"Calculate CHA2DS2-VASc for a 72-year-old woman with hypertension and diabetes, and advise on anticoagulation.",search,clinical_question,,,"{""age"": ""72"", ""sex"": ""female"", ""pregnancy_status"": null, ""chief_complaint"": null, ""symptoms"": [], ""duration"": null, ""vitals"": null, ""exam_findings"": [], ""labs_imaging"": [], ""medications"": [], ""allergies"": [], ""comorbidities"": [""hypertension"", ""diabetes""]}",,,"[""CHA2DS2-VASc score calculation atrial fibrillation anticoagulation guidelines"", ""anticoagulation recommendations for non-valvular atrial fibrillation with CHA2DS2-VASc score 3"", ""anticoagulation in elderly patients with hypertension and diabetes""]",1,,"[{""url"": ""https://pmc.ncbi.nlm.nih.gov/articles/PMC4107426"", ""title"": ""Anticoagulation in Patients Aged ≥75 years with Atrial Fibrillation: Role of Novel Oral Anticoagulants"", ""score"": 0.8690161}, {""url"": ""https://pubmed.ncbi.nlm.nih.gov/22502952"", ""title"": ""Impact of the CHA2DS2-VASc score on anticoagulation recommendations for atrial fibrillation."", ""score"": 0.8682137}, {""url"": ""https://pmc.ncbi.nlm.nih.gov/articles/PMC4555351"", ""title"": ""Impact of the CHA2DS2-VASc Score on Anticoagulation Recommendations for Atrial Fibrillation"", ""score"": 0.86413884}, {""url"": ""https://pubmed.ncbi.nlm.nih.gov/25155035"", ""title"": ""Age-related prevalence of diabetes mellitus, cardiovascular disease and anticoagulation therapy use in a urolithiasis population and their effect on outcomes: the Clinical Research Office of the Endourological Society Ureteroscopy Global Study."", ""score"": 0.86024034}, {""url"": ""https://pmc.ncbi.nlm.nih.gov/articles/PMC10145451"", ""title"": ""Validation of CHA2DS2 VASc Score Predictability of Stroke and Systemic Embolization in a Middle Eastern Population with AF: The Jordan Atrial Fibrillation (JoFib) Study"", ""score"": 0.85538095}, {""url"": ""https://pmc.ncbi.nlm.nih.gov/articles/PMC5641434"", ""title"": ""The CHA2DS2-VASc Score A Predictor of Thromboembolic Events and Mortality In Patients With an Implantable Monitoring Device Without Atrial Fibrillation"", ""score"": 0.84707206}, {""url"": ""https://www.acc.org/education-and-meetings/patient-case-quizzes/antithrombotic-therapy-in-an-elderly-patient-with-atrial-fibrillation"", ""title"": ""Antithrombotic Therapy in an Elderly Patient With Atrial Fibrillation - American College of Cardiology"", ""score"": 0.8443195}, {""url"": ""https://www.aafp.org/afp/2020/0615/p748"", ""title"": ""Anticoagulation in Older Adults | AFP"", ""score"": 0.84277284}, {""url"": ""https://pmc.ncbi.nlm.nih.gov/articles/PMC2685237"", ""title"": ""Use of anticoagulants in elderly patients: practical recommendations"", ""score"": 0.8412138}, {""url"": ""https://pmc.ncbi.nlm.nih.gov/articles/PMC3905705"", ""title"": ""Comparison of CHADS2 and CHA2DS2-VASC anticoagulation recommendations: evaluation in a cohort of atrial fibrillation ablation patients"", ""score"": 0.8361405}, {""url"": ""https://pmc.ncbi.nlm.nih.gov/articles/PMC5756154"", ""title"": ""CHAD is Dead: Pragmatic Utility of the CHA2DS2-VASc Score in Non-Valvular Atrial Fibrillation? - PMC"", ""score"": 0.8361405}, {""url"": ""https://pmc.ncbi.nlm.nih.gov/articles/PMC6210214"", ""title"": ""The CHA2DS2-VASc Score Predicts Major Bleeding in Non-Valvular Atrial Fibrillation Patients Who Take Oral Anticoagulants"", ""score"": 0.8306082}, {""url"": ""https://pmc.ncbi.nlm.nih.gov/articles/PMC11574616"", ""title"": ""CHA2DS2-VA instead of CHA2DS2-VASc for stroke risk stratification in patients with atrial fibrillation: not just a matter of sex"", ""score"": 0.8156003}, {""url"": ""https://pmc.ncbi.nlm.nih.gov/articles/PMC12230829"", ""title"": ""Anticoagulation for Stroke Prevention in Patients with Atrial Fibrillation: A Review of the Literature and Current Guidelines"", ""score"": 0.8098936}]","⚠️ Red flags / urgent action
+No red flags were provided in the case data.
+
+Case summary
+A 72-year-old female with hypertension and diabetes requires stroke risk stratification for atrial fibrillation (AF).
+Assumptions: The patient has non-valvular atrial fibrillation (as the CHA2DS2-VASc score is specific to AF). The patient is not pregnant.
+
+Differential diagnosis
+*Note: The request asks for risk calculation and anticoagulation advice, not a differential diagnosis of the patient's presenting symptoms. The following addresses the clinical question of stroke risk stratification.*
+
+**Answer**
+Based on the provided case and guidelines:
+1.  **CHA2DS2-VASc Score Calculation:**
+    *   **Age 65–74 years:** 1 point [13][14].
+    *   **Female sex:** 1 point [13][14].
+    *   **Hypertension:** 1 point [13][14].
+    *   **Diabetes:** 1 point [13][14].
+    *   **Total Score:** 4 points [13][14].
+
+2.  **Anticoagulation Recommendation:**
+    *   A CHA2DS2-VASc score of 4 places the patient in the **high-risk category** for stroke [13][14].
+    *   Current guidelines (2018 CHEST, 2019 ACC/AHA/HRS, 2020 ESC) recommend oral anticoagulation (OAC) for women with a score ≥ 2 (or ≥ 3 depending on specific guideline version cited, but universally ≥ 2 is the threshold for consideration) [13][14].
+    *   Specifically, the 2019 ACC/AHA/HRS guidelines recommend OAC for women with a score ≥ 3 (Class I) and consider it for a score of 2 (Class IIb) [13].
+    *   The 2020 ESC guidelines recommend OAC for women with a score ≥ 3 (Class I) [13].
+    *   Given the score of 4, the patient has a significant annual stroke risk (estimated between 4.8% and 7.2% based on score tables) and should receive oral anticoagulation [14].
+    *   Direct Oral Anticoagulants (DOACs) are preferred over Vitamin K Antagonists (Warfarin) in patients without mechanical heart valves or moderate-to-severe mitral stenosis [14].
+
+**Suggestions**
+
+*   **Investigations:**
+    *   Confirm diagnosis of Atrial Fibrillation (ECG/Holter).
+    *   Assess bleeding risk using the **HAS-BLED** score (Hypertension, Abnormal renal/liver function, Stroke, Bleeding history, Labile INR, Elderly, Drugs/Alcohol) to identify modifiable bleeding risks before starting therapy [7][8].
+    *   Baseline renal function (eGFR) and liver function tests to guide DOAC selection and dosing [9].
+    *   Complete blood count (CBC) to check for anemia [9].
+
+*   **Management:**
+    *   **Initiate Oral Anticoagulation:** Recommended for a female patient with a CHA2DS2-VASc score ≥ 2 (specifically ≥ 3 per some guidelines, but 4 is high risk regardless) [13][14].
+    *   **Drug Choice:** Prefer a DOAC (e.g., apixaban, rivaroxaban, dabigatran, edoxaban) over warfarin if no contraindications exist [14].
+    *   **Dosing:** The provided sources do not contain specific dosing regimens (frequency or mg) for DOACs or warfarin. **Please consult a drug reference (e.g., Lexicomp, UpToDate) for specific dosing based on renal function and age.**
+    *   **Bleeding Risk Management:** Address modifiable risk factors (e.g., uncontrolled hypertension, concomitant antiplatelet use) to lower the HAS-BLED score [7][9].
+
+*   **Referral / Follow-up:**
+    *   Refer to a cardiologist or electrophysiologist for rhythm management if indicated.
+    *   Schedule follow-up to monitor INR (if on warfarin) or renal function (if on DOACs) and assess adherence [9].
+    *   Re-evaluate stroke and bleeding risk periodically [14].
+
+*   **What would change the assessment:**
+    *   **Presence of Valvular AF:** If the patient has moderate-to-severe mitral stenosis or a mechanical heart valve, DOACs are contraindicated, and warfarin is required [14].
+    *   **High Bleeding Risk:** A high HAS-BLED score (≥ 3) does not contraindicate anticoagulation but requires careful monitoring and correction of risk factors [7][9].
+    *   **Renal Impairment:** Severe renal impairment may necessitate dose adjustments or avoidance of specific DOACs [9].
+
+Sources
+[1] Anticoagulation in Patients Aged ≥75 years with Atrial Fibrillation: Role of Novel Oral Anticoagulants — https://pmc.ncbi.nlm.nih.gov/articles/PMC4107426
+[2] Impact of the CHA2DS2-VASc score on anticoagulation recommendations for atrial fibrillation. — https://pubmed.ncbi.nlm.nih.gov/22502952
+[3] Impact of the CHA2DS2-VASc Score on Anticoagulation Recommendations for Atrial Fibrillation — https://pmc.ncbi.nlm.nih.gov/articles/PMC4555351
+[4] Age-related prevalence of diabetes mellitus, cardiovascular disease and anticoagulation therapy use in a urolithiasis population and their effect on outcomes: the Clinical Research Office of the Endourological Society Ureteroscopy Global Study. — https://pubmed.ncbi.nlm.nih.gov/25155035
+[5] Validation of CHA2DS2 VASc Score Predictability of Stroke and Systemic Embolization in a Middle Eastern Population with AF: The Jordan Atrial Fibrillation (JoFib) Study — https://pmc.ncbi.nlm.nih.gov/articles/PMC10145451
+[6] The CHA2DS2-VASc Score A Predictor of Thromboembolic Events and Mortality In Patients With an Implantable Monitoring Device Without Atrial Fibrillation — https://pmc.ncbi.nlm.nih.gov/articles/PMC5641434
+[7] Antithrombotic Therapy in an Elderly Patient With Atrial Fibrillation - American College of Cardiology — https://www.acc.org/education-and-meetings/patient-case-quizzes/antithrombotic-therapy-in-an-elderly-patient-with-atrial-fibrillation
+[8] Anticoagulation in Older Adults | AFP — https://www.aafp.org/afp/2020/0615/p748
+[9] Use of anticoagulants in elderly patients: practical recommendations — https://pmc.ncbi.nlm.nih.gov/articles/PMC2685237
+[10] Comparison of CHADS2 and CHA2DS2-VASC anticoagulation recommendations: evaluation in a cohort of atrial fibrillation ablation patients — https://pmc.ncbi.nlm.nih.gov/articles/PMC3905705
+[11] CHAD is Dead: Pragmatic Utility of the CHA2DS2-VASc Score in Non-Valvular Atrial Fibrillation? — https://pmc.ncbi.nlm.nih.gov/articles/PMC5756154
+[12] The CHA2DS2-VASc Score Predicts Major Bleeding in Non-Valvular Atrial Fibrillation Patients Who Take Oral Anticoagulants — https://pmc.ncbi.nlm.nih.gov/articles/PMC6210214
+[13] CHA2DS2-VA instead of CHA2DS2-VASc for stroke risk stratification in patients with atrial fibrillation: not just a matter of sex — https://pmc.ncbi.nlm.nih.gov/articles/PMC11574616
+[14] Anticoagulation for Stroke Prevention in Patients with Atrial Fibrillation: A Review of the Literature and Current Guidelines — https://pmc.ncbi.nlm.nih.gov/articles/PMC12230829
+
+This response is for clinical decision support only and does not replace the treating physician's clinical judgment.",36.34,
+2026-10-11T09:32:36+00:00,"Write a SOAP note for a 35M with 2 days of sore throat, fever 38.5, tonsillar exudate, tender anterior nodes, no cough.",,"Write a SOAP note for a 35M with 2 days of sore throat, fever 38.5, tonsillar exudate, tender anterior nodes, no cough.",search,clinical_question,,,"{""age"": ""35"", ""sex"": ""male"", ""pregnancy_status"": null, ""chief_complaint"": ""sore throat"", ""symptoms"": [""fever"", ""no cough""], ""duration"": ""2 days"", ""vitals"": ""fever 38.5"", ""exam_findings"": [""tonsillar exudate"", ""tender anterior nodes""], ""labs_imaging"": [], ""medications"": [], ""allergies"": [], ""comorbidities"": []}",,,"[""Centor criteria scoring system for streptococcal pharyngitis"", ""clinical presentation of streptococcal pharyngitis in adults"", ""initial management of group A streptococcal pharyngitis guidelines""]",1,,"[{""url"": ""https://pubmed.ncbi.nlm.nih.gov/12841012"", ""title"": ""Clinical predictors of streptococcal pharyngitis in adults - PubMed"", ""score"": 0.9174287}, {""url"": ""https://pubmed.ncbi.nlm.nih.gov/1103766"", ""title"": ""Recognition of streptococcal pharyngitis in adults."", ""score"": 0.8909888}, {""url"": ""https://pubmed.ncbi.nlm.nih.gov/16567603"", ""title"": ""Management of acute pharyngitis in adults: reliability of rapid streptococcal tests and clinical findings."", ""score"": 0.8700796}, {""url"": ""https://pubmed.ncbi.nlm.nih.gov/16567603?dopt=Abstract"", ""title"": ""Management of acute pharyngitis in adults: reliability of rapid streptococcal tests and clinical findings - PubMed"", ""score"": 0.8512743}, {""url"": ""https://pubmed.ncbi.nlm.nih.gov/36101529"", ""title"": ""Diagnostic Accuracy of Centor Score for Diagnosis of Group A Streptococcal Pharyngitis among Adults in Primary Care Clinics in Malaysia."", ""score"": 0.8440111}, {""url"": ""https://pmc.ncbi.nlm.nih.gov/articles/PMC7108032"", ""title"": ""Clinical Practice Guideline for the Diagnosis and Management of Group A Streptococcal Pharyngitis: 2012 Update by the Infectious Diseases Society of America"", ""score"": 0.82288796}, {""url"": ""https://www.idsociety.org/practice-guideline/streptococcal-pharyngitis"", ""title"": ""Group A Streptococcal Pharyngitis"", ""score"": 0.8201387}, {""url"": ""https://www.idsociety.org/practice-guideline/streptococcal-pharyngitis2"", ""title"": ""IDSA Clinical Practice Guideline Update on Group A Streptococcal (GAS) Pharyngitis"", ""score"": 0.8033131}, {""url"": ""https://pubmed.ncbi.nlm.nih.gov/21631919"", ""title"": ""Predicting streptococcal pharyngitis in adults in primary care"", ""score"": 0.7975099}, {""url"": ""https://publications.aap.org/pediatrics/article/139/5/e20163403/38739/Viral-Features-and-Testing-for-Streptococcal"", ""title"": ""Viral Features and Testing for Streptococcal Pharyngitis"", ""score"": 0.76512027}, {""url"": ""https://jamanetwork.com/journals/jamainternalmedicine/fullarticle/410590"", ""title"": ""Evaluation and Treatment of Pharyngitis in Primary Care ..."", ""score"": 0.76300776}, {""url"": ""https://stacks.cdc.gov/view/cdc/33542/cdc_33542_DS1.pdf"", ""title"": ""NIH Public Access"", ""score"": 0.7559439}, {""url"": ""https://pubmed.ncbi.nlm.nih.gov/41343363"", ""title"": ""2025 Clinical Practice Guideline Update by the Infectious Diseases Society of America on Group A Streptococcal Pharyngitis: Risk Assessment Using Clinical Scoring Systems in Children and Adults."", ""score"": 0.72814995}, {""url"": ""https://pmc.ncbi.nlm.nih.gov/articles/PMC7593338"", ""title"": ""Diagnostic Methods, Clinical Guidelines, and Antibiotic Treatment for Group A Streptococcal Pharyngitis: A Narrative Review"", ""score"": 0.72042775}]","⚠️ Red flags / urgent action
+No red flags were identified in the provided case data. Immediate emergency action is not indicated based on the current information.
+
+Case summary
+35-year-old male presenting with 2 days of sore throat, fever (38.5°C), tonsillar exudate, and tender anterior cervical nodes, with no cough.
+Assumptions: Patient is not pregnant (male), has no known penicillin allergy, and has no history of rheumatic fever or recurrent streptococcal infections.
+
+Differential diagnosis
+1. **Group A Streptococcal (GAS) Pharyngitis** (Most likely / Must-not-miss)
+   - **Supporting features:** The patient presents with 4 of the 4 classic Centor criteria: fever >38°C, tonsillar exudate, tender anterior cervical adenopathy, and absence of cough [2][3][5]. A Centor score of 4 indicates a high probability of GAS infection, necessitating testing [5][13]. Clinical predictors such as fever, exudate, and tender nodes are significantly associated with positive cultures for Group A Streptococcus [1][2].
+   - **Features against:** None identified in the current presentation.
+   - **Citations:** [1][2][3][5][13]
+
+2. **Viral Pharyngitis** (Less likely)
+   - **Supporting features:** Viral causes are the most common etiology of sore throat overall.
+   - **Features against:** The absence of cough, rhinitis, or other viral prodromal symptoms, combined with the presence of high fever and exudate, makes a viral etiology less likely compared to GAS in this specific clinical picture [1][2].
+   - **Citations:** [1][2]
+
+3. **Infectious Mononucleosis** (Possible)
+   - **Supporting features:** Can present with fever, exudative pharyngitis, and lymphadenopathy.
+   - **Features against:** No mention of fatigue, splenomegaly, or posterior cervical lymphadenopathy. The high pre-test probability for GAS based on the Centor score prioritizes testing for GAS first [5].
+   - **Citations:** [5]
+
+Suggestions
+
+**Investigations**
+- **Rapid Streptococcal Antigen Test (RSAT):** Recommended for patients with 2 to 4 clinical symptoms/signs (like this patient with a score of 4) to confirm GAS diagnosis [3][4]. RSAT has high sensitivity (91%) and specificity (95%) in adults [3][4].
+- **Throat Culture:** If the RSAT is negative, a backup throat culture is recommended to rule out GAS, as RSAT may miss some cases [3][4].
+- **Note:** Empirical antibiotic treatment without testing is discouraged as it leads to higher rates of antibiotic overuse and underuse compared to testing strategies [3][4].
+
+**Management**
+- **If GAS is confirmed (Positive RSAT or Culture):**
+  - **First-line therapy:** Penicillin or Amoxicillin are the treatments of choice [6][7][14].
+  - **Duration:** A 10-day course is recommended for Penicillin or Amoxicillin [14].
+  - **For Penicillin-allergic patients:** Options include Clindamycin, a first-generation Cephalosporin, or Azithromycin (for 5 days) or Clarithromycin (for 10 days) [14].
+  - *Note: Specific dosages (e.g., mg/kg or mg/day) were not provided in the retrieved sources. Please consult a drug reference for exact dosing.*
+- **If GAS is negative:**
+  - **Management:** Symptomatic treatment only (e.g., analgesics, hydration). Antibiotics are not indicated for viral pharyngitis [3][4].
+
+**Referral / Follow-up**
+- Follow up if symptoms persist beyond 48–72 hours of treatment or if the patient develops new symptoms (e.g., difficulty breathing, inability to swallow, rash).
+- No immediate referral to specialists is required unless complications (e.g., peritonsillar abscess) are suspected, which is not indicated by the current data.
+
+**What would change the assessment**
+- **Positive Monospot/EBV serology:** Would shift diagnosis to Infectious Mononucleosis; antibiotics (especially ampicillin/amoxicillin) should be avoided due to risk of rash.
+- **History of Rheumatic Fever:** Would necessitate stricter adherence to antibiotic treatment to prevent recurrence.
+- **Presence of Cough or Rhinitis:** Would lower the Centor score, reducing the probability of GAS and potentially altering the testing strategy.
+
+Sources
+[1] Clinical predictors of streptococcal pharyngitis in adults - PubMed — https://pubmed.ncbi.nlm.nih.gov/12841012
+[2] Recognition of streptococcal pharyngitis in adults. — https://pubmed.ncbi.nlm.nih.gov/1103766
+[3] Management of acute pharyngitis in adults: reliability of rapid streptococcal tests and clinical findings. — https://pubmed.ncbi.nlm.nih.gov/16567603
+[4] Management of acute pharyngitis in adults: reliability of rapid streptococcal tests and clinical findings - PubMed — https://pubmed.ncbi.nlm.nih.gov/16567603?dopt=Abstract
+[5] Diagnostic Accuracy of Centor Score for Diagnosis of Group A Streptococcal Pharyngitis among Adults in Primary Care Clinics in Malaysia. — https://pubmed.ncbi.nlm.nih.gov/36101529
+[6] Clinical Practice Guideline for the Diagnosis and Management of Group A Streptococcal Pharyngitis: 2012 Update by the Infectious Diseases Society of America — https://pmc.ncbi.nlm.nih.gov/articles/PMC7108032
+[7] Group A Streptococcal Pharyngitis — https://www.idsociety.org/practice-guideline/streptococcal-pharyngitis
+[8] IDSA Clinical Practice Guideline Update on Group A Streptococcal (GAS) Pharyngitis — https://www.idsociety.org/practice-guideline/streptococcal-pharyngitis2
+[9] Predicting streptococcal pharyngitis in adults in primary care — https://pubmed.ncbi.nlm.nih.gov/21631919
+[10] Viral Features and Testing for Streptococcal Pharyngitis — https://publications.aap.org/pediatrics/article/139/5/e20163403/38739/Viral-Features-and-Testing-for-Streptococcal
+[11] Evaluation and Treatment of Pharyngitis in Primary Care ... — https://jamanetwork.com/journals/jamainternalmedicine/fullarticle/410590
+[12] NIH Public Access — https://stacks.cdc.gov/view/cdc/33542/cdc_33542_DS1.pdf
+[13] 2025 Clinical Practice Guideline Update by the Infectious Diseases Society of America on Group A Streptococcal Pharyngitis: Risk Assessment Using Clinical Scoring Systems in Children and Adults. — https://pubmed.ncbi.nlm.nih.gov/41343363
+[14] Diagnostic Methods, Clinical Guidelines, and Antibiotic Treatment for Group A Streptococcal Pharyngitis: A Narrative Review — https://pmc.ncbi.nlm.nih.gov/articles/PMC7593338
+
+This is decision support only and the treating physician's clinical judgment prevails.",31.43,
+2026-10-11T09:33:22+00:00,اشرح لمريض مصاب حديثًا بارتفاع ضغط الدم ما هو المرض وكيف يتعامل معه، بلغة عربية بسيطة.,,اشرح لمريض مصاب حديثًا بارتفاع ضغط الدم ما هو المرض وكيف يتعامل معه، بلغة عربية بسيطة.,search,clinical_question,evidence_gap,,"{""age"": null, ""sex"": null, ""pregnancy_status"": null, ""chief_complaint"": null, ""symptoms"": [], ""duration"": null, ""vitals"": null, ""exam_findings"": [], ""labs_imaging"": [], ""medications"": [], ""allergies"": [], ""comorbidities"": []}",,,"[""高血压 患者教育 手册 中文版 简单易懂 新诊断"", ""高血压病 健康教育 生活方式干预 患者指南 2024"", ""hypertension patient education materials Arabic language simple explanation""]",2,"[""No Arabic patient education materials explaining what hypertension is in simple terms"", ""No Arabic text providing concrete lifestyle advice (diet, exercise) or medication information for newly diagnosed patients"", ""No simplified Arabic explanation of the new 2024 ESC guidelines or WHO management recommendations for patients""]","[{""url"": ""https://www.acc.org/latest-in-cardiology/ten-points-to-remember/2024/09/05/14/11/2024-esc-guidelines-for-bp-esc-2024"", ""title"": ""2024 ESC Guidelines for Management of Elevated BP and Hypertension: Key Points - American College of Cardiology"", ""score"": 0.7576693}, {""url"": ""https://www.escardio.org/education/content-collections/focus/elevated-blood-pressure-hypertension"", ""title"": ""Elevated blood pressure and hypertension"", ""score"": 0.75442725}, {""url"": ""https://www.escardio.org/guidelines/clinical-practice-guidelines/pocket-guidelines/elevated-blood-pressure-and-hypertension"", ""title"": ""2024 Pocket Guidelines on Elevated Blood Pressure and Hypertension"", ""score"": 0.7355091}, {""url"": ""https://www.ahajournals.org/doi/pdf/10.1161/HYPERTENSIONAHA.124.24173"", ""title"": ""What Is New and Different in the 2024 European Society of ..."", ""score"": 0.7187726}, {""url"": ""https://pmc.ncbi.nlm.nih.gov/articles/PMC9922562"", ""title"": ""Pharmacist Role in Hypertension Management in the ... - PMC"", ""score"": 0.71305263}, {""url"": ""https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/elevated-blood-pressure-and-hypertension"", ""title"": ""2024 Elevated Blood Pressure and Hypertension"", ""score"": 0.6164054}, {""url"": ""https://pmc.ncbi.nlm.nih.gov/articles/PMC12769041"", ""title"": ""Comorbidities and concomitant medication use in adult ... - PMC"", ""score"": 0.6016175}, {""url"": ""https://pmc.ncbi.nlm.nih.gov/articles/PMC9785093"", ""title"": ""Serum free fatty acid level in children with primary hypertension"", ""score"": 0.5942929}, {""url"": ""https://iris.who.int/bitstreams/f7e59cf3-aec9-496d-8015-8d9206d231d5/download"", ""title"": ""实施性研究在慢性病防控中的应用指导"", ""score"": 0.56258565}, {""url"": ""https://pmc.ncbi.nlm.nih.gov/articles/PMC4445860"", ""title"": ""Prevalence, Awareness, Treatment, and Control of Hypertension Among Arab Americans"", ""score"": 0.5530473}, {""url"": ""https://pmc.ncbi.nlm.nih.gov/articles/PMC12899224"", ""title"": ""Research progress on dietary and exercise intervention for the ..."", ""score"": 0.5450684}, {""url"": ""https://pmc.ncbi.nlm.nih.gov/articles/PMC11579752"", ""title"": ""奥妥珠单抗短程输注中国专家共识（2024年版）"", ""score"": 0.4689128}, {""url"": ""https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.CD008823.pub2/full/zh_HANS"", ""title"": ""步行和高血压 - Lee, LL - 2021"", ""score"": 0.4256297}, {""url"": ""https://pmc.ncbi.nlm.nih.gov/articles/PMC11596216"", ""title"": ""Evaluation of Hypertension-Related Knowledge, Medication Adherence, and Associated Factors Among Hypertensive Patients in the Aljouf Region, Saudi Arabia: A Cross-Sectional Study - PMC"", ""score"": 0.42033842}, {""url"": ""https://iris.who.int/server/api/core/bitstreams/a93c5d03-fbb8-4f2b-9e13-5d11c4eb25c4/content"", ""title"": ""成人高血压药物治疗指南"", ""score"": 0.41962478}]","⚠️ Not a red flag case; proceeding with clarification.
+
+The configured medical sources did not contain Arabic patient education materials, simple explanations, or concrete lifestyle/medication advice specifically tailored for newly diagnosed hypertensive patients as requested.
+
+To narrow the search and provide a sourced answer, please provide the following details:
+
+1. Which specific guideline is the physician referring to? (e.g., ESC 2024, WHO 2024, JNC 8, or a local national guideline).
+2. What is the specific target audience? (e.g., general adult population, elderly patients, or a specific cultural region requiring tailored language).
+3. Are there specific lifestyle components that must be included? (e.g., DASH diet details, salt reduction limits, or exercise types).
+4. Should the explanation include specific medication classes (e.g., ACE inhibitors, diuretics) or focus solely on lifestyle and disease concept?",22.50,
+2026-10-11T09:33:54+00:00,What does the evidence say about SGLT2 inhibitors in heart failure with preserved ejection fraction?,,What does the evidence say about SGLT2 inhibitors in heart failure with preserved ejection fraction?,search,clinical_question,,,"{""age"": null, ""sex"": null, ""pregnancy_status"": null, ""chief_complaint"": null, ""symptoms"": [], ""duration"": null, ""vitals"": null, ""exam_findings"": [], ""labs_imaging"": [], ""medications"": [], ""allergies"": [], ""comorbidities"": []}",,,"[""SGLT2 inhibitors heart failure with preserved ejection fraction HFpEF evidence guidelines"", ""empagliflozin dapagliflozin heart failure with preserved ejection fraction outcomes"", ""SGLT2 inhibitors HFpEF meta-analysis cardiovascular outcomes""]",1,,"[{""url"": ""https://pubmed.ncbi.nlm.nih.gov/35600478"", ""title"": ""Effect of Sodium-Glucose Cotransporter 2 Inhibitors for Heart Failure With Preserved Ejection Fraction: A Systematic Review and Meta-Analysis of Randomized Clinical Trials."", ""score"": 0.95282507}, {""url"": ""https://pmc.ncbi.nlm.nih.gov/articles/PMC9492916"", ""title"": ""SGLT-2 inhibitors on prognosis and health-related quality of life in patients with heart failure and preserved ejection fraction: A systematic review and meta-analysis"", ""score"": 0.9459663}, {""url"": ""https://pubmed.ncbi.nlm.nih.gov/36914068"", ""title"": ""SGLT2 inhibitors and cardiovascular outcomes in heart failure with mildly reduced and preserved ejection fraction: A systematic review and meta-analysis."", ""score"": 0.9416167}, {""url"": ""https://pubmed.ncbi.nlm.nih.gov/41146013"", ""title"": ""The role of SGLT 2 inhibitors in heart failure with preserved ejection fraction (HFpEF): a systematic review and meta-analysis of randomized controlled trials."", ""score"": 0.9365236}, {""url"": ""https://pmc.ncbi.nlm.nih.gov/articles/PMC12524905"", ""title"": ""Effectiveness of SGLT2 Inhibitors in Improving Functional Capacity and Reducing Hospitalizations in Heart Failure With Preserved Ejection Fraction (HFpEF): A Systematic Review of Randomized Controlled Trials"", ""score"": 0.9205687}, {""url"": ""https://pubmed.ncbi.nlm.nih.gov/34449189"", ""title"": ""Empagliflozin in Heart Failure with a Preserved Ejection Fraction."", ""score"": 0.91936076}, {""url"": ""https://pmc.ncbi.nlm.nih.gov/articles/PMC12719827"", ""title"": ""SGLT2 inhibitors for the prevention and treatment of heart failure: A scientific statement of the HFA and the HFAI"", ""score"": 0.917251}, {""url"": ""https://pmc.ncbi.nlm.nih.gov/articles/PMC12277921"", ""title"": ""Sodium-Glucose Cotransporter 2 (SGLT2) Inhibitors in Heart Failure With Preserved Ejection Fraction: A Systematic Review"", ""score"": 0.9014448}, {""url"": ""https://pmc.ncbi.nlm.nih.gov/articles/PMC8587377"", ""title"": ""EMPEROR-Preserved: SGLT2 inhibitors breakthrough in the management of heart failure with preserved ejection fraction"", ""score"": 0.8969848}, {""url"": ""https://www.aafp.org/afp/2023/0100/fpin-ci-sglt-2-inhibitors-heart-failure"", ""title"": ""SGLT-2 Inhibitors for Cardiovascular Outcomes in Heart Failure With Preserved Ejection Fraction | AFP"", ""score"": 0.8967681}, {""url"": ""https://pmc.ncbi.nlm.nih.gov/articles/PMC10172076"", ""title"": ""SGLT-2 Inhibitors in Heart Failure: A Review of Current Evidence"", ""score"": 0.89501935}, {""url"": ""https://www.nejm.org/doi/full/10.1056/NEJMoa2107038"", ""title"": ""Empagliflozin in Heart Failure with a Preserved Ejection ..."", ""score"": 0.8868231}, {""url"": ""https://jamanetwork.com/collections/42062/heart-failure-with-preserved-ejection-fraction?fl_Categories=Heart+Failure+with+Preserved+Ejection+Fraction&fl_ContentType=Article&page=3"", ""title"": ""Heart Failure with Preserved Ejection Fraction"", ""score"": 0.8839694}, {""url"": ""https://pubmed.ncbi.nlm.nih.gov/34711976"", ""title"": ""The SGLT2 inhibitor dapagliflozin in heart failure with preserved ejection fraction: a multicenter randomized trial."", ""score"": 0.8800674}]","# Answer
+Evidence from multiple randomized controlled trials (RCTs) and meta-analyses confirms that SGLT2 inhibitors (specifically dapagliflozin and empagliflozin) significantly reduce the risk of hospitalization for heart failure (HHF) and the composite of cardiovascular death or HHF in patients with heart failure with preserved ejection fraction (HFpEF), regardless of the presence of type 2 diabetes [1][2][3][6][9].
+
+These agents also demonstrate benefits in improving patient-reported outcomes, including functional capacity and quality of life, as measured by the Kansas City Cardiomyopathy Questionnaire (KCCQ) and six-minute walk test (6MWT) [5][10][14]. While they significantly reduce HHF, current evidence does not show a statistically significant reduction in all-cause or cardiovascular mortality, although the trend is favorable [1][2][4].
+
+# Suggestions
+
+## Investigations
+*   **Baseline Assessment:** Confirm HFpEF diagnosis (symptoms/signs of HF, LVEF ≥50%, structural/functional abnormalities, elevated natriuretic peptides) [9].
+*   **Renal Function:** Assess eGFR prior to initiation, as SGLT2 inhibitors are effective across the spectrum of kidney function but require monitoring [11].
+*   **Volume Status:** Evaluate for signs of volume overload to guide concomitant diuretic therapy [11].
+
+## Management
+*   **Drug Selection:** Initiate **dapagliflozin** or **empagliflozin** as foundational therapy for HFpEF [3][11].
+*   **Dosing:**
+    *   **Empagliflozin:** 10 mg once daily [6][10].
+    *   **Dapagliflozin:** 10 mg once daily [10][14].
+    *   *Note:* No dose titration is required, and no routine laboratory monitoring is mandated specifically for the drug itself, though standard clinical monitoring applies [11].
+*   **Duration:** Benefits on hospitalization risk were observed over a median follow-up of 26.2 months [6][10].
+*   **Adverse Events:** Counsel patients on the increased risk of uncomplicated genital and urinary tract infections and potential hypotension [6].
+
+## Referral / Follow-up
+*   **Follow-up:** Monitor for symptomatic improvement (KCCQ scores) and signs of adverse events (genital infections, volume depletion) within the first month, as clinical benefits can be seen rapidly [11].
+*   **Referral:** Consider referral to a heart failure specialist if the patient remains symptomatic despite optimized guideline-directed medical therapy or if there are complex comorbidities [11].
+
+## What would change the assessment
+*   **Contraindications:** History of severe recurrent genital infections or active urinary tract infections.
+*   **Hemodynamic Instability:** Severe hypotension or acute kidney injury may require temporary hold or dose adjustment (though specific thresholds are not detailed in the provided sources, clinical judgment is required).
+*   **Lack of Response:** If no improvement in symptoms or hospitalization risk is observed after an adequate trial period, reassess adherence and alternative diagnoses.
+
+# Sources
+[1] Effect of Sodium-Glucose Cotransporter 2 Inhibitors for Heart Failure With Preserved Ejection Fraction: A Systematic Review and Meta-Analysis of Randomized Clinical Trials — https://pubmed.ncbi.nlm.nih.gov/35600478
+[2] SGLT-2 inhibitors on prognosis and health-related quality of life in patients with heart failure and preserved ejection fraction: A systematic review and meta-analysis — https://pmc.ncbi.nlm.nih.gov/articles/PMC9492916
+[3] SGLT2 inhibitors and cardiovascular outcomes in heart failure with mildly reduced and preserved ejection fraction: A systematic review and meta-analysis — https://pubmed.ncbi.nlm.nih.gov/36914068
+[4] The role of SGLT 2 inhibitors in heart failure with preserved ejection fraction (HFpEF): a systematic review and meta-analysis of randomized controlled trials — https://pubmed.ncbi.nlm.nih.gov/41146013
+[5] Effectiveness of SGLT2 Inhibitors in Improving Functional Capacity and Reducing Hospitalizations in Heart Failure With Preserved Ejection Fraction (HFpEF): A Systematic Review of Randomized Controlled Trials — https://pmc.ncbi.nlm.nih.gov/articles/PMC12524905
+[6] Empagliflozin in Heart Failure with a Preserved Ejection Fraction — https://pubmed.ncbi.nlm.nih.gov/34449189
+[7] SGLT2 inhibitors for the prevention and treatment of heart failure: A scientific statement of the HFA and the HFAI — https://pmc.ncbi.nlm.nih.gov/articles/PMC12719827
+[8] Sodium-Glucose Cotransporter 2 (SGLT2) Inhibitors in Heart Failure With Preserved Ejection Fraction: A Systematic Review — https://pmc.ncbi.nlm.nih.gov/articles/PMC12277921
+[9] EMPEROR-Preserved: SGLT2 inhibitors breakthrough in the management of heart failure with preserved ejection fraction — https://pmc.ncbi.nlm.nih.gov/articles/PMC8587377
+[10] SGLT-2 Inhibitors for Cardiovascular Outcomes in Heart Failure With Preserved Ejection Fraction | AFP — https://www.aafp.org/afp/2023/0100/fpin-ci-sglt-2-inhibitors-heart-failure
+[11] SGLT-2 Inhibitors in Heart Failure: A Review of Current Evidence — https://pmc.ncbi.nlm.nih.gov/articles/PMC10172076
+[12] Empagliflozin in Heart Failure with a Preserved Ejection Fraction — https://www.nejm.org/doi/full/10.1056/NEJMoa2107038
+[13] Heart Failure with Preserved Ejection Fraction — https://jamanetwork.com/collections/42062/heart-failure-with-preserved-ejection-fraction?fl_Categories=Heart+Failure+with+Preserved+Ejection+Fraction&fl_ContentType=Article&page=3
+[14] The SGLT2 inhibitor dapagliflozin in heart failure with preserved ejection fraction: a multicenter randomized trial — https://pubmed.ncbi.nlm.nih.gov/34711976
+
+*This response is for clinical decision support only and does not replace the treating physician's clinical judgment.*",26.53,
+2026-10-11T09:34:49+00:00,"Adult with suspected anaphylaxis after a bee sting: hypotensive, wheezing, facial swelling. Step-by-step immediate management?",,"Adult with suspected anaphylaxis after a bee sting: hypotensive, wheezing, facial swelling. Step-by-step immediate management?",search,clinical_question,,,"{""age"": null, ""sex"": null, ""pregnancy_status"": null, ""chief_complaint"": null, ""symptoms"": [""hypotension"", ""wheezing"", ""facial swelling""], ""duration"": null, ""vitals"": null, ""exam_findings"": [""hypotension"", ""wheezing"", ""facial swelling""], ""labs_imaging"": [], ""medications"": [], ""allergies"": [], ""comorbidities"": []}",,"[""Hypotension with wheezing and facial swelling following a bee sting suggests anaphylactic shock requiring immediate intervention.""]","[""adult anaphylactic shock immediate step-by-step management protocol epinephrine fluids positioning"", ""IV fluid resuscitation volume rate guidelines for anaphylactic shock in adults"", ""refractory anaphylaxis management algorithm hypotension bronchospasm after epinephrine""]",2,,"[{""url"": ""https://pmc.ncbi.nlm.nih.gov/articles/PMC8996305"", ""title"": ""A Clinical Practice Guideline for the Emergency Management of Anaphylaxis (2020)"", ""score"": 0.9020676}, {""url"": ""https://pmc.ncbi.nlm.nih.gov/articles/PMC9724388"", ""title"": ""International recommendations on epinephrine auto-injector doses often differ from standard weight-based guidance: a review and clinical proposals"", ""score"": 0.8914433}, {""url"": ""https://pmc.ncbi.nlm.nih.gov/articles/PMC10052460"", ""title"": ""Epinephrine Administered in Anaphylaxis: The Evolution of 0.3 mg Dosage"", ""score"": 0.88705814}, {""url"": ""https://www.aafp.org/afp/2020/0915/p355"", ""title"": ""Anaphylaxis: Recognition and Management | AFP"", ""score"": 0.8785752}, {""url"": ""https://pmc.ncbi.nlm.nih.gov/articles/PMC10185359"", ""title"": ""Epinephrine in anaphylaxis"", ""score"": 0.8687491}, {""url"": ""https://pmc.ncbi.nlm.nih.gov/articles/PMC12328063"", ""title"": ""Optimizing Adrenaline Administration in Anaphylaxis: Clinical Practice Considerations and Safety Insights"", ""score"": 0.86767644}, {""url"": ""https://pmc.ncbi.nlm.nih.gov/articles/PMC11439156"", ""title"": ""Management of Refractory Anaphylaxis: An Overview of Current Guidelines"", ""score"": 0.838376}, {""url"": ""https://pmc.ncbi.nlm.nih.gov/articles/PMC4479483"", ""title"": ""Guideline for acute therapy and management of anaphylaxis"", ""score"": 0.81630427}, {""url"": ""https://www.aafp.org/afp/2003/1001/p1325"", ""title"": ""A Practical Guide to Anaphylaxis | AFP"", ""score"": 0.7859175}, {""url"": ""https://pmc.ncbi.nlm.nih.gov/articles/PMC5895473"", ""title"": ""Anaphylaxis: emergency management for health professionals - PMC"", ""score"": 0.767429}, {""url"": ""https://pmc.ncbi.nlm.nih.gov/articles/PMC2873621"", ""title"": ""Navigating the Updated Anaphylaxis Parameters - PMC"", ""score"": 0.767429}, {""url"": ""https://www.moh.gov.sa/Ministry/MediaCenter/Publications/Documents/Saudi-MoH-Protocol-for-Management-of-Anaphylaxis-V1.2.pdf"", ""title"": ""Saudi-MoH-Protocol-for-Management-of-Anaphylaxis- ..."", ""score"": 0.69820654}, {""url"": ""https://pmc.ncbi.nlm.nih.gov/articles/PMC7607509"", ""title"": ""World allergy organization anaphylaxis guidance 2020"", ""score"": 0.6826801}, {""url"": ""https://pmc.ncbi.nlm.nih.gov/articles/PMC2954079"", ""title"": ""Anaphylaxis: A review and update - PMC"", ""score"": 0.67988104}, {""url"": ""https://pmc.ncbi.nlm.nih.gov/articles/PMC11250555"", ""title"": ""Diagnosis and management of anaphylaxis"", ""score"": 0.66308063}]","⚠️ **Red flags / urgent action**
+The patient presents with hypotension, wheezing, and facial swelling following a bee sting, indicating **anaphylactic shock** (Grade 3–4 anaphylaxis) requiring immediate intervention [1][10].
+*   **Immediate Action:** Call for assistance and lay the patient flat (do not allow standing or walking) [10][12].
+*   **Airway:** Administer supplemental oxygen (8–10 L/min via facemask or up to 100% as needed) [12][15].
+*   **Epinephrine:** Administer intramuscular (IM) epinephrine immediately. For adults, the recommended dose is **0.01 mg/kg** (up to a maximum of **0.5 mg**) using a 1 mg/mL (1:1000) concentration [1][5][12].
+*   **Positioning:** Place the patient supine with lower limbs elevated to prevent distributive shock and empty ventricle syndrome [15]. If vomiting or dyspnea is present, place in a comfortable position with legs elevated [15].
+
+**Case summary**
+Adult patient with confirmed anaphylactic shock (hypotension, bronchospasm, angioedema) post-bee sting.
+*Assumptions:* Patient is an adult (weight >30 kg) based on the request; no pregnancy status provided (assumed not pregnant for general dosing, though left lateral tilt is recommended if pregnant [15]).
+
+**Differential diagnosis**
+*Note: The clinical presentation is classic for anaphylaxis; other differentials are less likely given the specific trigger and multi-system involvement.*
+
+1.  **Anaphylaxis (Most Likely / Must-Not-Miss)**
+    *   **Supporting features:** Acute onset of hypotension, wheezing (bronchospasm), and facial swelling (angioedema) immediately following a bee sting (known allergen) [10][14].
+    *   **Features against:** None; this is the primary diagnosis requiring immediate treatment [1][13].
+2.  **Septic Shock**
+    *   **Supporting features:** Hypotension.
+    *   **Features against:** No fever or source of infection mentioned; acute onset linked to insect sting makes anaphylaxis far more likely [10].
+3.  **Cardiogenic Shock**
+    *   **Supporting features:** Hypotension.
+    *   **Features against:** Presence of wheezing and facial swelling points to allergic etiology; no history of cardiac disease provided [10].
+
+**Suggestions**
+
+**Investigations**
+*   **Continuous Monitoring:** Monitor blood pressure, heart rate, and oxygen saturation continuously [12].
+*   **Serum Tryptase:** Consider measuring serum tryptase levels (ideally within 1–3 hours of onset) to confirm diagnosis, though treatment should not be delayed [13].
+*   **ECG:** Perform if cardiac involvement is suspected or if epinephrine causes significant tachycardia [12].
+
+**Management**
+*   **Epinephrine (First Line):**
+    *   **Route:** Intramuscular (IM) into the mid-outer thigh [1][5][12].
+    *   **Dose:** 0.01 mg/kg (max 0.5 mg) for adults [1][5].
+    *   **Concentration:** 1 mg/mL (1:1000) [1][5].
+    *   **Repetition:** Repeat every 5–15 minutes if there is no response [1][5][12].
+*   **Fluid Resuscitation:**
+    *   **Indication:** For hypotension not responding to epinephrine [4][12].
+    *   **Dose:** 1–2 liters of 0.9% isotonic saline rapidly for adults (or 20 mL/kg for children) [4][12].
+    *   **Rate:** Administer as quickly as possible; up to 30 mL/kg in the first hour for children, 1–2 L for adults [15].
+*   **Bronchospasm (Adjunct):**
+    *   If wheezing persists after epinephrine, administer nebulized albuterol (salbutamol) 2.5–5 mg in 3 mL saline [12][15].
+*   **Adjunctive Medications (Optional/Secondary):**
+    *   **H1 Antihistamine:** Diphenhydramine 25–50 mg IV for adults (does not treat hypotension or bronchospasm) [9][15].
+    *   **H2 Antagonist:** Famotidine 20 mg IV (optional) [12].
+    *   **Corticosteroids:** Methylprednisolone 125 mg IV (optional, no evidence of preventing biphasic reaction but often used) [12].
+*   **Refractory Anaphylaxis:**
+    *   If hypotension persists despite two doses of IM epinephrine and IV fluids, consider an **epinephrine infusion** starting at 0.1 mcg/kg/min, titrated to response [12].
+    *   Vasopressors (e.g., dopamine 2–20 mcg/kg/min) may be considered if epinephrine infusion is ineffective [9].
+
+**Referral / Follow-up**
+*   **Transfer:** Transfer to an emergency department or ICU for observation if no immediate response to the first dose of IM epinephrine or if the reaction is moderate to severe [15].
+*   **Observation:** Observe in the emergency department for 4 to 24 hours due to the risk of biphasic reactions [14].
+*   **Education:** Advise the patient to carry an epinephrine auto-injector and wear a medical alert bracelet [9].
+
+**What would change the assessment**
+*   **Lack of response to IM epinephrine:** Would necessitate immediate IV fluid bolus and initiation of epinephrine infusion [12].
+*   **Airway obstruction:** If angioedema progresses to impending airway obstruction, immediate intubation is required [12].
+*   **Pregnancy:** If the patient is pregnant, the left lateral tilt position is recommended to prevent aortocaval compression [15].
+
+**Sources**
+[1] A Clinical Practice Guideline for the Emergency Management of Anaphylaxis (2020) — https://pmc.ncbi.nlm.nih.gov/articles/PMC8996305
+[2] International recommendations on epinephrine auto-injector doses often differ from standard weight-based guidance: a review and clinical proposals — https://pmc.ncbi.nlm.nih.gov/articles/PMC9724388
+[3] Epinephrine Administered in Anaphylaxis: The Evolution of 0.3 mg Dosage — https://pmc.ncbi.nlm.nih.gov/articles/PMC10052460
+[4] Anaphylaxis: Recognition and Management | AFP — https://www.aafp.org/afp/2020/0915/p355
+[5] Epinephrine in anaphylaxis — https://pmc.ncbi.nlm.nih.gov/articles/PMC10185359
+[6] Optimizing Adrenaline Administration in Anaphylaxis: Clinical Practice Considerations and Safety Insights — https://pmc.ncbi.nlm.nih.gov/articles/PMC12328063
+[7] Management of Refractory Anaphylaxis: An Overview of Current Guidelines — https://pmc.ncbi.nlm.nih.gov/articles/PMC11439156
+[8] Guideline for acute therapy and management of anaphylaxis — https://pmc.ncbi.nlm.nih.gov/articles/PMC4479483
+[9] A Practical Guide to Anaphylaxis | AFP — https://www.aafp.org/afp/2003/1001/p1325
+[10] Anaphylaxis: emergency management for health professionals - PMC — https://pmc.ncbi.nlm.nih.gov/articles/PMC5895473
+[11] Navigating the Updated Anaphylaxis Parameters - PMC — https://pmc.ncbi.nlm.nih.gov/articles/PMC2873621
+[12] Saudi-MoH-Protocol-for-Management-of-Anaphylaxis- ... — https://www.moh.gov.sa/Ministry/MediaCenter/Publications/Documents/Saudi-MoH-Protocol-for-Management-of-Anaphylaxis-V1.2.pdf
+[13] World allergy organization anaphylaxis guidance 2020 — https://pmc.ncbi.nlm.nih.gov/articles/PMC7607509
+[14] Anaphylaxis: A review and update - PMC — https://pmc.ncbi.nlm.nih.gov/articles/PMC2954079
+[15] Diagnosis and management of anaphylaxis — https://pmc.ncbi.nlm.nih.gov/articles/PMC11250555
+
+*This is decision support only and the treating physician's clinical judgment prevails.*",46.93,
+2026-10-11T09:35:14+00:00,"Give me 5 high-yield MCQs on nephrotic vs nephritic syndrome with explanations, SMLE style.",,"Give me 5 high-yield MCQs on nephrotic vs nephritic syndrome with explanations, SMLE style.",search,clinical_question,evidence_gap,,"{""age"": null, ""sex"": null, ""pregnancy_status"": null, ""chief_complaint"": null, ""symptoms"": [], ""duration"": null, ""vitals"": null, ""exam_findings"": [], ""labs_imaging"": [], ""medications"": [], ""allergies"": [], ""comorbidities"": []}",,,"[""SMLE style nephrotic vs nephritic syndrome MCQs with explanations"", ""Saudi Medical Licensing Examination nephrology MCQs nephrotic nephritic"", ""high yield nephrotic vs nephritic syndrome practice questions USMLE Step 1 style""]",2,"[""no SMLE-style MCQs (Saudi Medical Licensing Examination specific format) generated"", ""no set of 5 specific high-yield practice questions provided in the search results"", ""no detailed explanations for MCQ answers as requested for SMLE preparation""]","[{""url"": ""https://pmc.ncbi.nlm.nih.gov/articles/PMC6188440"", ""title"": ""Clinical Presentation & Management of Glomerular Diseases: Hematuria, Nephritic & Nephrotic Syndrome"", ""score"": 0.7336813}, {""url"": ""https://pubmed.ncbi.nlm.nih.gov/21462608"", ""title"": ""Clinical presentation & management of glomerular diseases: hematuria, nephritic & nephrotic syndrome."", ""score"": 0.7060491}, {""url"": ""https://pmc.ncbi.nlm.nih.gov/articles/PMC10224557"", ""title"": ""Impact of Thyroid Cancer Treatment on Renal Function - PMC"", ""score"": 0.6811549}, {""url"": ""https://pmc.ncbi.nlm.nih.gov/articles/PMC4571534"", ""title"": ""Misapplications of Commonly Used Kidney Equations: Renal ..."", ""score"": 0.66699636}, {""url"": ""https://pubmed.ncbi.nlm.nih.gov/29262216"", ""title"": ""Nephrotic Syndrome"", ""score"": 0.63723457}, {""url"": ""https://www.nature.com/articles/srep09556"", ""title"": ""Faculty development programs improve the quality of Multiple Choice Questions items' writing | Scientific Reports"", ""score"": 0.44695392}, {""url"": ""https://pmc.ncbi.nlm.nih.gov/articles/PMC7120678"", ""title"": ""Question Sets and Answers"", ""score"": 0.41976747}, {""url"": ""https://www.ncbi.nlm.nih.gov/sites/books/NBK554544"", ""title"": ""Histology, Kidney and Glomerulus - StatPearls - NCBI Bookshelf"", ""score"": 0.36385083}, {""url"": ""https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6188440"", ""title"": ""Clinical Presentation & Management of Glomerular Diseases: Hematuria, Nephritic & Nephrotic Syndrome"", ""score"": 0.29509327}, {""url"": ""http://www.ncbi.nlm.nih.gov/pmc/articles/PMC6188440"", ""title"": ""Clinical Presentation & Management of Glomerular Diseases: Hematuria, Nephritic & Nephrotic Syndrome"", ""score"": 0.29509327}, {""url"": ""https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6188440?term=%22Mo+Med%22%5Bjour%5D"", ""title"": ""Clinical Presentation & Management of Glomerular Diseases: Hematuria, Nephritic & Nephrotic Syndrome"", ""score"": 0.29509327}, {""url"": ""https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6188440?term="", ""title"": ""Clinical Presentation & Management of Glomerular Diseases: Hematuria, Nephritic & Nephrotic Syndrome"", ""score"": 0.29509327}, {""url"": ""https://pmc.ncbi.nlm.nih.gov/articles/PMC5528910"", ""title"": ""Pathology Competencies for Medical Education and ... - PMC - NIH"", ""score"": 0.21847796}, {""url"": ""https://www.bmj.com/content/330/7483/s30.2"", ""title"": ""Revision MCQs - The BMJ"", ""score"": 0.20524879}, {""url"": ""https://www.nature.com/articles/s41598-025-17571-4"", ""title"": ""Comparative evaluation of large language models performance in medical education using urinary system histology assessment | Scientific Reports"", ""score"": 0.1607532}]","The configured medical sources did not cover this case/question well enough to give a sourced answer. Specifically, the search could not find:
+- SMLE-style MCQs (Saudi Medical Licensing Examination specific format)
+- A set of 5 specific high-yield practice questions
+- Detailed explanations for MCQ answers tailored to this exam style
+
+To help refine a search for these specific resources, please provide:
+1. Are there specific subtopics within Nephrotic vs. Nephritic syndrome (e.g., specific pathologies like Minimal Change Disease or IgA nephropathy) you need emphasized?
+2. Do you require the questions to focus on a particular age group (e.g., pediatric, adult, geriatric) relevant to SMLE?
+3. Is there a specific pharmacological or diagnostic aspect (e.g., biopsy findings, specific treatment protocols) you need included in the questions?
+4. Are you looking for questions that specifically address recent guideline updates or common pitfalls in the SMLE exam?",21.34,

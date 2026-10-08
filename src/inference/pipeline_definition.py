@@ -24,25 +24,32 @@ class PipelineDefinition:
         if self._initialized:
             return
 
+        # Qwen3/3.5 on vLLM otherwise writes its chain of thought into `content`.
+        extra_body = {"chat_template_kwargs": {"enable_thinking": False}}
+
         self.analyzer_llm = ChatOpenAI(
             api_key=settings.OPENAI_API_KEY,
             base_url=settings.OPENAI_BASE_URL,
+            extra_body=extra_body,
             model=settings.ANALYZER_MODEL,
         )
         self.contextualize_llm = ChatOpenAI(
             api_key=settings.OPENAI_API_KEY,
             base_url=settings.OPENAI_BASE_URL,
+            extra_body=extra_body,
             model=settings.CONTEXTUALIZE_MODEL,
             temperature=0,
         )
         self.assess_llm = ChatOpenAI(
             api_key=settings.OPENAI_API_KEY,
             base_url=settings.OPENAI_BASE_URL,
+            extra_body=extra_body,
             model=settings.ASSESS_MODEL,
         )
         self.generate_llm = ChatOpenAI(
             api_key=settings.OPENAI_API_KEY,
             base_url=settings.OPENAI_BASE_URL,
+            extra_body=extra_body,
             model=settings.GENERATE_MODEL,
             temperature=settings.GENERATE_TEMPERATURE,
             streaming=True,
@@ -50,12 +57,14 @@ class PipelineDefinition:
         self.clarify_llm = ChatOpenAI(
             api_key=settings.OPENAI_API_KEY,
             base_url=settings.OPENAI_BASE_URL,
+            extra_body=extra_body,
             model=settings.CLARIFY_MODEL,
             streaming=True,
         )
         self.refuse_llm = ChatOpenAI(
             api_key=settings.OPENAI_API_KEY,
             base_url=settings.OPENAI_BASE_URL,
+            extra_body=extra_body,
             model=settings.REFUSE_MODEL,
             streaming=True,
         )
