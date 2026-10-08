@@ -26,5 +26,8 @@ TODO.txt
 # logs
 logs
 
+# saved conversations (clinical text)
+data/
+
 # env
 .env

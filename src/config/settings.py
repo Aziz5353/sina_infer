@@ -30,6 +30,21 @@ class Settings:
             "on",
         )
 
+        self.SAVE_CONVERSATIONS = os.environ.get("SAVE_CONVERSATIONS", "false").strip().lower() in (
+            "1",
+            "true",
+            "yes",
+            "on",
+        )
+        # Only used to name the conversations file, e.g. data/conversations_gpt-5.1.csv
+        generation_model_name = os.environ.get("GENERATION_MODEL_NAME", "").strip()
+        default_csv_name = (
+            f"conversations_{generation_model_name}.csv" if generation_model_name else "conversations.csv"
+        )
+        self.CONVERSATIONS_CSV_PATH = os.environ.get(
+            "CONVERSATIONS_CSV_PATH", f"data/{default_csv_name}"
+        )
+
         # CORS
         self.CORS_ALLOWED_ORIGINS = _csv(
             os.environ.get("CORS_ALLOWED_ORIGINS", "http://localhost:4200")

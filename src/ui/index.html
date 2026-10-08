@@ -37,7 +37,11 @@
         --shadow: 0 0 0 1px rgba(255,255,255,.06);
       }
     }
-    * { box-sizing: border-box; }
+    :root { color-scheme: light dark; }
+    * { box-sizing: border-box; scrollbar-width: thin; scrollbar-color: var(--border) transparent; }
+    *::-webkit-scrollbar { width: 8px; height: 8px; }
+    *::-webkit-scrollbar-track { background: transparent; }
+    *::-webkit-scrollbar-thumb { background: var(--border); border-radius: 8px; }
     html, body { height: 100%; margin: 0; }
     body {
       background: var(--bg);
@@ -131,7 +135,7 @@
     /* Empty state */
     .empty {
       flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center;
-      gap: 24px; padding: 16px; text-align: center;
+      gap: 24px; padding: 16px; text-align: center; overflow-y: auto; min-height: 0; justify-content: safe center;
     }
     .empty h1 { font-size: 28px; font-weight: 500; margin: 0; }
     .suggestions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; max-width: 640px; width: 100%; }
@@ -140,6 +144,7 @@
       font-size: 14px; color: var(--muted);
     }
     .suggestion:hover { background: var(--hover); color: var(--text); }
+    .suggestion .tag { display: block; font-size: 12px; font-weight: 500; color: var(--text); margin-bottom: 4px; }
     .hidden { display: none !important; }
 
     /* Composer */
@@ -203,8 +208,16 @@
     <section class="empty" id="empty">
       <h1>صف الحالة السريرية أو اطرح سؤالك</h1>
       <div class="suggestions">
-        <button class="suggestion" dir="auto">45M, 2h crushing chest pain radiating to left arm, diaphoretic, BP 150/95</button>
-        <button class="suggestion" dir="auto">ما جرعة amoxicillin للأطفال في acute otitis media؟</button>
+        <button class="suggestion" dir="auto"><span class="tag">التشخيص والتشخيص التفريقي</span><span class="q">28F, 3 days of fever, dysuria, and right flank pain. Temp 38.9, HR 112. What is the differential and the most likely diagnosis?</span></button>
+        <button class="suggestion" dir="auto"><span class="tag">العلاج والإرشادات</span><span class="q">What is the current first-line management of newly diagnosed type 2 diabetes with HbA1c 8.5% and established ASCVD?</span></button>
+        <button class="suggestion" dir="auto"><span class="tag">معلومات الأدوية</span><span class="q">ما جرعة amoxicillin للأطفال في acute otitis media؟ وهل تحتاج تعديلًا في القصور الكلوي؟</span></button>
+        <button class="suggestion" dir="auto"><span class="tag">تفسير التحاليل والفحوصات</span><span class="q">Interpret these ABG results: pH 7.28, PaCO2 28, HCO3 13, Na 138, Cl 102. What is the acid-base disorder?</span></button>
+        <button class="suggestion" dir="auto"><span class="tag">الحاسبات والمقاييس السريرية</span><span class="q">Calculate CHA2DS2-VASc for a 72-year-old woman with hypertension and diabetes, and advise on anticoagulation.</span></button>
+        <button class="suggestion" dir="auto"><span class="tag">التوثيق والمهام الإدارية</span><span class="q">Write a SOAP note for a 35M with 2 days of sore throat, fever 38.5, tonsillar exudate, tender anterior nodes, no cough.</span></button>
+        <button class="suggestion" dir="auto"><span class="tag">التواصل مع المريض</span><span class="q">اشرح لمريض مصاب حديثًا بارتفاع ضغط الدم ما هو المرض وكيف يتعامل معه، بلغة عربية بسيطة.</span></button>
+        <button class="suggestion" dir="auto"><span class="tag">الأدلة والأبحاث</span><span class="q">What does the evidence say about SGLT2 inhibitors in heart failure with preserved ejection fraction?</span></button>
+        <button class="suggestion" dir="auto"><span class="tag">الطوارئ والتدخل العاجل</span><span class="q">Adult with suspected anaphylaxis after a bee sting: hypotensive, wheezing, facial swelling. Step-by-step immediate management?</span></button>
+        <button class="suggestion" dir="auto"><span class="tag">التعليم والتحضير للاختبارات</span><span class="q">Give me 5 high-yield MCQs on nephrotic vs nephritic syndrome with explanations, SMLE style.</span></button>
       </div>
     </section>
 
@@ -480,7 +493,7 @@
     }
     els.input.addEventListener("input", autoGrow);
 
-    document.querySelectorAll(".suggestion").forEach((b) => (b.onclick = () => send(b.textContent)));
+    document.querySelectorAll(".suggestion").forEach((b) => (b.onclick = () => send(b.querySelector(".q").textContent)));
     $("newChat").onclick = newConversation;
     $("newChatIcon").onclick = newConversation;
     $("closeSidebar").onclick = () => document.body.classList.add("sidebar-closed");

@@ -17,3 +17,5 @@ docker-compose.yml
 .DS_Store
 .vscode/
 .idea/
+data/
+logs/

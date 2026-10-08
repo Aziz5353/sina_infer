@@ -112,6 +112,8 @@ Optional:
 | `CORS_ALLOWED_ORIGINS` | `http://localhost:4200` | Comma-separated allowed origins |
 | `LOG_LEVEL` | `INFO` | Console log level |
 | `LOG_TO_FILE` | `false` | Also write `logs/app-debug.log` and `logs/app-info.log` (rotating, 50 MB × 3) |
+| `SAVE_CONVERSATIONS` | `false` | Append one row per `/chat` turn to a CSV for offline evaluation (see [Conversation dataset](#conversation-dataset)) |
+| `CONVERSATIONS_CSV_PATH` | `data/conversations.csv` | Where that CSV is written |
 
 Do **not** commit `.env`; keys belong only in the local file.
 
@@ -123,7 +125,7 @@ Local:
 uvicorn src.main:app --reload
 ```
 
-Docker (container `sina-infer`, port 8000, `./logs` mounted):
+Docker (container `sina-infer`, port 8000, `./logs` and `./data` mounted):
 
 ```bash
 docker compose up --build
@@ -159,6 +161,8 @@ If many requests end in `clarify reason=evidence_gap`, widen `SEARCH_ALLOWED_DOM
 - `INFO` logs carry no clinical text: only route, query type, counts (case fields filled, missing items, red flags, queries, results), search domains, attempts, sufficiency, answer length and durations.
 - Full messages, case objects, queries, prompts and answers are logged only at `DEBUG`. With `LOG_TO_FILE=true`, `logs/app-debug.log` contains them, so treat that file as sensitive.
 
+- With `SAVE_CONVERSATIONS=true`, `data/conversations.csv` stores full messages and answers. It is git-ignored; treat it as sensitive.
+
 Each node writes one log line per request. Useful greps:
 
 ```bash
@@ -168,6 +172,20 @@ docker logs sina-infer | grep "search |"           # attempt, queries, new/total
 docker logs sina-infer | grep "assess_evidence |"  # results, sufficient, gaps, refined queries
 docker logs sina-infer | grep "generate |"         # web results, context size, answer length
 docker logs sina-infer | grep "clarify |"          # reason (case_gap / evidence_gap), counts, answer length
+```
+
+## Conversation dataset
+
+With `SAVE_CONVERSATIONS=true`, every `/chat` turn is appended to `CONVERSATIONS_CSV_PATH` once the stream ends (also when the client disconnects or the graph fails; `error` then holds the exception name). Columns:
+
+`timestamp`, `message`, `history`, `standalone_message`, `route`, `query_type`, `clarify_reason`, `refusal_reason`, `case`, `missing_critical_info`, `red_flags`, `search_queries`, `search_attempts`, `evidence_gaps`, `sources` (`url`, `title`, `score`), `answer`, `latency_s`, `error`.
+
+List and dict columns are JSON strings:
+
+```python
+import json, pandas as pd
+df = pd.read_csv("data/conversations.csv")
+df["sources"] = df["sources"].fillna("[]").map(json.loads)
 ```
 
 ## Tests
