@@ -1,22 +1,27 @@
-# Sina evaluation: GPT-5.1 vs Qwen3.5-35B-A3B
+# Sina evaluation: Qwen3.5-35B-A3B vs GPT-5.1
 
 **Goal of this evaluation:** get the highest-quality results from Sina running fully on the self-hosted Qwen model, since that is the deployment target.
 
-Evaluated on 2026-10-11. Each answer is checked against the question asked, current clinical guidance, and Sina's own prompt contract (`src/config/constants.py`).
+Evaluated on 2026-10-12. Each answer is checked against the question asked, current clinical guidance, and Sina's own prompt contract (`src/config/constants.py`).
 
 ---
 
 ## 1. Runs compared
 
-| Run | Data file | Turns | Models per node |
-|---|---|---|---|
-| **A. GPT** | `data/conversations_gpt-5.1.csv` (2026-10-08) | 10 | gpt-4o-mini for analyzer, contextualize, assess, clarify, refuse; **gpt-5.1** for generate only |
-| **B. Qwen, thinking ON** | *(overwritten by run C; scores kept from the first evaluation)* | 7 | Qwen for every node; chain of thought leaked into every answer |
-| **C. Qwen, thinking OFF** | `data/conversations_qwen3.5-35b-a3b.csv` (2026-10-11 09:29) | 10 | Qwen for every node, `enable_thinking: False` |
+| | **GPT-5.1** | **Qwen3.5-35B-A3B** |
+|---|---|---|
+| Data file | `data/conversations_gpt-5.1.csv`, all 10 rows | `data/conversations_qwen3.5-35b-a3b_v3.csv`, **last 10 rows only** (rows 31–40) |
+| Date | 2026-10-08 | 2026-10-12 |
+| Graph | Old graph: contextualize → analyzer → search ⇄ assess evidence (up to 2 search rounds) → generate, with clarify and refuse branches | plan → retrieve → answer |
+| Models | gpt-4o-mini for analyzer, contextualize, assess, clarify and refuse; **gpt-5.1** for generate only | **Qwen3.5-35B-A3B-FP8** on vLLM (served as `qwen3`, thinking off) for plan and answer; temperature 0 for both |
+| Model calls per answered turn | 4–5 | 2 |
+| Code | Before the graph redesign | Commit `0538226` plus the three calculation prompt edits described in section 6 |
 
-**Model identity.** The vLLM endpoint serves the model under the name `qwen3`. `/v1/models` reports `root: Qwen/Qwen3.5-35B-A3B-FP8`: a mixture-of-experts model with 35B total and about 3B active parameters, FP8-quantized. The first run was mislabelled "qwen3-8b".
+The same 10 questions were asked in both runs, each in a new conversation (no history).
 
-**Caveat.** Each question was run once, and web search returns different sources on each run. Some differences between runs come from retrieval variance rather than the model; Q3 is the clearest example. Where this matters it is called out.
+**What this comparison is and is not.**
+- It compares two complete systems. The model **and** the pipeline differ, so the total score gap cannot be credited to the model alone. Section 4 separates the two where possible.
+- Each system ran each question once. Search results vary between runs. The Qwen rows used here are the third of three repeats on the same code; the other two scored 75 and 74, so this run is representative.
 
 ---
 
@@ -38,214 +43,164 @@ Verdicts: **PASS** ≥ 7, **PARTIAL** 4–6, **FAIL** ≤ 3.
 
 ## 3. Results
 
-| # | Question | A. GPT | B. Qwen (thinking) | **C. Qwen (no thinking)** | C route / outcome |
+| # | Question | GPT-5.1 | **Qwen** | GPT-5.1 outcome | Qwen outcome |
 |---|---|---|---|---|---|
-| 1 | Pyelonephritis case | 8 | 7 | **9** | answered |
-| 2 | T2DM + ASCVD first-line | 6 | 9 | **7** | answered |
-| 3 | Amoxicillin dose for pediatric AOM + renal (Arabic) | 2 | 8 | **2** | evidence-gap clarify ❌ |
-| 4 | ABG interpretation | 2 | 3 | **1** | evidence-gap clarify ❌ |
-| 5 | CHA2DS2-VASc + anticoagulation | 9 | 9 | **7** | answered |
-| 6 | SOAP note, sore throat | 1 | 4 | **6** | answered, but not as a SOAP note |
-| 7 | Hypertension explanation for a patient (Arabic) | 1 | 2 | **2** | evidence-gap clarify ❌ |
-| 8 | SGLT2i in HFpEF | 9 | – | **8** | answered |
-| 9 | Anaphylaxis management | 9 | – | **9** | answered |
-| 10 | SMLE MCQs nephrotic vs nephritic | 1 | – | **1** | evidence-gap clarify ❌ |
-| | **Total** | **48 / 100** | 42 / 70 | **52 / 100** | |
+| 1 | Pyelonephritis case | **8** | 7 | answered | answered (consult) |
+| 2 | T2DM + ASCVD first-line | 8 | 8 | answered | answered (consult) |
+| 3 | Amoxicillin for pediatric AOM + renal (Arabic) | 1 | **8** | evidence-gap clarify, in English | answered, in Arabic |
+| 4 | ABG interpretation | 1 | **9** | evidence-gap clarify | answered (calculation) |
+| 5 | CHA2DS2-VASc + anticoagulation | **8** | 6 | answered | answered (calculation) |
+| 6 | SOAP note, sore throat | 1 | **5** | refused as "non-medical" | answered (SOAP note) |
+| 7 | Hypertension explained to a patient (Arabic) | 1 | **8** | refused | answered (patient explanation), in Arabic |
+| 8 | SGLT2i in HFpEF | **9** | 8 | answered | answered (consult) |
+| 9 | Anaphylaxis management | **9** | 8 | answered | answered (consult) |
+| 10 | SMLE MCQs, nephrotic vs nephritic | 1 | **8** | refused | answered (5 MCQs) |
+| | **Total** | **47 / 100** | **75 / 100** | | |
 
 ### Key metrics
 
-| Metric | A. GPT | C. Qwen (no thinking) |
+| Metric | GPT-5.1 | Qwen |
 |---|---|---|
-| Total score | 48 / 100 | **52 / 100** |
-| PASS / PARTIAL / FAIL | 4 / 1 / 5 | 5 / 1 / 4 |
-| Head-to-head on the 5 questions both models answered (Q1, 2, 5, 8, 9) | **41 / 50** | 40 / 50 |
-| Wrong refusals | 3 | **0** |
-| Unnecessary "evidence gap" clarifications | 2 | **4** |
-| Replied in the wrong language | 1 (Q3) | 2 (Q3, Q7) |
-| Mean latency, all turns | 22.7 s (refusals took about 3.6 s) | 30.8 s |
-| Mean latency, generated answers | 35.5 s | 36.6 s |
-| Reasoning leak | none | **none (fixed)** |
+| Total score | 47 / 100 | **75 / 100** |
+| PASS / PARTIAL / FAIL | 5 / 0 / 5 | **8 / 2 / 0** |
+| Questions answered | 5 / 10 | **10 / 10** |
+| Wrong refusals | 3 (Q6, Q7, Q10) | **0** |
+| Unnecessary clarifications | 2 (Q3, Q4) | **0** |
+| Replied in the wrong language | 1 (Q3) | **0** |
+| **Head-to-head on the 5 questions both answered** (Q1, 2, 5, 8, 9) | **42 / 50** | 37 / 50 |
+| Mean latency, all turns | 22.7 s (refusals took about 3.7 s) | **15.8 s** |
+| Mean latency, answered turns | 35.5 s | **15.8 s** |
+| Mean answer length on Q1, 2, 5, 8, 9 | 7,870 characters | 4,250 characters |
+| Runs on own hardware | no | **yes** |
 
-### What the numbers say
-
-1. **When Qwen writes the final answer, it is on par with GPT-5.1** (40 vs 41 out of 50 on the same five questions). Qwen is better on pyelonephritis and anaphylaxis dosing, and GPT is better on CHA2DS2-VASc and HFpEF guideline context. **The model is not the bottleneck.**
-2. **The pipeline is the bottleneck.** In run C, 4 of the 10 questions never reached the generate step: the evidence assessor declared a gap and sent the request to clarify. Those 4 turns account for 6 of the 52 points. If they were answered at the quality of the other turns (about 8 each), Qwen would score **about 80/100**. This is an estimate.
-3. **Disabling thinking fixed the leak and halved latency** (66 s → 31 s). On the 7 questions shared with run B, the score dropped from 42 to 34. Part of that is retrieval variance: in Q3, run C did not retrieve the amoxicillin monograph and label that run B had. Part is lower reasoning quality in the generate and assess steps (Q2 and Q5 are less current and less precise). See enhancement M1.
-4. **Over-refusal is gone with Qwen** (0 wrong refusals vs 3 with gpt-4o-mini). The same tasks now fail one step later, at the evidence check.
+GPT-5.1 scores were re-checked for this report and differ slightly from the earlier version: Q2 6 → 8, Q3 and Q4 2 → 1, Q5 9 → 8 (total 48 → 47).
 
 ---
 
-## 4. Per-question detail for run C (Qwen, thinking off), with GPT comparison
+## 4. What the numbers say
 
-### Q1. 28F, fever, dysuria, right flank pain, T 38.9, HR 112. **C: 9 (PASS)** · A: 8
-
-- ✔ Most likely: acute pyelonephritis. Red flag raised: possible sepsis, consider admission.
-- ✔ **Pregnancy test listed as critical.** Run A missed this. The analyzer also flagged "pregnancy status" as missing, but still routed to search and stated the assumption, which is correct behavior.
-- ✔ Urinalysis, urine culture and blood cultures. CT or ultrasound if complicated. FQ 5–7 d or TMP-SMX 14 d. Ceftriaxone if admitted. Re-evaluate at 48 h.
-- ✗ "Complicated UTI / urosepsis" is listed as a separate differential; it is a severity grade, not a different diagnosis. Pyonephrosis, renal abscess and renal infarction are not named, and ectopic pregnancy/PID only appear as "gynecological".
-- ✗ The source list includes uncited and irrelevant items (pediatric UTI, an AKI case report).
-
-### Q2. T2DM, HbA1c 8.5%, established ASCVD. **C: 7 (PASS)** · A: 6 · B: 9
-
-- ✔ Metformin plus an immediate SGLT2i or GLP-1 RA with proven CV benefit, regardless of HbA1c. Early combination therapy at 8.5%. Insulin threshold (HbA1c >10% or catabolic symptoms). High-intensity statin.
-- ✗ **Relies on older sources** (ADA 2018, 2020 and 2021 abridged) even though **ADA 2025 Standards [8][9] and the 2026 CKM guideline [13] were retrieved**. It therefore misses the current position: SGLT2i/GLP-1 RA are recommended *independent of metformin*, and metformin is no longer a prerequisite. Run B got this right.
-- ✗ **Format:** prints "⚠️ Red flags: none" and a **"Differential diagnosis" section** (type 1 diabetes as "must-not-miss") for a general clinical question.
-
-### Q3. (Arabic) Amoxicillin dose for children with AOM; renal adjustment? **C: 2 (FAIL)** · A: 2 · B: 8
-
-- ✗ The assessor declared an evidence gap because no source gave **pediatric renal dosing**. The **first half of the question, the AOM dose (80–90 mg/kg/day), was answerable** from the retrieved sources (AFP 2019 otitis review, Italian consensus, the high-dose papers), but the whole answer was withheld.
-- ✗ The clarify reply is **in English** for an Arabic question. Its questions are poor; for example, it asks the doctor which guideline to prioritize.
-- Retrieval differed from run B: this run fetched amoxicillin-clavulanate labels instead of the amoxicillin monograph.
-
-### Q4. ABG pH 7.28 / PaCO2 28 / HCO3 13 / Na 138 / Cl 102. **C: 1 (FAIL)** · A: 2 · B: 3
-
-- Reference answer: primary metabolic acidosis. Winter's expected PaCO2 = 27.5 ± 2, so compensation is appropriate. AG = 23 → high anion gap metabolic acidosis. Delta-delta ≈ 1, so no second metabolic disorder.
-- ✗ Evidence-gap clarify again ("no source with the Winter's result for these values"). The clarify reply **asks the doctor to calculate the anion gap and delta gap**, which is the very task Sina was asked to do. This is worse than runs A and B.
-- The retrieved sources (MSD Manual, StatPearls AG, AFP 2025 acid-base approach) contained every formula needed.
-
-### Q5. CHA2DS2-VASc, 72F, HTN, DM. **C: 7 (PASS)** · A: 9 · B: 9
-
-- ✔ Score of 4. OAC recommended. DOAC preferred, with the valve/mitral stenosis exception. HAS-BLED and renal function.
-- ✗ Muddled threshold text ("≥2 or ≥3 depending on guideline… universally ≥2"). Cites the 2019 ACC/AHA and 2020 ESC guidelines, and **ignores source [13], which is specifically about the 2024 shift to CHA2DS2-VA**. Run B used it.
-- ✗ "Annual stroke risk 4.8–7.2%" is not verifiable from the cited text. It assumes "not pregnant" for a 72-year-old. Same format issues as Q2 (empty red-flag header, a "Differential diagnosis" note).
-
-### Q6. SOAP note, 35M with sore throat. **C: 6 (PARTIAL)** · A: 1 · B: 4
-
-- ✔ Not refused, and no hallucinated "missing duration". Centor 4/4. Strep (GAS) pharyngitis vs viral vs EBV. Rapid antigen test. Penicillin or amoxicillin for 10 days. Allergy alternatives (azithromycin 5 d). Avoid amoxicillin if EBV.
-- ✗ **Not written as a SOAP note.** It used the generic differential template, because the generate prompt has only one output format.
-- ✗ **Clinical error:** "If RADT negative, backup throat culture is recommended." IDSA recommends backup culture for **children and adolescents only, not adults**.
-- query_type was classified as `clinical_question` even though the request describes a specific patient.
-
-### Q7. (Arabic) Explain hypertension to a newly diagnosed patient. **C: 2 (FAIL)** · A: 1 · B: 2
-
-- ✔ No longer refused.
-- ✗ **The analyzer wrote 2 of its 3 search queries in Chinese** ("高血压 患者教育 …"), which pulled in Chinese WHO documents and an unrelated Chinese oncology consensus.
-- ✗ The assessor then looked for "Arabic patient-education material", did not find any, and declared a gap. The ESC 2024 hypertension guideline sources it had retrieved were enough to write the explanation.
-- ✗ The reply is in English for an Arabic request, and starts with a stray line: "⚠️ Not a red flag case; proceeding with clarification."
-
-### Q8. SGLT2i in HFpEF. **C: 8 (PASS)** · A: 9
-
-- ✔ Concise and correct: reduces HF hospitalization and the composite outcome regardless of diabetes, no significant mortality reduction, better KCCQ scores and 6-minute walk. Doses **empagliflozin 10 mg and dapagliflozin 10 mg once daily**, sourced. Median follow-up 26.2 months.
-- ✗ No guideline class of recommendation (ESC 2023 gives Class I), although the HFA statement [7] was retrieved. Less depth than run A on effect sizes (no HRs).
-
-### Q9. Anaphylaxis after a bee sting. **C: 9 (PASS)** · A: 9
-
-- ✔ IM epinephrine 0.01 mg/kg (max 0.5 mg), repeat every 5–15 min. Supine with legs raised. O2. 1–2 L crystalloid. Salbutamol 2.5–5 mg. Diphenhydramine 25–50 mg. **Famotidine 20 mg** (better than run A's withdrawn ranitidine). Epinephrine infusion from 0.1 µg/kg/min. Tryptase. Observe 4–24 h. Auto-injector. Most doses come from the Saudi MoH protocol, which is relevant locally.
-- ✗ Fluids are described as "for hypotension not responding to epinephrine"; with shock present they should start immediately alongside epinephrine. Glucagon for patients on β-blockers is missing. The septic/cardiogenic shock differential is padding.
-
-### Q10. 5 SMLE-style MCQs. **C: 1 (FAIL)** · A: 1
-
-- ✔ Not refused.
-- ✗ The assessor searched for **ready-made MCQs** and declared a gap when none were found. The glomerular disease review [1] had all the content needed to write them. The same article also appears **5 times** in the source list under different URLs.
+1. **The Qwen system wins by 28 points because it answers every question.** On the five questions the GPT system did not answer (Q3, Q4, Q6, Q7, Q10), Qwen scores 38 points against 5. On the five both answered, GPT-5.1 leads by 5.
+2. **The GPT system's failures came from its old pipeline, not from GPT-5.1.** gpt-4o-mini refused a SOAP note, a patient explanation and MCQs as "non-medical". The evidence assessor sent Q3 and Q4 to clarify because no source contained the finished answer, and asked the doctor about age, medications and "which severity". GPT-5.1 never saw those five questions.
+3. **When both answer, GPT-5.1 still writes the better answer** (42 vs 37). It is more complete on safety-critical details: immediate fluids, airway escalation and glucagon in anaphylaxis; DOAC preference and "no aspirin" for AF; guideline positions for HFpEF. Its costs are length (almost twice as long), padding (AKI guidelines in a pyelonephritis answer, a mechanisms section for HFpEF) and one withdrawn drug (ranitidine).
+4. **Qwen is more than twice as fast on answered turns** (15.8 s vs 35.5 s) with 2 model calls instead of 4–5, and it runs on self-hosted hardware.
+5. **Most of Qwen's remaining errors are copied from weak or old sources**, not invented: a repeat urine culture after treatment (AFP 2005), a backup throat culture for an adult (a Medscape calculator page), fluids held back until hypotension persists (AFP). Grounding works as designed, so what the model writes is only as current as the sources it is given (section 7).
+6. **Both systems miss the same things:** neither orders a pregnancy test in a 28-year-old woman with pyelonephritis, and neither names the 2024 ESC change to CHA2DS2-VA.
 
 ---
 
-## 5. Root causes in the Qwen pipeline
+## 5. Per-question detail
 
-| # | Root cause | Questions affected | Points lost (approx.) |
+### Q1. 28F, fever, dysuria, right flank pain, T 38.9, HR 112. GPT-5.1: 8 · Qwen: 7
+
+Reference: acute pyelonephritis; pregnancy test; urinalysis and urine culture before antibiotics (blood cultures if severe); oral FQ for 5–7 days, with a single parenteral dose (e.g. ceftriaxone) first where FQ resistance is >10%; imaging if septic, obstruction is suspected or no improvement at 48–72 h; admission criteria.
+
+- **GPT-5.1** ✔ Ranked differential including perinephric abscess, renal infarction and stones. Imaging only when septic, obstructed or not improving at 48–72 h. Outpatient vs admission criteria. Follow-up in 24–48 h. ✗ Pregnancy assumed negative, no test ordered. Durations from a 2001 review (FQ 7–14 d, TMP-SMX ≥14 d), and no initial parenteral dose for high resistance. KDIGO AKI guidelines cited as padding. Renal infarction supported by a case report.
+- **Qwen** ✔ Sepsis red flags. Culture before antibiotics. FQ for 7 days, plus a single ceftriaxone or aminoglycoside dose if FQ resistance is >10%. Admission criteria and imaging at 72 h. ✗ Pregnancy assumed negative; only named under "what would change the assessment". **Recommends a repeat urine culture 1–2 weeks after treatment** (AFP 2005; not recommended for non-pregnant women). Renal infarction listed from a single case report. Gynecological causes only mentioned generically (no PID or ectopic pregnancy).
+
+### Q2. T2DM, HbA1c 8.5%, established ASCVD. GPT-5.1: 8 · Qwen: 8
+
+Reference: a GLP-1 RA with proven CV benefit or an SGLT2i, independent of HbA1c and of metformin (ADA Standards); consider combination therapy at 8.5%; statin and other secondary prevention.
+
+- **GPT-5.1** ✔ Sets out both positions (metformin-first vs complication-centric). Says SGLT2i/GLP-1 RA are recommended independently of HbA1c and other glucose-lowering drugs. Recommends early combination with metformin. Statin and HbA1c target. ✗ Gives the older metformin-first position equal weight and relies on a Chinese consensus. Newest sources are from 2023. Long.
+- **Qwen** ✔ GLP-1 RA or SGLT2i first-line, independent of glycemic control, chosen by comorbidity. Names the GLP-1 RAs with proven CV benefit. Add the other class if above target. ✗ No statin. The contraindications bullet says it comes from "standard clinical knowledge": accurate, but it breaks the grounding rule. The plan searched for "ADA Standards of Care 2024" in 2026, and most cited sources are cohort studies.
+
+### Q3. (Arabic) Amoxicillin dose for children with AOM; renal adjustment? GPT-5.1: 1 · Qwen: 8
+
+Reference: 80–90 mg/kg/day in 2 divided doses; duration by age (10 d under 2 y, 7 d at 2–5 y, 5–7 d at 6 y and over); adjust only when GFR is <30 mL/min; the pediatric renal regimen comes from a drug reference.
+
+- **GPT-5.1** ✗ Evidence-gap clarify ("no specific pediatric dosing for amoxicillin in acute otitis media"). **Reply in English** to an Arabic question. Asks the doctor for age ranges, severity and other medications.
+- **Qwen** ✔ Fully Arabic. 80–90 mg/kg/day in two doses. Correct age-based durations. Names the adjustment threshold (GFR 10–30) from NICE CKS and says plainly that the sources lack a pediatric renal regimen, pointing to a drug reference. ✗ No watchful waiting or amoxicillin-clavulanate indication. One filler line on maximum dose.
+
+### Q4. ABG pH 7.28 / PaCO2 28 / HCO3 13 / Na 138 / Cl 102. GPT-5.1: 1 · Qwen: 9
+
+Reference: primary metabolic acidosis; AG 23, so high anion gap; Winter's 27.5 ± 2, so compensation is appropriate; delta ratio 11/11 = 1.0, so no additional metabolic disorder; next: lactate, ketones, renal function, osmolar gap, albumin.
+
+- **GPT-5.1** ✗ Evidence-gap clarify ("no specific interpretation for the given ABG values"). Asks for age, history and medications, none of which are needed to interpret an ABG.
+- **Qwen** ✔ Matches the reference in full, with every step's arithmetic shown, a Result consistent with the Working, and osmolar gap and albumin correction as next steps. ✗ Shows two delta methods; hedges the delta-ratio range ("1.0 to 2.0 depending on the guideline").
+
+### Q5. CHA2DS2-VASc, 72F, HTN, DM. GPT-5.1: 8 · Qwen: 6
+
+Reference: score 4; OAC recommended (ACC/AHA: ≥2 in men, ≥3 in women; 2024 ESC: CHA2DS2-VA = 3); DOAC over VKA except mechanical valve or moderate–severe mitral stenosis; no aspirin; bleeding-risk assessment; the score assumes AF.
+
+- **GPT-5.1** ✔ Score 4. Sex-specific thresholds. DOAC preferred, with the valve exception. No aspirin. States the AF assumption. ✗ No bleeding-risk assessment. No CHA2DS2-VA, although a 2024 ESC key-points source was retrieved.
+- **Qwen** ✔ Score 4 with each point shown. ACC/AHA sex-specific thresholds and the 2024 ESC threshold. HAS-BLED. ✗ **DOAC vs VKA left to "individual patient factors"** (DOACs are preferred). No aspirin statement. CHA2DS2-VA not named. AF not stated as an assumption.
+
+### Q6. SOAP note, 35M with sore throat. GPT-5.1: 1 · Qwen: 5
+
+Reference: S/O/A/P; Centor/McIsaac 4; rapid antigen test; **no backup culture in adults**; penicillin V or amoxicillin for 10 days; allergy alternatives; consider EBV.
+
+- **GPT-5.1** ✗ Refused as a "non-medical request".
+- **Qwen** ✔ Real S/O/A/P note with "not documented" for missing vitals. McIsaac 4. No empirical antibiotics (IDSA). Penicillin or amoxicillin first-line, macrolides only for allergy. ✗ **"If RADT is negative, confirm with a throat culture"** for an adult. Sinusitis self-care advice (warm facial packs, head of bed raised). No dose or duration. McIsaac age points garbled (the total is still right). No EBV.
+
+### Q7. (Arabic) Explain hypertension to a newly diagnosed patient. GPT-5.1: 1 · Qwen: 8
+
+Reference: plain Arabic; what blood pressure is and why it matters without symptoms; lifestyle with concrete targets; take medication even when feeling well; home monitoring; when to seek urgent care.
+
+- **GPT-5.1** ✗ Refused ("a medical explanation not suitable for clinical purposes"), in Arabic.
+- **Qwen** ✔ Simple, warm Arabic. Adherence, home BP monitoring, DASH, weight, exercise, smoking, stress and sleep, and emergency symptoms. No citation numbers in the patient text; the physician section is cited. ✗ No numbers (salt target, exercise minutes, target BP, 180/120). No emergency phone number.
+
+### Q8. SGLT2i in HFpEF. GPT-5.1: 9 · Qwen: 8
+
+Reference: EMPEROR-Preserved and DELIVER; composite HR about 0.80; benefit driven by HF hospitalization; no mortality reduction; better KCCQ; empagliflozin 10 mg or dapagliflozin 10 mg; ESC 2023 Class I, AHA 2022 Class 2a.
+
+- **GPT-5.1** ✔ HRs with confidence intervals. Mortality neutral. KCCQ and 6-minute walk. Renal outcomes, subgroups, the ESC 2023 update and a Class IIa position, plus safety. ✗ No doses. 10,500 characters, including a mechanisms section. Does not state ESC Class I.
+- **Qwen** ✔ Mortality neutral. Both trials named. HR range. 10 mg doses. Benefit across renal function. Monitoring. ✗ No class of recommendation ("aligns with major society recommendations").
+
+### Q9. Anaphylaxis after a bee sting. GPT-5.1: 9 · Qwen: 8
+
+Reference: call for help; remove the trigger; supine with legs raised; IM epinephrine 0.5 mg (0.01 mg/kg) in the anterolateral thigh, repeat every 5 min; high-flow oxygen; airway assessment and early intubation; **IV crystalloid bolus now** (the patient is hypotensive); salbutamol; IV epinephrine infusion if refractory; glucagon if on β-blockers; observation; auto-injectors; allergist and venom immunotherapy.
+
+- **GPT-5.1** ✔ Every reference step, in order, including immediate aggressive fluids and airway escalation up to cricothyrotomy. ✗ **Ranitidine** (withdrawn from the market) as the H2 option. No fluid volumes. About 9,000 characters is long for an emergency.
+- **Qwen** ✔ IM epinephrine. Legs raised. Call for help and prepare for an advanced airway. Repeat every 5–15 min. Salbutamol. IV infusion for refractory cases. Glucagon (flagged as not in the sources). Observation, two auto-injectors and allergist referral. ✗ **Fluids only "if hypotension persists despite epinephrine"**. "Or deltoid". No oxygen. Panic attack and vasovagal syncope as padding differentials.
+
+### Q10. 5 SMLE-style MCQs, nephrotic vs nephritic. GPT-5.1: 1 · Qwen: 8
+
+Reference: five vignettes testing different points (proteinuria >3.5 g/day, hypoalbuminemia, lipiduria vs hematuria, RBC casts, hypertension; typical causes by age; complications).
+
+- **GPT-5.1** ✗ Refused ("can't assist with creating MCQs").
+- **Qwen** ✔ Five vignettes with options A–E, answers and explanations, each testing a different point: minimal change disease, edema mechanism, thrombosis risk, diabetes as the commonest secondary cause, and oval fat bodies vs PSGN with low C3. ✗ Question 1 gives the threshold as >3.0 g/day (3.5 is standard).
+
+---
+
+## 6. The Qwen configuration in this run
+
+Compared with the old graph that the GPT run used:
+
+- **One planning call** replaces analyzer, contextualize and evidence assessment. Code guards: clarify only for a consult about a specific patient with something missing; search queries in non-Latin scripts dropped; reply language detected in code.
+- **No evidence assessor.** The answer step states what the sources did not cover and still answers the rest. This alone removed every unnecessary clarification.
+- **Answer layout per task, built in code** (consult, calculation, SOAP note, patient explanation, teaching), with localized headings. The Sources list is built from the citations actually used.
+- **Three prompt edits for calculations** (in `src/config/constants.py`), which fixed Q4. Without them, Q4 scored 4–5 in every recent run, because the model stated a wrong conclusion first and then corrected itself in the visible text:
+  1. `PLAN_PROMPT`: the `calculation` task lists examples (ABG / acid-base interpretation, anion gap, CrCl, corrected sodium or calcium, CHA2DS2-VASc, Wells, CURB-65).
+  2. `ANSWER_PROMPT`: never show drafts, corrections or a revised second version; work through the arithmetic before stating the conclusion.
+  3. Calculation layout: the Working section asks for the full method (for an ABG, including the delta ratio).
+
+---
+
+## 7. Remaining issues in the Qwen system
+
+| # | Issue | Questions | Root cause |
 |---|---|---|---|
-| R1 | **The evidence assessor expects a source to contain the finished output** (the calculation result, an Arabic leaflet, ready-made MCQs, every sub-answer), so the generate step never runs | Q3, Q4, Q7, Q10 | ~25 |
-| R2 | **A partial gap blocks the whole answer**: one unanswered sub-question means no answer at all | Q3 | (inside R1) |
-| R3 | **One output template for every task**: no SOAP, patient-education or MCQ formats, and empty red-flag and differential sections still printed | Q2, Q5, Q6 | ~4 |
-| R4 | **Older sources preferred over newer ones** that were also retrieved | Q2, Q5 | ~4 |
-| R5 | **Language drift**: Chinese search queries; English clarify replies to Arabic questions | Q3, Q7 | ~2 |
-| R6 | **Source list hygiene**: uncited sources listed, duplicates, irrelevant results | Q1, Q5, Q10 | ~1 |
-| R7 | Individual clinical slips (adult backup culture, fluid timing, glucagon missing) | Q6, Q9 | ~2 |
+| R1 | Outdated recommendations copied from old or non-guideline sources | Q1 (test-of-cure culture), Q6 (adult backup culture), Q9 (fluids delayed) | Sources are ranked by Tavily relevance only; the `nih.gov` whitelist admits all of PubMed/PMC (case reports, audits, single-center studies) |
+| R2 | Current guidelines missing from the source pool | Q5 (CHA2DS2-VA), Q6 (IDSA pharyngitis guideline) | Full texts of IDSA guidelines (*Clin Infect Dis*) and ESC guidelines (*Eur Heart J*) are hosted on `academic.oup.com`, which is not in `SEARCH_ALLOWED_DOMAINS` |
+| R3 | The answer step cannot tell old sources from new | Q1, Q2, Q6 | `render_context` passes title, URL and content, but no year or source type, so "follow the most recent guideline" cannot be applied |
+| R4 | Stale years in search queries | Q2, Q5, Q6, Q8, Q9 ("2024" in October 2026) | The plan step does not know today's date |
+| R5 | Queries for the output form instead of the clinical content | Q6 ("SOAP note structure"), Q10 ("high yield MCQs") | The prompt rule is not followed reliably |
+| R6 | Less complete than GPT-5.1 on safety-critical details | Q5, Q9 | Model and sources together; not separable with this data |
 
 ---
 
-## 6. Recommended enhancements
+## 8. Recommendations
 
-Ordered by expected impact on Qwen quality. "W" items change the workflow (code and prompts), "M" items change the model or how it is served.
+Ordered by expected value. All are small changes; none adds a model call.
 
-### W1. Make the evidence assessor task-aware *(fixes R1; biggest gain)*
+1. **Make evaluation cheap and repeatable first.** Run-to-run variance is about ±5 points and comes mostly from search results (at temperature 0, repeated answers on the same sources were identical for 8 of 10 questions), so smaller improvements cannot be seen today.
+   - Save each question's sources once and replay them, so prompt changes are judged against the same evidence in one run.
+   - Score answers automatically: must-contain facts (reuse the patterns in `scripts/retrieval_eval.py`) and must-not-say patterns (adult backup culture, repeat urine culture, "or deltoid", "contraindicated if eGFR <30").
+   - Add cases this set does not cover: one that should be clarified, one that should be refused, a two-turn follow-up and an Arabic patient case.
+2. **Improve the source pool (R1, R2).** Add `academic.oup.com` to `SEARCH_ALLOWED_DOMAINS`, and check `scripts/retrieval_eval.py` before and after. In `dedupe()`, boost guideline bodies and guideline titles, demote case reports, and demote sources older than about 10 years. Reserve the first source slots for the guideline query.
+3. **Show each source's year and type to the answer step (R3),** e.g. `[3] (2005, review) Title`, so the existing "most recent guideline wins" rule can actually be applied.
+4. **Fix queries in code (R4, R5).** Put today's date in `PLAN_PROMPT` (an earlier run showed it retrieves the ADA 2026 and AHA 2025 documents). In `_clean_queries`, remove output-form words (SOAP note, MCQ, patient education, "in Arabic").
+5. **Measure the model ceiling once.** Run the same 10 questions with GPT-5.1 as `ANSWER_MODEL` on the current pipeline (an `.env` change only). This shows how much of R6 is the model and whether a larger self-hosted model is worth evaluating.
+6. **Not a priority now:** thinking mode, a larger Qwen model, or a verification pass. The remaining errors are faithful copies of weak sources. A larger model would reproduce them, and a verification pass would confirm them, because the sources do say those things.
 
-File: `src/config/constants.py` (`ASSESS_PROMPT`), `src/inference/nodes/assess_evidence.py`.
-
-- Judge **whether the sources cover the underlying facts**, not whether they contain the finished product. Add to the prompt:
-  - Calculations and scores (ABG, CHA2DS2-VASc, CrCl, corrected Na/Ca): sufficient if the sources give the formula or criteria. The doctor's own values will never appear in a source.
-  - Composition tasks (SOAP note, patient explanation, MCQs, discharge letter): sufficient if the sources cover the clinical content. Language, reading level and format are Sina's job, not the source's.
-- Better still, have the analyzer output a `task_type` (`answer | calculate | document | educate | teach`) and pass it to the assessor and generate step.
-- **Search queries must always be in English.** Sources are English-only, so never search for "Arabic material".
-
-### W2. Allow partial answers instead of all-or-nothing *(fixes R2)*
-
-File: `src/inference/graph.py` (`_route_from_assess`), `GENERATE_PROMPT`.
-
-- After the final search attempt, **route to `generate` whenever any part of the question is covered**, and pass `evidence_gaps` to the generate step so it states the uncovered parts ("Pediatric renal dosing was not in the configured sources; check a drug reference"). The current prompt already has a rule for this ("If a section cannot be supported, say so briefly").
-- Send a request to `clarify` for an evidence gap only when **nothing** relevant was retrieved.
-
-### W3. Build the output template in code, per task *(fixes R3)*
-
-File: `src/inference/nodes/generate.py`, `GENERATE_PROMPT`.
-
-- Do not ask the model to skip sections conditionally; Qwen frequently ignores "ONLY when…" instructions. **Assemble the format section in Python**: include the red-flag section only if `red_flags` is non-empty, use "Differential diagnosis" vs "Answer" based on query_type, and switch to a SOAP, patient-education (plain language, no citations inline, doctor-facing note at the end) or MCQ template based on `task_type`.
-- Shorter, unconditional prompts are followed more reliably by smaller models.
-
-### W4. Prefer current guidance *(fixes R4)*
-
-File: `src/inference/context.py` (`render_web_results`), `src/inference/nodes/search.py`, `GENERATE_PROMPT`.
-
-- Include the **publication year** and **source type** (guideline / review / trial / label) for each source in the context, extracted from the URL, title or Tavily metadata.
-- Prompt rule: "When sources conflict, follow the most recent guideline from a major society; mention older positions only as history."
-- Sort guidelines and recent sources first, and drop results older than about 10 years unless no newer source covers the topic.
-
-### W5. Enforce language in code, not just the prompt *(fixes R5)*
-
-File: `src/inference/nodes/analyzer.py`, `clarify.py`, `refuse.py`.
-
-- Detect Arabic script in the message with a regex (`[؀-ۿ]`) and pass an explicit instruction to every user-facing node: "Respond in Arabic." This is more reliable than "respond in the user's language".
-- Validate the analyzer's search queries: if a query contains non-ASCII/CJK characters, drop it or fall back to a translated message. This would have prevented the Chinese queries in Q7.
-
-### W6. Render the Sources section in code *(fixes R6)*
-
-File: `src/inference/nodes/generate.py`, `search.py`.
-
-- Deduplicate search results by normalized URL and PMID/PMC ID in `search.py` (PMC6188440 appeared 5 times in Q10).
-- Have the model output only the body with `[n]` citations, then **build the Sources list from the numbers actually cited**. This removes uncited and irrelevant sources and guarantees that every citation resolves.
-
-### W7. Add a self-check step for safety-critical content *(fixes R7; optional)*
-
-- Add a short "verify" pass after generate. The same Qwen model checks each dose, threshold and recommendation against the cited source text and flags or removes unsupported ones. This targets slips like the adult backup culture. It costs one extra call of about 5–10 s.
-
-### M1. Turn thinking back on, but only where it pays, and without leaking it
-
-File: vLLM launch flags, `src/inference/pipeline_definition.py`.
-
-- Run B (thinking on) wrote better generate answers on Q2 and Q5 and judged evidence better on Q3. Run C is 2× faster.
-- Recommended setup: start vLLM with **`--reasoning-parser qwen3`**, so reasoning goes to `reasoning_content` and never reaches `content`. Then enable thinking **only for `assess_llm` and `generate_llm`**, and keep it off for analyzer, contextualize, clarify and refuse, which need speed, not depth.
-- Expected latency is roughly 40–50 s per answered question, in exchange for better currency and precision. Re-measure before adopting.
-
-### M2. Set sampling parameters explicitly
-
-File: `src/inference/pipeline_definition.py`.
-
-- `analyzer_llm` and `assess_llm` currently send no temperature, so the server's default applies. Set **`temperature=0`** (or 0.1) for analyzer, assess and contextualize so routing and gap decisions are deterministic.
-- For generate, follow Qwen's published recommendations for the chosen mode (non-thinking: about T 0.7 / top_p 0.8 / top_k 20; thinking: about T 0.6 / top_p 0.95 / top_k 20; check the model card). The current `GENERATE_TEMPERATURE=0.2` is fine for grounding, but very low temperatures can cause repetition with Qwen models. A/B test it.
-
-### M3. Consider a larger Qwen3.5 variant only after W1–W3
-
-- The head-to-head result (40 vs 41) shows Qwen3.5-35B-A3B already matches GPT-5.1 at writing grounded answers. Its weaknesses here are judgment calls (assessment, template following), which W1–W3 address directly.
-- If GPU capacity allows and quality is still short after W1–W3, a larger Qwen3.5 model (more active parameters, e.g. a dense ~27B or a larger MoE; check what is released and what your GPUs fit) is the next lever.
-
-### E1. Make evaluation repeatable
-
-- Turn these 10 questions into a regression suite (`eval/cases.yaml`) with **expected route + key facts** per question, for example Q4: "metabolic acidosis", "anion gap 23", "appropriate compensation"; Q5: "score 4", "DOAC"; Q3: "80–90 mg/kg/day". This allows automatic scoring after every prompt change.
-- Run each question **3 times** and average, because search results vary between runs.
-- Add Arabic variants of a few English cases and a few multi-turn conversations, since `contextualize` was not exercised in this set.
-
----
-
-## 7. Suggested order of work
-
-| Step | Change | Effort | Expected effect on Qwen score |
-|---|---|---|---|
-| 1 | W1 + W2: task-aware assessor + partial answers | Small (prompt + routing) | **+20 to +25** (Q3, Q4, Q7, Q10 get answered) |
-| 2 | W3: per-task template built in code | Medium | +3 to +5 (Q2, Q5, Q6) |
-| 3 | W5 + W6: language enforcement + sources rendered in code | Small | +2 to +3 and cleaner output |
-| 4 | M2: temperature 0 for analyzer/assess | Trivial | More consistent routing |
-| 5 | W4: prefer current guidance | Medium | +3 to +4 (Q2, Q5) |
-| 6 | M1: thinking on for assess and generate, with reasoning parser | Small (needs server restart) | Better precision; re-measure latency |
-| 7 | E1: regression suite with 3× repeats | Medium | Measures 1–6 reliably |
-
-With steps 1–3, a realistic target is **75–85/100** on this question set, comfortably above the GPT-5.1 configuration's 48. This is an estimate to verify with step 7.
+Earlier runs (the old graph on Qwen and the intermediate runs of the new graph) are in the git history of this file.

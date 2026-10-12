@@ -16,16 +16,14 @@ FIELDNAMES = (
     "message",
     "history",
     "standalone_message",
+    "language",
     "route",
     "query_type",
-    "clarify_reason",
-    "refusal_reason",
+    "task",
     "case",
     "missing_critical_info",
     "red_flags",
     "search_queries",
-    "search_attempts",
-    "evidence_gaps",
     "sources",
     "answer",
     "latency_s",
@@ -49,21 +47,34 @@ def build_row(final_state: dict, answer: str, latency_s: float, error: str = "")
         "message": final_state.get("message", ""),
         "history": _json(final_state.get("history")),
         "standalone_message": final_state.get("standalone_message", ""),
+        "language": final_state.get("language", ""),
         "route": final_state.get("route", ""),
         "query_type": final_state.get("query_type", ""),
-        "clarify_reason": final_state.get("clarify_reason", ""),
-        "refusal_reason": final_state.get("refusal_reason") or "",
+        "task": final_state.get("task", ""),
         "case": _json(final_state.get("case")),
         "missing_critical_info": _json(final_state.get("missing_critical_info")),
         "red_flags": _json(final_state.get("red_flags")),
         "search_queries": _json(final_state.get("search_queries")),
-        "search_attempts": final_state.get("search_attempts", ""),
-        "evidence_gaps": _json(final_state.get("evidence_gaps")),
         "sources": _json(sources),
         "answer": answer,
         "latency_s": f"{latency_s:.2f}",
         "error": error,
     }
+
+
+def _target_path() -> Path:
+    """The configured CSV, or the first sibling (_v2, _v3, ...) that is new or has the
+    current columns, so rows never end up under an older version's header."""
+    base = Path(settings.CONVERSATIONS_CSV_PATH)
+    version = 1
+    while True:
+        path = base if version == 1 else base.with_name(f"{base.stem}_v{version}{base.suffix}")
+        if not path.exists() or path.stat().st_size == 0:
+            return path
+        with path.open(newline="", encoding="utf-8") as f:
+            if tuple(next(csv.reader(f), [])) == FIELDNAMES:
+                return path
+        version += 1
 
 
 def save_conversation(row: dict) -> None:
@@ -73,6 +84,7 @@ def save_conversation(row: dict) -> None:
     path = Path(settings.CONVERSATIONS_CSV_PATH)
     try:
         with _lock:
+            path = _target_path()
             path.parent.mkdir(parents=True, exist_ok=True)
             write_header = not path.exists() or path.stat().st_size == 0
             with path.open("a", newline="", encoding="utf-8") as f:

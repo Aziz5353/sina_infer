@@ -3,7 +3,6 @@ __pycache__/
 *.pyc
 *.pyo
 *.pyd
-.pytest_cache/
 .ruff_cache/
 .mypy_cache/
 .git/
@@ -19,3 +18,4 @@ docker-compose.yml
 .idea/
 data/
 logs/
+scripts/

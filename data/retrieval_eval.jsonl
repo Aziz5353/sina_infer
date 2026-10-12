@@ -1,0 +1,863 @@
+{
+  "timestamp": "2026-10-12T09:56:01+00:00",
+  "repeats": 1,
+  "facts_total": 49,
+  "facts_found": [
+    31
+  ],
+  "runs": [
+    [
+      {
+        "q": 1,
+        "route": "answer",
+        "task": "consult",
+        "queries": [
+          "IDSA guidelines acute pyelonephritis adult women diagnosis",
+          "differential diagnosis fever flank pain dysuria adult female",
+          "acute pyelonephritis vs pyelitis vs renal abscess clinical features"
+        ],
+        "fallback_used": false,
+        "sources": [
+          {
+            "title": "Guidelines for antimicrobial treatment of uncomplicated acute bacterial cystitis and acute pyelonephritis in women. Infectious Diseases Society of America (IDSA).",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/10589881"
+          },
+          {
+            "title": "Clinical and diagnostic evaluation of flank pain in female patients: a retrospective cohort study of 3350 patients",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13321474"
+          },
+          {
+            "title": "International clinical practice guidelines for the treatment of acute uncomplicated cystitis and pyelonephritis in women: A 2010 update by the Infectious Diseases Society of America and the European Society for Microbiology and Infectious Diseases.",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/21292654"
+          },
+          {
+            "title": "Diagnosis and Management of Acute Pyelonephritis in Adults | AFP",
+            "url": "https://www.aafp.org/afp/2005/0301/p933"
+          },
+          {
+            "title": "Diagnosis and Treatment of Acute Uncomplicated Cystitis | AFP",
+            "url": "https://www.aafp.org/afp/2011/1001/p771"
+          },
+          {
+            "title": "Acute Pyelonephritis: Clinical Characteristics and the Role of the Surgical Treatment",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2672131"
+          },
+          {
+            "title": "Role of CT in Pyelonephritis: A Comprehensive Pictorial Review",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12374602"
+          },
+          {
+            "title": "Acute Pyelonephritis - StatPearls - NCBI Bookshelf",
+            "url": "https://www.ncbi.nlm.nih.gov/sites/books/NBK519537"
+          },
+          {
+            "title": "Renal abscess complicating acute pyelonephritis in children: Two cases report and literature review.",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/38050281"
+          },
+          {
+            "title": "Clinical Characteristics, Microbiological Spectrum, Biomarkers, and Imaging Insights in Acute Pyelonephritis and Its Complicated Forms—A Systematic Review",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12844392"
+          }
+        ],
+        "facts": [
+          {
+            "fact": "urine culture",
+            "found_in": [
+              4,
+              5
+            ]
+          },
+          {
+            "fact": "fluoroquinolone regimen",
+            "found_in": [
+              4,
+              6
+            ]
+          },
+          {
+            "fact": "admission criteria",
+            "found_in": [
+              1,
+              4
+            ]
+          },
+          {
+            "fact": "pregnancy",
+            "found_in": [
+              3,
+              4,
+              8
+            ]
+          },
+          {
+            "fact": "imaging if no improvement 48–72 h",
+            "found_in": []
+          }
+        ],
+        "seconds": 6.6
+      },
+      {
+        "q": 2,
+        "route": "answer",
+        "task": "consult",
+        "queries": [
+          "ADA Standards of Care 2024 type 2 diabetes management established ASCVD",
+          "first-line pharmacotherapy type 2 diabetes HbA1c 8.5% ASCVD guidelines",
+          "GLP-1 receptor agonist vs SGLT2 inhibitor first-line type 2 diabetes ASCVD"
+        ],
+        "fallback_used": false,
+        "sources": [
+          {
+            "title": "SGLT2 Inhibitors vs. GLP-1 Agonists to Treat the Heart, the Kidneys and the Brain",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10455499"
+          },
+          {
+            "title": "First-Line Therapy for Type 2 Diabetes With Sodium–Glucose Cotransporter-2 Inhibitors and Glucagon-Like Peptide-1 Receptor Agonists",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10155215"
+          },
+          {
+            "title": "Combining glucagon-like peptide-1 receptor agonists (GLP-1RAs) and sodium-glucose cotransporter-2 inhibitors (SGLT2is) in patients with type 2 diabetes mellitus (T2DM)",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10067319"
+          },
+          {
+            "title": "Use of Glucagon-Like Peptide-1 Receptor Agonists in Patients With Type 2 Diabetes and Cardiovascular Disease",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7744318"
+          },
+          {
+            "title": "Prescribing Patterns of SGLT2 Inhibitors and GLP‐1 Receptor Agonists in Patients With T2DM and ASCVD in South Korea",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12209748"
+          },
+          {
+            "title": "10. Cardiovascular Disease and Risk Management: Standards of Care in Diabetes—2026 | Diabetes Care | American Diabetes Association",
+            "url": "https://diabetesjournals.org/care/article/49/Supplement_1/S216/163933/10-Cardiovascular-Disease-and-Risk-Management"
+          },
+          {
+            "title": "9. Pharmacologic Approaches to Glycemic Treatment: Standards of Care in Diabetes—2025 | Diabetes Care | American Diabetes Association",
+            "url": "https://diabetesjournals.org/care/article/48/Supplement_1/S181/157569/9-Pharmacologic-Approaches-to-Glycemic-Treatment"
+          },
+          {
+            "title": "13. Older Adults: Standards of Care in Diabetes—2026 | Diabetes Care | American Diabetes Association",
+            "url": "https://diabetesjournals.org/care/article/49/Supplement_1/S277/163921/13-Older-Adults-Standards-of-Care-in-Diabetes-2026"
+          },
+          {
+            "title": "Summary of Revisions: Standards of Care in Diabetes—2024",
+            "url": "https://diabetesjournals.org/care/article/47/Supplement_1/S5/153943/Summary-of-Revisions-Standards-of-Care-in-Diabetes"
+          },
+          {
+            "title": "10. Cardiovascular Disease and Risk Management",
+            "url": "https://diabetesjournals.org/care/article/47/Supplement_1/S179/153957/10-Cardiovascular-Disease-and-Risk-Management"
+          }
+        ],
+        "facts": [
+          {
+            "fact": "GLP-1 RA / SGLT2i for ASCVD",
+            "found_in": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          {
+            "fact": "independent of HbA1c",
+            "found_in": [
+              4,
+              7,
+              8
+            ]
+          },
+          {
+            "fact": "independent of metformin",
+            "found_in": [
+              7
+            ]
+          },
+          {
+            "fact": "statin",
+            "found_in": []
+          }
+        ],
+        "seconds": 5.4
+      },
+      {
+        "q": 3,
+        "route": "answer",
+        "task": "consult",
+        "queries": [
+          "IDSA guidelines acute otitis media pediatric amoxicillin dosing",
+          "amoxicillin dosing adjustment renal insufficiency children"
+        ],
+        "fallback_used": false,
+        "sources": [
+          {
+            "title": "AMOXICILLIN AND CLAVULANATE POTASSIUM",
+            "url": "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=70c5dcb1-ebad-4297-a3bd-88ab5a70d86c"
+          },
+          {
+            "title": "Antibiotic Use in Acute Upper Respiratory Tract Infections | AFP",
+            "url": "https://www.aafp.org/afp/2022/1200/antibiotics-upper-respiratory-tract-infections"
+          },
+          {
+            "title": "Clinical Practice Guideline for the Diagnosis and ...",
+            "url": "https://publications.aap.org/pediatrics/article/132/1/e262/31288/Clinical-Practice-Guideline-for-the-Diagnosis-and"
+          },
+          {
+            "title": "AUGMENTIN® (amoxicillin and clavulanate potassium) tablets ...",
+            "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2024/050564s060,050575s051,050597s052,050720s037,050725s036,050726s027lbl.pdf"
+          },
+          {
+            "title": "Steering Away from Current Amoxicillin Dose Reductions in Hospitalized Patients with Impaired Kidney Function to Avoid Subtherapeutic Drug Exposure",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9494977"
+          },
+          {
+            "title": "AMOXIL (amoxicillin) capsules, tablets, or powder for oral ...",
+            "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2015/50542s02950754s01950760s01950761s016lbl.pdf"
+          },
+          {
+            "title": "Acute Otitis Media and Acute Bacterial Rhinosinusitis",
+            "url": "https://publications.aap.org/books/chapter-pdf/1283608/aap_9781610020770-part01_section01_ch01.pdf"
+          },
+          {
+            "title": "Principles of Appropriate Use of Antimicrobial Therapy for ...",
+            "url": "https://publications.aap.org/redbook/book/755/chapter/14083980/Principles-of-Appropriate-Use-of-Antimicrobial"
+          },
+          {
+            "title": "Harmonization of Amoxicillin Dose, Duration, and Formulation for Acute Childhood Respiratory Infections",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10376083"
+          },
+          {
+            "title": "Amoxicillin and Clavulanate | Drug Lookup",
+            "url": "https://publications.aap.org/pediatriccare/drug-monograph/18/5194/Amoxicillin-and-Clavulanate"
+          }
+        ],
+        "facts": [
+          {
+            "fact": "80–90 mg/kg/day",
+            "found_in": [
+              8
+            ]
+          },
+          {
+            "fact": "two divided doses",
+            "found_in": [
+              1,
+              2,
+              4,
+              6
+            ]
+          },
+          {
+            "fact": "renal adjustment threshold",
+            "found_in": [
+              1,
+              4,
+              6
+            ]
+          },
+          {
+            "fact": "duration",
+            "found_in": [
+              1,
+              2,
+              4,
+              6
+            ]
+          }
+        ],
+        "seconds": 4.0
+      },
+      {
+        "q": 4,
+        "route": "answer",
+        "task": "consult",
+        "queries": [
+          "acid-base disorder interpretation pH 7.28 PaCO2 28 HCO3 13 anion gap",
+          "mixed acid-base disorder criteria metabolic acidosis respiratory alkalosis"
+        ],
+        "fallback_used": false,
+        "sources": [
+          {
+            "title": "Evaluation of respiratory alkalosis - Differential diagnosis of symptoms | BMJ Best Practice US",
+            "url": "https://bestpractice.bmj.com/topics/en-us/463"
+          },
+          {
+            "title": "Overview of acid-base and electrolyte disorders - Summary of relevant conditions | BMJ Best Practice US",
+            "url": "https://bestpractice.bmj.com/topics/en-us/1072"
+          },
+          {
+            "title": "Assessment of respiratory alkalosis",
+            "url": "https://bestpractice.bmj.com/topics/en-gb/463"
+          },
+          {
+            "title": "A 84-Year-Old Man With Decreased Consciousness and ...",
+            "url": "https://europepmc.org/articles/pmc10332947?pdf=render"
+          },
+          {
+            "title": "Understanding Acid-Base Disorders",
+            "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5849971?term=%22Ulster+Med+J%22%5Bjour%5D"
+          },
+          {
+            "title": "Acid-Base Management for Open-Heart Surgery",
+            "url": "https://www.ahajournals.org/doi/pdf/10.1161/01.cir.29.3.456"
+          },
+          {
+            "title": "[Procedural analysis of acid-base balance disorder: case serials in 4 patents].",
+            "url": "https://www.ncbi.nlm.nih.gov/pubmed/28524033"
+          }
+        ],
+        "facts": [
+          {
+            "fact": "Winter's formula",
+            "found_in": []
+          },
+          {
+            "fact": "anion gap formula",
+            "found_in": []
+          },
+          {
+            "fact": "delta ratio / delta gap",
+            "found_in": []
+          },
+          {
+            "fact": "normal anion gap range",
+            "found_in": []
+          }
+        ],
+        "seconds": 4.5
+      },
+      {
+        "q": 5,
+        "route": "answer",
+        "task": "calculation",
+        "queries": [
+          "2024 AHA/ACC/HRS guideline atrial fibrillation anticoagulation CHA2DS2-VASc",
+          "CHA2DS2-VASc score calculation criteria and interpretation",
+          "anticoagulation recommendations for non-valvular atrial fibrillation based on CHA2DS2-VASc score"
+        ],
+        "fallback_used": false,
+        "sources": [
+          {
+            "title": "The CHA2DS2-VASc Score A Predictor of Thromboembolic Events and Mortality In Patients With an Implantable Monitoring Device Without Atrial Fibrillation",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5641434"
+          },
+          {
+            "title": "Impact of the CHA2DS2-VASc Score on Anticoagulation Recommendations for Atrial Fibrillation",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4555351"
+          },
+          {
+            "title": "Risk Stratification and Anticoagulation in Low-risk Non-valvular Atrial Fibrillation",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4253753"
+          },
+          {
+            "title": "Oral anticoagulation in patients with non-valvular atrial fibrillation and a CHA2DS2-VASc score of 1: a current opinion of the European Society of Cardiology Working Group on Cardiovascular Pharmacotherapy and European Society of Cardiology Council on Stroke.",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/31119266"
+          },
+          {
+            "title": "CHADS2 versus CHA2DS2-VASc score in assessing the stroke and thromboembolism risk stratification in patients with atrial fibrillation: a systematic review and meta-analysis",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3796700"
+          },
+          {
+            "title": "Stroke Prevention in Atrial Fibrillation: Global Guideline Comparison",
+            "url": "https://reference.medscape.com/cc2/p10/guideline-essentials-stroke-prevention-patients-atrial-2023a1000qnh"
+          },
+          {
+            "title": "CHA2DS2-VASc Score Guides Oral Anticoagulation in Patients With SCAF - American College of Cardiology",
+            "url": "https://www.acc.org/latest-in-cardiology/articles/2024/06/12/15/50/cha2ds2-vasc-score-guides-oral-anticoagulation-in-patients-with-scaf"
+          },
+          {
+            "title": "Differences Between the AAFP Atrial Fibrillation Guideline and the AHA/ACC/HRS Guideline | AFP",
+            "url": "https://aafp.org/afp/2017/0901/p284"
+          },
+          {
+            "title": "Risks of Bleeding and Stroke Based on CHA2DS2‐VASc ...",
+            "url": "https://www.ahajournals.org/doi/10.1161/JAHA.119.014574"
+          },
+          {
+            "title": "CHA2DS2-VASc Score and Stroke Prediction in Atrial ...",
+            "url": "https://www.ahajournals.org/doi/10.1161/STROKEAHA.118.021453"
+          }
+        ],
+        "facts": [
+          {
+            "fact": "age 65–74 = 1 point",
+            "found_in": [
+              1,
+              10
+            ]
+          },
+          {
+            "fact": "threshold for women",
+            "found_in": [
+              6
+            ]
+          },
+          {
+            "fact": "CHA2DS2-VA (2024 ESC)",
+            "found_in": [
+              6
+            ]
+          },
+          {
+            "fact": "DOAC over warfarin",
+            "found_in": []
+          },
+          {
+            "fact": "bleeding risk",
+            "found_in": [
+              3,
+              4,
+              6,
+              8
+            ]
+          }
+        ],
+        "seconds": 4.1
+      },
+      {
+        "q": 6,
+        "route": "answer",
+        "task": "documentation",
+        "queries": [
+          "CDC guidelines for acute pharyngitis documentation",
+          "Centor criteria scoring and management",
+          "SOAP note structure for acute pharyngitis"
+        ],
+        "fallback_used": false,
+        "sources": [
+          {
+            "title": "A Study to Determine if Addition of Palatal Petechiae to Centor Criteria Adds More Significance to Clinical Diagnosis of Acute Strep Pharyngitis in Children",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4959792"
+          },
+          {
+            "title": "Acute pharyngitis in children and adults: descriptive comparison of current recommendations from national and international guidelines and future perspectives",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10746578"
+          },
+          {
+            "title": "Optimal management of adults with pharyngitis – a multi-criteria decision analysis",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1431519"
+          },
+          {
+            "title": "Optimal management of adults with pharyngitis--a multi-criteria decision analysis - PubMed",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/16533386"
+          },
+          {
+            "title": "Acute Pharyngitis - StatPearls - NCBI Bookshelf",
+            "url": "https://www.ncbi.nlm.nih.gov/sites/books/NBK559007"
+          },
+          {
+            "title": "Physicians’ knowledge and adherence to Centor Criteria for preventing acute rheumatic fever in Jeddah, Saudi Arabia",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12207700"
+          },
+          {
+            "title": "Diagnostic Methods, Clinical Guidelines, and Antibiotic Treatment for Group A Streptococcal Pharyngitis: A Narrative Review",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7593338"
+          },
+          {
+            "title": "Diagnosis and Treatment of Pharyngitis in Children",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7118881"
+          },
+          {
+            "title": "Core Elements of Outpatient Antibiotic Stewardship  | MMWR",
+            "url": "https://www.cdc.gov/mmwr/volumes/65/rr/rr6506a1.htm"
+          },
+          {
+            "title": "Upper Respiratory Infections",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7127764"
+          }
+        ],
+        "facts": [
+          {
+            "fact": "Centor criteria",
+            "found_in": [
+              1,
+              3,
+              4,
+              5,
+              6,
+              7
+            ]
+          },
+          {
+            "fact": "rapid antigen test",
+            "found_in": [
+              1,
+              2,
+              6,
+              7,
+              8
+            ]
+          },
+          {
+            "fact": "backup culture rule",
+            "found_in": []
+          },
+          {
+            "fact": "penicillin/amoxicillin first-line",
+            "found_in": [
+              5,
+              10
+            ]
+          },
+          {
+            "fact": "10-day course",
+            "found_in": []
+          }
+        ],
+        "seconds": 6.0
+      },
+      {
+        "q": 7,
+        "route": "answer",
+        "task": "patient_education",
+        "queries": [
+          "American Heart Association hypertension patient education guidelines",
+          "hypertension lifestyle management and medication adherence patient education"
+        ],
+        "fallback_used": false,
+        "sources": [
+          {
+            "title": "Key contents of health education and their impact on improving medication adherence among hypertensive patients: A systematic review and meta-analysis",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12425528"
+          },
+          {
+            "title": "Effect of Comprehensive Health Management on Medication Adherence and Healthy Lifestyle Behavior of Patients With Hypertension",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12463532"
+          },
+          {
+            "title": "Patient Education and Medication Adherence among Hypertensives in a Tertiary Hospital, South Western Nigeria",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7060389"
+          },
+          {
+            "title": "Effectiveness of Educational Interventions on Adherence to Lifestyle Modifications Among Hypertensive Patients: An Integrative Review",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7177836"
+          },
+          {
+            "title": "Hypertension knowledge, heart healthy lifestyle practices and medication adherence among adults with hypertension",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7220145"
+          },
+          {
+            "title": "Updates in the 2025 AHA/ACC Hypertension Guideline",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12995957"
+          },
+          {
+            "title": "Implications of the New 2017 American College of Cardiology/American Heart Association Guidelines for Hypertension. - Abstract",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/31220914"
+          },
+          {
+            "title": "Global Impact of the 2017 American College of Cardiology/American Heart Association Hypertension Guidelines | Circulation",
+            "url": "https://www.ahajournals.org/doi/10.1161/circulationaha.117.032849"
+          },
+          {
+            "title": "Implementation of the 2017 American College of Cardiology/American Heart Association Guidelines on Hypertension in Clinical Practice - PubMed",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/34566506"
+          },
+          {
+            "title": "Harmonization of the American College of Cardiology/American Heart Association and European Society of Cardiology/European Society of Hypertension Blood Pressure/Hypertension Guidelines: Comparisons, Reflections, and Recommendations",
+            "url": "https://www.ahajournals.org/doi/10.1161/Circulationaha.121.054602"
+          }
+        ],
+        "facts": [
+          {
+            "fact": "sodium target",
+            "found_in": []
+          },
+          {
+            "fact": "DASH diet",
+            "found_in": []
+          },
+          {
+            "fact": "weight loss",
+            "found_in": []
+          },
+          {
+            "fact": "exercise amount",
+            "found_in": []
+          },
+          {
+            "fact": "urgent threshold 180/120",
+            "found_in": []
+          }
+        ],
+        "seconds": 3.7
+      },
+      {
+        "q": 8,
+        "route": "answer",
+        "task": "consult",
+        "queries": [
+          "SGLT2 inhibitors heart failure with preserved ejection fraction guidelines 2024",
+          "SGLT2 inhibitors heart failure with preserved ejection fraction randomized controlled trials evidence",
+          "SGLT2 inhibitors heart failure with preserved ejection fraction dosing renal adjustment"
+        ],
+        "fallback_used": false,
+        "sources": [
+          {
+            "title": "Effectiveness of SGLT2 Inhibitors in Improving Functional Capacity and Reducing Hospitalizations in Heart Failure With Preserved Ejection Fraction (HFpEF): A Systematic Review of Randomized Controlled Trials",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12524905"
+          },
+          {
+            "title": "Efficacy of Sodium-Glucose Cotransporter 2 (SGLT2) Inhibitors in Heart Failure With Preserved Ejection Fraction: A Systematic Review",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12165776"
+          },
+          {
+            "title": "The role of SGLT 2 inhibitors in heart failure with preserved ejection fraction (HFpEF): a systematic review and meta-analysis of randomized controlled trials",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12557931"
+          },
+          {
+            "title": "SGLT2 inhibitors among patients with heart failure with preserved ejection fraction: A meta-analysis of randomised controlled trials.",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/37773799"
+          },
+          {
+            "title": "Robustness of randomized controlled trial evidence for SGLT2 inhibitors in heart failure with preserved and mildly reduced ejection fraction.",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/41314931"
+          },
+          {
+            "title": "ACC/AHA Add Nine New Performance and Quality Measures to Updated 2024 Heart Failure Measure Set - American College of Cardiology",
+            "url": "https://www.acc.org/latest-in-cardiology/articles/2024/08/07/10/16/acc-aha-add-nine-new-performance-and-quality-measures-to-updated-2024-hf-measure-set"
+          },
+          {
+            "title": "SGLT2 Inhibition in Heart Failure with Preserved Ejection Fraction — The New Frontier",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11270412"
+          },
+          {
+            "title": "USE OF SGLT2 INHIBITORS IN THE MANAGEMENT OF ...",
+            "url": "https://www.acc.org/-/media/Non-Clinical/Files-PDFs-Excel-MS-Word-etc/Tools-and-Practice-Support/Clinical-Solutions/B23054-SGLT2is-Pocket-Guide.pdf"
+          },
+          {
+            "title": "Sodium-Glucose Cotransporter 2 (SGLT2) Inhibitors in Heart Failure With Preserved Ejection Fraction: A Systematic Review",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12277921"
+          },
+          {
+            "title": "SGLT-2 Inhibitors in Heart Failure: A Review of Current Evidence",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10172076"
+          }
+        ],
+        "facts": [
+          {
+            "fact": "EMPEROR-Preserved",
+            "found_in": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "fact": "DELIVER",
+            "found_in": [
+              1,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "fact": "no mortality reduction",
+            "found_in": [
+              3,
+              4
+            ]
+          },
+          {
+            "fact": "guideline class",
+            "found_in": []
+          },
+          {
+            "fact": "10 mg dose",
+            "found_in": [
+              1
+            ]
+          }
+        ],
+        "seconds": 4.3
+      },
+      {
+        "q": 9,
+        "route": "answer",
+        "task": "consult",
+        "queries": [
+          "2025 AAAAI/ACAAI anaphylaxis guidelines management",
+          "epinephrine dosing for anaphylaxis in adults",
+          "anaphylaxis management algorithm hypotension wheezing"
+        ],
+        "fallback_used": false,
+        "sources": [
+          {
+            "title": "Epinephrine Administered in Anaphylaxis: The Evolution of 0.3 mg Dosage",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10052460"
+          },
+          {
+            "title": "Epinephrine in anaphylaxis",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10185359"
+          },
+          {
+            "title": "International recommendations on epinephrine auto-injector doses often differ from standard weight-based guidance: a review and clinical proposals",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9724388"
+          },
+          {
+            "title": "Anaphylaxis - Allergy and Immunology - Merck Manual Professional Edition",
+            "url": "https://www.msdmanuals.com/en-pr/professional/immunology-allergic-disorders/allergic-autoimmune-and-other-hypersensitivity-disorders/anaphylaxis"
+          },
+          {
+            "title": "Use of multiple epinephrine doses in anaphylaxis: A systematic review and meta-analysis",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8588837"
+          },
+          {
+            "title": "Management of IgE-Mediated Food Allergies in K-12 ...",
+            "url": "https://europepmc.org/articles/pmc12983177?pdf=render"
+          },
+          {
+            "title": "Anaphyllaxis management: Current concepts",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4173449"
+          },
+          {
+            "title": "A Clinical Practice Guideline for the Emergency Management of Anaphylaxis (2020)",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8996305"
+          },
+          {
+            "title": "Outpatient Emergencies: Anaphylaxis",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5381731"
+          },
+          {
+            "title": "Towards a common approach for managing food allergy ...",
+            "url": "https://europepmc.org/article/pmc/11682877"
+          }
+        ],
+        "facts": [
+          {
+            "fact": "IM epinephrine dose",
+            "found_in": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "fact": "thigh injection site",
+            "found_in": [
+              2,
+              7
+            ]
+          },
+          {
+            "fact": "positioning",
+            "found_in": []
+          },
+          {
+            "fact": "IV fluid bolus",
+            "found_in": [
+              7
+            ]
+          },
+          {
+            "fact": "airway management",
+            "found_in": [
+              4,
+              7,
+              9
+            ]
+          },
+          {
+            "fact": "bronchodilator",
+            "found_in": [
+              8
+            ]
+          },
+          {
+            "fact": "glucagon (β-blockers)",
+            "found_in": []
+          }
+        ],
+        "seconds": 4.5
+      },
+      {
+        "q": 10,
+        "route": "answer",
+        "task": "teaching",
+        "queries": [
+          "SMLE nephrotic vs nephritic syndrome MCQs guidelines",
+          "nephrotic vs nephritic syndrome differentiation criteria review",
+          "high yield nephrotic nephritic syndrome questions with explanations"
+        ],
+        "fallback_used": false,
+        "sources": [
+          {
+            "title": "Minimal Change Disease - Abstract",
+            "url": "https://europepmc.org/books/nbk560639"
+          },
+          {
+            "title": "Clinical Presentation & Management of Glomerular Diseases: Hematuria, Nephritic & Nephrotic Syndrome",
+            "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6188440"
+          },
+          {
+            "title": "KDIGO-2025-Guideline-for-Nephrotic-Syndrome-in- ...",
+            "url": "https://kdigo.org/wp-content/uploads/2025/04/KDIGO-2025-Guideline-for-Nephrotic-Syndrome-in-Children.pdf"
+          },
+          {
+            "title": "KDIGO-2024-Nephrotic-Syndrome-in-Children-Guideline- ...",
+            "url": "https://kdigo.org/wp-content/uploads/2024/04/KDIGO-2024-Nephrotic-Syndrome-in-Children-Guideline-Public-Review-Draft.pdf"
+          },
+          {
+            "title": "Nephrotic syndrome with a nephritic component associated with toxoplasmosis in an immunocompetent young man.",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4001951"
+          },
+          {
+            "title": "Overview of Nephrotic Syndrome - Nephrology - MSD Manual Professional Edition",
+            "url": "https://www.msdmanuals.com/professional/nephrology/glomerular-disorders/overview-of-nephrotic-syndrome"
+          },
+          {
+            "title": "Nephrotic Syndrome - Kidney Disorders",
+            "url": "https://www.msdmanuals.com/home/kidney-disorders/kidney-filtering-disorders/nephrotic-syndrome"
+          },
+          {
+            "title": "Overview of Nephritic Syndrome - Nephrology - MSD Manual Professional Edition",
+            "url": "https://www.msdmanuals.com/professional/nephrology/glomerular-disorders/overview-of-nephritic-syndrome"
+          }
+        ],
+        "facts": [
+          {
+            "fact": "nephrotic proteinuria threshold",
+            "found_in": []
+          },
+          {
+            "fact": "hypoalbuminemia",
+            "found_in": [
+              2,
+              5,
+              6
+            ]
+          },
+          {
+            "fact": "RBC casts",
+            "found_in": [
+              8
+            ]
+          },
+          {
+            "fact": "minimal change disease",
+            "found_in": [
+              1,
+              2,
+              6
+            ]
+          },
+          {
+            "fact": "post-infectious / IgA",
+            "found_in": [
+              2,
+              8
+            ]
+          }
+        ],
+        "seconds": 4.2
+      }
+    ]
+  ]
+}{"timestamp": "2026-10-12T09:58:49+00:00", "repeats": 3, "facts_total": 49, "facts_found": [31, 31, 31], "runs": [[{"q": 1, "route": "answer", "task": "consult", "queries": ["IDSA guidelines acute pyelonephritis adult women diagnosis", "differential diagnosis fever flank pain dysuria adult female", "acute pyelonephritis vs pyelitis vs renal abscess clinical features"], "fallback_used": false, "sources": [{"title": "Guidelines for antimicrobial treatment of uncomplicated acute bacterial cystitis and acute pyelonephritis in women. Infectious Diseases Society of America (IDSA).", "url": "https://pubmed.ncbi.nlm.nih.gov/10589881"}, {"title": "Clinical and diagnostic evaluation of flank pain in female patients: a retrospective cohort study of 3350 patients", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13321474"}, {"title": "International clinical practice guidelines for the treatment of acute uncomplicated cystitis and pyelonephritis in women: A 2010 update by the Infectious Diseases Society of America and the European Society for Microbiology and Infectious Diseases.", "url": "https://pubmed.ncbi.nlm.nih.gov/21292654"}, {"title": "Diagnosis and Management of Acute Pyelonephritis in Adults | AFP", "url": "https://www.aafp.org/afp/2005/0301/p933"}, {"title": "Diagnosis and Treatment of Acute Uncomplicated Cystitis | AFP", "url": "https://www.aafp.org/afp/2011/1001/p771"}, {"title": "Acute Pyelonephritis: Clinical Characteristics and the Role of the Surgical Treatment", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2672131"}, {"title": "Role of CT in Pyelonephritis: A Comprehensive Pictorial Review", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12374602"}, {"title": "Acute Pyelonephritis - StatPearls - NCBI Bookshelf", "url": "https://www.ncbi.nlm.nih.gov/sites/books/NBK519537"}, {"title": "Renal abscess complicating acute pyelonephritis in children: Two cases report and literature review.", "url": "https://pubmed.ncbi.nlm.nih.gov/38050281"}, {"title": "Clinical Characteristics, Microbiological Spectrum, Biomarkers, and Imaging Insights in Acute Pyelonephritis and Its Complicated Forms—A Systematic Review", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12844392"}], "facts": [{"fact": "urine culture", "found_in": [4, 5]}, {"fact": "fluoroquinolone regimen", "found_in": [4, 6]}, {"fact": "admission criteria", "found_in": [1, 4]}, {"fact": "pregnancy", "found_in": [3, 4, 8]}, {"fact": "imaging if no improvement 48–72 h", "found_in": []}], "seconds": 6.6}, {"q": 2, "route": "answer", "task": "consult", "queries": ["ADA Standards of Care 2024 type 2 diabetes management established ASCVD", "first-line pharmacotherapy type 2 diabetes HbA1c 8.5% ASCVD guidelines", "GLP-1 receptor agonist vs SGLT2 inhibitor first-line type 2 diabetes ASCVD"], "fallback_used": false, "sources": [{"title": "SGLT2 Inhibitors vs. GLP-1 Agonists to Treat the Heart, the Kidneys and the Brain", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10455499"}, {"title": "First-Line Therapy for Type 2 Diabetes With Sodium–Glucose Cotransporter-2 Inhibitors and Glucagon-Like Peptide-1 Receptor Agonists", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10155215"}, {"title": "Combining glucagon-like peptide-1 receptor agonists (GLP-1RAs) and sodium-glucose cotransporter-2 inhibitors (SGLT2is) in patients with type 2 diabetes mellitus (T2DM)", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10067319"}, {"title": "Use of Glucagon-Like Peptide-1 Receptor Agonists in Patients With Type 2 Diabetes and Cardiovascular Disease", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7744318"}, {"title": "Prescribing Patterns of SGLT2 Inhibitors and GLP‐1 Receptor Agonists in Patients With T2DM and ASCVD in South Korea", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12209748"}, {"title": "10. Cardiovascular Disease and Risk Management: Standards of Care in Diabetes—2026 | Diabetes Care | American Diabetes Association", "url": "https://diabetesjournals.org/care/article/49/Supplement_1/S216/163933/10-Cardiovascular-Disease-and-Risk-Management"}, {"title": "9. Pharmacologic Approaches to Glycemic Treatment: Standards of Care in Diabetes—2025 | Diabetes Care | American Diabetes Association", "url": "https://diabetesjournals.org/care/article/48/Supplement_1/S181/157569/9-Pharmacologic-Approaches-to-Glycemic-Treatment"}, {"title": "13. Older Adults: Standards of Care in Diabetes—2026 | Diabetes Care | American Diabetes Association", "url": "https://diabetesjournals.org/care/article/49/Supplement_1/S277/163921/13-Older-Adults-Standards-of-Care-in-Diabetes-2026"}, {"title": "Summary of Revisions: Standards of Care in Diabetes—2024", "url": "https://diabetesjournals.org/care/article/47/Supplement_1/S5/153943/Summary-of-Revisions-Standards-of-Care-in-Diabetes"}, {"title": "10. Cardiovascular Disease and Risk Management", "url": "https://diabetesjournals.org/care/article/47/Supplement_1/S179/153957/10-Cardiovascular-Disease-and-Risk-Management"}], "facts": [{"fact": "GLP-1 RA / SGLT2i for ASCVD", "found_in": [1, 2, 3, 4, 5, 6, 7, 8]}, {"fact": "independent of HbA1c", "found_in": [4, 7, 8]}, {"fact": "independent of metformin", "found_in": [7]}, {"fact": "statin", "found_in": []}], "seconds": 4.7}, {"q": 3, "route": "answer", "task": "consult", "queries": ["IDSA guidelines acute otitis media pediatric amoxicillin dosing", "amoxicillin dosing adjustment renal insufficiency children"], "fallback_used": false, "sources": [{"title": "AMOXICILLIN AND CLAVULANATE POTASSIUM", "url": "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=70c5dcb1-ebad-4297-a3bd-88ab5a70d86c"}, {"title": "Antibiotic Use in Acute Upper Respiratory Tract Infections | AFP", "url": "https://www.aafp.org/afp/2022/1200/antibiotics-upper-respiratory-tract-infections"}, {"title": "Clinical Practice Guideline for the Diagnosis and ...", "url": "https://publications.aap.org/pediatrics/article/132/1/e262/31288/Clinical-Practice-Guideline-for-the-Diagnosis-and"}, {"title": "AUGMENTIN® (amoxicillin and clavulanate potassium) tablets ...", "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2024/050564s060,050575s051,050597s052,050720s037,050725s036,050726s027lbl.pdf"}, {"title": "Steering Away from Current Amoxicillin Dose Reductions in Hospitalized Patients with Impaired Kidney Function to Avoid Subtherapeutic Drug Exposure", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9494977"}, {"title": "AMOXIL (amoxicillin) capsules, tablets, or powder for oral ...", "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2015/50542s02950754s01950760s01950761s016lbl.pdf"}, {"title": "Acute Otitis Media and Acute Bacterial Rhinosinusitis", "url": "https://publications.aap.org/books/chapter-pdf/1283608/aap_9781610020770-part01_section01_ch01.pdf"}, {"title": "Principles of Appropriate Use of Antimicrobial Therapy for ...", "url": "https://publications.aap.org/redbook/book/755/chapter/14083980/Principles-of-Appropriate-Use-of-Antimicrobial"}, {"title": "Harmonization of Amoxicillin Dose, Duration, and Formulation for Acute Childhood Respiratory Infections", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10376083"}, {"title": "Amoxicillin and Clavulanate | Drug Lookup", "url": "https://publications.aap.org/pediatriccare/drug-monograph/18/5194/Amoxicillin-and-Clavulanate"}], "facts": [{"fact": "80–90 mg/kg/day", "found_in": [8]}, {"fact": "two divided doses", "found_in": [1, 2, 4, 6]}, {"fact": "renal adjustment threshold", "found_in": [1, 4, 6]}, {"fact": "duration", "found_in": [1, 2, 4, 6]}], "seconds": 3.9}, {"q": 4, "route": "answer", "task": "consult", "queries": ["acid-base disorder interpretation pH 7.28 PaCO2 28 HCO3 13 anion gap", "mixed acid-base disorder criteria metabolic acidosis respiratory alkalosis"], "fallback_used": false, "sources": [{"title": "Evaluation of respiratory alkalosis - Differential diagnosis of symptoms | BMJ Best Practice US", "url": "https://bestpractice.bmj.com/topics/en-us/463"}, {"title": "Overview of acid-base and electrolyte disorders - Summary of relevant conditions | BMJ Best Practice US", "url": "https://bestpractice.bmj.com/topics/en-us/1072"}, {"title": "Assessment of respiratory alkalosis", "url": "https://bestpractice.bmj.com/topics/en-gb/463"}, {"title": "A 84-Year-Old Man With Decreased Consciousness and ...", "url": "https://europepmc.org/articles/pmc10332947?pdf=render"}, {"title": "Understanding Acid-Base Disorders", "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5849971?term=%22Ulster+Med+J%22%5Bjour%5D"}, {"title": "Acid-Base Management for Open-Heart Surgery", "url": "https://www.ahajournals.org/doi/pdf/10.1161/01.cir.29.3.456"}, {"title": "[Procedural analysis of acid-base balance disorder: case serials in 4 patents].", "url": "https://www.ncbi.nlm.nih.gov/pubmed/28524033"}], "facts": [{"fact": "Winter's formula", "found_in": []}, {"fact": "anion gap formula", "found_in": []}, {"fact": "delta ratio / delta gap", "found_in": []}, {"fact": "normal anion gap range", "found_in": []}], "seconds": 3.9}, {"q": 5, "route": "answer", "task": "calculation", "queries": ["2024 AHA/ACC/HRS guideline atrial fibrillation anticoagulation CHA2DS2-VASc", "CHA2DS2-VASc score calculation criteria and interpretation", "anticoagulation recommendations for non-valvular atrial fibrillation based on CHA2DS2-VASc score"], "fallback_used": false, "sources": [{"title": "The CHA2DS2-VASc Score A Predictor of Thromboembolic Events and Mortality In Patients With an Implantable Monitoring Device Without Atrial Fibrillation", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5641434"}, {"title": "Impact of the CHA2DS2-VASc Score on Anticoagulation Recommendations for Atrial Fibrillation", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4555351"}, {"title": "Risk Stratification and Anticoagulation in Low-risk Non-valvular Atrial Fibrillation", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4253753"}, {"title": "Oral anticoagulation in patients with non-valvular atrial fibrillation and a CHA2DS2-VASc score of 1: a current opinion of the European Society of Cardiology Working Group on Cardiovascular Pharmacotherapy and European Society of Cardiology Council on Stroke.", "url": "https://pubmed.ncbi.nlm.nih.gov/31119266"}, {"title": "CHADS2 versus CHA2DS2-VASc score in assessing the stroke and thromboembolism risk stratification in patients with atrial fibrillation: a systematic review and meta-analysis", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3796700"}, {"title": "Stroke Prevention in Atrial Fibrillation: Global Guideline Comparison", "url": "https://reference.medscape.com/cc2/p10/guideline-essentials-stroke-prevention-patients-atrial-2023a1000qnh"}, {"title": "CHA2DS2-VASc Score Guides Oral Anticoagulation in Patients With SCAF - American College of Cardiology", "url": "https://www.acc.org/latest-in-cardiology/articles/2024/06/12/15/50/cha2ds2-vasc-score-guides-oral-anticoagulation-in-patients-with-scaf"}, {"title": "Differences Between the AAFP Atrial Fibrillation Guideline and the AHA/ACC/HRS Guideline | AFP", "url": "https://aafp.org/afp/2017/0901/p284"}, {"title": "Risks of Bleeding and Stroke Based on CHA2DS2‐VASc ...", "url": "https://www.ahajournals.org/doi/10.1161/JAHA.119.014574"}, {"title": "CHA2DS2-VASc Score and Stroke Prediction in Atrial ...", "url": "https://www.ahajournals.org/doi/10.1161/STROKEAHA.118.021453"}], "facts": [{"fact": "age 65–74 = 1 point", "found_in": [1, 10]}, {"fact": "threshold for women", "found_in": [6]}, {"fact": "CHA2DS2-VA (2024 ESC)", "found_in": [6]}, {"fact": "DOAC over warfarin", "found_in": []}, {"fact": "bleeding risk", "found_in": [3, 4, 6, 8]}], "seconds": 4.3}, {"q": 6, "route": "answer", "task": "documentation", "queries": ["CDC guidelines for acute pharyngitis documentation", "Centor criteria scoring and management", "SOAP note structure for acute pharyngitis"], "fallback_used": false, "sources": [{"title": "A Study to Determine if Addition of Palatal Petechiae to Centor Criteria Adds More Significance to Clinical Diagnosis of Acute Strep Pharyngitis in Children", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4959792"}, {"title": "Acute pharyngitis in children and adults: descriptive comparison of current recommendations from national and international guidelines and future perspectives", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10746578"}, {"title": "Optimal management of adults with pharyngitis – a multi-criteria decision analysis", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1431519"}, {"title": "Optimal management of adults with pharyngitis--a multi-criteria decision analysis - PubMed", "url": "https://pubmed.ncbi.nlm.nih.gov/16533386"}, {"title": "Acute Pharyngitis - StatPearls - NCBI Bookshelf", "url": "https://www.ncbi.nlm.nih.gov/sites/books/NBK559007"}, {"title": "Physicians’ knowledge and adherence to Centor Criteria for preventing acute rheumatic fever in Jeddah, Saudi Arabia", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12207700"}, {"title": "Diagnostic Methods, Clinical Guidelines, and Antibiotic Treatment for Group A Streptococcal Pharyngitis: A Narrative Review", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7593338"}, {"title": "Diagnosis and Treatment of Pharyngitis in Children", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7118881"}, {"title": "Core Elements of Outpatient Antibiotic Stewardship  | MMWR", "url": "https://www.cdc.gov/mmwr/volumes/65/rr/rr6506a1.htm"}, {"title": "Upper Respiratory Infections", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7127764"}], "facts": [{"fact": "Centor criteria", "found_in": [1, 3, 4, 5, 6, 7]}, {"fact": "rapid antigen test", "found_in": [1, 2, 6, 7, 8]}, {"fact": "backup culture rule", "found_in": []}, {"fact": "penicillin/amoxicillin first-line", "found_in": [5, 10]}, {"fact": "10-day course", "found_in": []}], "seconds": 6.1}, {"q": 7, "route": "answer", "task": "patient_education", "queries": ["American Heart Association hypertension patient education guidelines", "hypertension lifestyle management and medication adherence patient education"], "fallback_used": false, "sources": [{"title": "Key contents of health education and their impact on improving medication adherence among hypertensive patients: A systematic review and meta-analysis", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12425528"}, {"title": "Effect of Comprehensive Health Management on Medication Adherence and Healthy Lifestyle Behavior of Patients With Hypertension", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12463532"}, {"title": "Patient Education and Medication Adherence among Hypertensives in a Tertiary Hospital, South Western Nigeria", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7060389"}, {"title": "Effectiveness of Educational Interventions on Adherence to Lifestyle Modifications Among Hypertensive Patients: An Integrative Review", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7177836"}, {"title": "Hypertension knowledge, heart healthy lifestyle practices and medication adherence among adults with hypertension", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7220145"}, {"title": "Updates in the 2025 AHA/ACC Hypertension Guideline", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12995957"}, {"title": "Implications of the New 2017 American College of Cardiology/American Heart Association Guidelines for Hypertension. - Abstract", "url": "https://pubmed.ncbi.nlm.nih.gov/31220914"}, {"title": "Global Impact of the 2017 American College of Cardiology/American Heart Association Hypertension Guidelines | Circulation", "url": "https://www.ahajournals.org/doi/10.1161/circulationaha.117.032849"}, {"title": "Implementation of the 2017 American College of Cardiology/American Heart Association Guidelines on Hypertension in Clinical Practice - PubMed", "url": "https://pubmed.ncbi.nlm.nih.gov/34566506"}, {"title": "Harmonization of the American College of Cardiology/American Heart Association and European Society of Cardiology/European Society of Hypertension Blood Pressure/Hypertension Guidelines: Comparisons, Reflections, and Recommendations", "url": "https://www.ahajournals.org/doi/10.1161/Circulationaha.121.054602"}], "facts": [{"fact": "sodium target", "found_in": []}, {"fact": "DASH diet", "found_in": []}, {"fact": "weight loss", "found_in": []}, {"fact": "exercise amount", "found_in": []}, {"fact": "urgent threshold 180/120", "found_in": []}], "seconds": 3.7}, {"q": 8, "route": "answer", "task": "consult", "queries": ["SGLT2 inhibitors heart failure with preserved ejection fraction guidelines 2024", "SGLT2 inhibitors heart failure with preserved ejection fraction randomized controlled trials evidence", "SGLT2 inhibitors heart failure with preserved ejection fraction dosing renal adjustment"], "fallback_used": false, "sources": [{"title": "Effectiveness of SGLT2 Inhibitors in Improving Functional Capacity and Reducing Hospitalizations in Heart Failure With Preserved Ejection Fraction (HFpEF): A Systematic Review of Randomized Controlled Trials", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12524905"}, {"title": "Efficacy of Sodium-Glucose Cotransporter 2 (SGLT2) Inhibitors in Heart Failure With Preserved Ejection Fraction: A Systematic Review", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12165776"}, {"title": "The role of SGLT 2 inhibitors in heart failure with preserved ejection fraction (HFpEF): a systematic review and meta-analysis of randomized controlled trials", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12557931"}, {"title": "SGLT2 inhibitors among patients with heart failure with preserved ejection fraction: A meta-analysis of randomised controlled trials.", "url": "https://pubmed.ncbi.nlm.nih.gov/37773799"}, {"title": "Robustness of randomized controlled trial evidence for SGLT2 inhibitors in heart failure with preserved and mildly reduced ejection fraction.", "url": "https://pubmed.ncbi.nlm.nih.gov/41314931"}, {"title": "ACC/AHA Add Nine New Performance and Quality Measures to Updated 2024 Heart Failure Measure Set - American College of Cardiology", "url": "https://www.acc.org/latest-in-cardiology/articles/2024/08/07/10/16/acc-aha-add-nine-new-performance-and-quality-measures-to-updated-2024-hf-measure-set"}, {"title": "SGLT2 Inhibition in Heart Failure with Preserved Ejection Fraction — The New Frontier", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11270412"}, {"title": "USE OF SGLT2 INHIBITORS IN THE MANAGEMENT OF ...", "url": "https://www.acc.org/-/media/Non-Clinical/Files-PDFs-Excel-MS-Word-etc/Tools-and-Practice-Support/Clinical-Solutions/B23054-SGLT2is-Pocket-Guide.pdf"}, {"title": "Sodium-Glucose Cotransporter 2 (SGLT2) Inhibitors in Heart Failure With Preserved Ejection Fraction: A Systematic Review", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12277921"}, {"title": "SGLT-2 Inhibitors in Heart Failure: A Review of Current Evidence", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10172076"}], "facts": [{"fact": "EMPEROR-Preserved", "found_in": [2, 3, 4, 5]}, {"fact": "DELIVER", "found_in": [1, 3, 4, 5]}, {"fact": "no mortality reduction", "found_in": [3, 4]}, {"fact": "guideline class", "found_in": []}, {"fact": "10 mg dose", "found_in": [1]}], "seconds": 4.1}, {"q": 9, "route": "answer", "task": "consult", "queries": ["2025 AAAAI/ACAAI anaphylaxis guidelines management", "epinephrine dosing for anaphylaxis in adults", "anaphylaxis management algorithm hypotension wheezing"], "fallback_used": false, "sources": [{"title": "Epinephrine Administered in Anaphylaxis: The Evolution of 0.3 mg Dosage", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10052460"}, {"title": "Epinephrine in anaphylaxis", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10185359"}, {"title": "International recommendations on epinephrine auto-injector doses often differ from standard weight-based guidance: a review and clinical proposals", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9724388"}, {"title": "Anaphylaxis - Allergy and Immunology - Merck Manual Professional Edition", "url": "https://www.msdmanuals.com/en-pr/professional/immunology-allergic-disorders/allergic-autoimmune-and-other-hypersensitivity-disorders/anaphylaxis"}, {"title": "Use of multiple epinephrine doses in anaphylaxis: A systematic review and meta-analysis", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8588837"}, {"title": "Management of IgE-Mediated Food Allergies in K-12 ...", "url": "https://europepmc.org/articles/pmc12983177?pdf=render"}, {"title": "Anaphyllaxis management: Current concepts", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4173449"}, {"title": "A Clinical Practice Guideline for the Emergency Management of Anaphylaxis (2020)", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8996305"}, {"title": "Outpatient Emergencies: Anaphylaxis", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5381731"}, {"title": "Towards a common approach for managing food allergy ...", "url": "https://europepmc.org/article/pmc/11682877"}], "facts": [{"fact": "IM epinephrine dose", "found_in": [1, 2, 3, 4, 5]}, {"fact": "thigh injection site", "found_in": [2, 7]}, {"fact": "positioning", "found_in": []}, {"fact": "IV fluid bolus", "found_in": [7]}, {"fact": "airway management", "found_in": [4, 7, 9]}, {"fact": "bronchodilator", "found_in": [8]}, {"fact": "glucagon (β-blockers)", "found_in": []}], "seconds": 4.2}, {"q": 10, "route": "answer", "task": "teaching", "queries": ["SMLE nephrotic vs nephritic syndrome MCQs guidelines", "nephrotic vs nephritic syndrome differentiation criteria review", "high yield nephrotic nephritic syndrome questions with explanations"], "fallback_used": false, "sources": [{"title": "Minimal Change Disease - Abstract", "url": "https://europepmc.org/books/nbk560639"}, {"title": "Clinical Presentation & Management of Glomerular Diseases: Hematuria, Nephritic & Nephrotic Syndrome", "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6188440"}, {"title": "KDIGO-2025-Guideline-for-Nephrotic-Syndrome-in- ...", "url": "https://kdigo.org/wp-content/uploads/2025/04/KDIGO-2025-Guideline-for-Nephrotic-Syndrome-in-Children.pdf"}, {"title": "KDIGO-2024-Nephrotic-Syndrome-in-Children-Guideline- ...", "url": "https://kdigo.org/wp-content/uploads/2024/04/KDIGO-2024-Nephrotic-Syndrome-in-Children-Guideline-Public-Review-Draft.pdf"}, {"title": "Nephrotic syndrome with a nephritic component associated with toxoplasmosis in an immunocompetent young man.", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4001951"}, {"title": "Overview of Nephrotic Syndrome - Nephrology - MSD Manual Professional Edition", "url": "https://www.msdmanuals.com/professional/nephrology/glomerular-disorders/overview-of-nephrotic-syndrome"}, {"title": "Nephrotic Syndrome - Kidney Disorders", "url": "https://www.msdmanuals.com/home/kidney-disorders/kidney-filtering-disorders/nephrotic-syndrome"}, {"title": "Overview of Nephritic Syndrome - Nephrology - MSD Manual Professional Edition", "url": "https://www.msdmanuals.com/professional/nephrology/glomerular-disorders/overview-of-nephritic-syndrome"}], "facts": [{"fact": "nephrotic proteinuria threshold", "found_in": []}, {"fact": "hypoalbuminemia", "found_in": [2, 5, 6]}, {"fact": "RBC casts", "found_in": [8]}, {"fact": "minimal change disease", "found_in": [1, 2, 6]}, {"fact": "post-infectious / IgA", "found_in": [2, 8]}], "seconds": 4.5}], [{"q": 1, "route": "answer", "task": "consult", "queries": ["IDSA guidelines acute pyelonephritis adult women diagnosis", "differential diagnosis fever flank pain dysuria adult female", "acute pyelonephritis vs pyelitis vs renal abscess clinical features"], "fallback_used": false, "sources": [{"title": "Guidelines for antimicrobial treatment of uncomplicated acute bacterial cystitis and acute pyelonephritis in women. Infectious Diseases Society of America (IDSA).", "url": "https://pubmed.ncbi.nlm.nih.gov/10589881"}, {"title": "Clinical and diagnostic evaluation of flank pain in female patients: a retrospective cohort study of 3350 patients", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13321474"}, {"title": "International clinical practice guidelines for the treatment of acute uncomplicated cystitis and pyelonephritis in women: A 2010 update by the Infectious Diseases Society of America and the European Society for Microbiology and Infectious Diseases.", "url": "https://pubmed.ncbi.nlm.nih.gov/21292654"}, {"title": "Diagnosis and Management of Acute Pyelonephritis in Adults | AFP", "url": "https://www.aafp.org/afp/2005/0301/p933"}, {"title": "Diagnosis and Treatment of Acute Uncomplicated Cystitis | AFP", "url": "https://www.aafp.org/afp/2011/1001/p771"}, {"title": "Acute Pyelonephritis: Clinical Characteristics and the Role of the Surgical Treatment", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2672131"}, {"title": "Role of CT in Pyelonephritis: A Comprehensive Pictorial Review", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12374602"}, {"title": "Acute Pyelonephritis - StatPearls - NCBI Bookshelf", "url": "https://www.ncbi.nlm.nih.gov/sites/books/NBK519537"}, {"title": "Renal abscess complicating acute pyelonephritis in children: Two cases report and literature review.", "url": "https://pubmed.ncbi.nlm.nih.gov/38050281"}, {"title": "Clinical Characteristics, Microbiological Spectrum, Biomarkers, and Imaging Insights in Acute Pyelonephritis and Its Complicated Forms—A Systematic Review", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12844392"}], "facts": [{"fact": "urine culture", "found_in": [4, 5]}, {"fact": "fluoroquinolone regimen", "found_in": [4, 6]}, {"fact": "admission criteria", "found_in": [1, 4]}, {"fact": "pregnancy", "found_in": [3, 4, 8]}, {"fact": "imaging if no improvement 48–72 h", "found_in": []}], "seconds": 7.1}, {"q": 2, "route": "answer", "task": "consult", "queries": ["ADA Standards of Care 2024 type 2 diabetes management established ASCVD", "first-line pharmacotherapy type 2 diabetes HbA1c 8.5% ASCVD guidelines", "GLP-1 receptor agonist vs SGLT2 inhibitor first-line type 2 diabetes ASCVD"], "fallback_used": false, "sources": [{"title": "SGLT2 Inhibitors vs. GLP-1 Agonists to Treat the Heart, the Kidneys and the Brain", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10455499"}, {"title": "First-Line Therapy for Type 2 Diabetes With Sodium–Glucose Cotransporter-2 Inhibitors and Glucagon-Like Peptide-1 Receptor Agonists", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10155215"}, {"title": "Combining glucagon-like peptide-1 receptor agonists (GLP-1RAs) and sodium-glucose cotransporter-2 inhibitors (SGLT2is) in patients with type 2 diabetes mellitus (T2DM)", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10067319"}, {"title": "Use of Glucagon-Like Peptide-1 Receptor Agonists in Patients With Type 2 Diabetes and Cardiovascular Disease", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7744318"}, {"title": "Prescribing Patterns of SGLT2 Inhibitors and GLP‐1 Receptor Agonists in Patients With T2DM and ASCVD in South Korea", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12209748"}, {"title": "10. Cardiovascular Disease and Risk Management: Standards of Care in Diabetes—2026 | Diabetes Care | American Diabetes Association", "url": "https://diabetesjournals.org/care/article/49/Supplement_1/S216/163933/10-Cardiovascular-Disease-and-Risk-Management"}, {"title": "9. Pharmacologic Approaches to Glycemic Treatment: Standards of Care in Diabetes—2025 | Diabetes Care | American Diabetes Association", "url": "https://diabetesjournals.org/care/article/48/Supplement_1/S181/157569/9-Pharmacologic-Approaches-to-Glycemic-Treatment"}, {"title": "13. Older Adults: Standards of Care in Diabetes—2026 | Diabetes Care | American Diabetes Association", "url": "https://diabetesjournals.org/care/article/49/Supplement_1/S277/163921/13-Older-Adults-Standards-of-Care-in-Diabetes-2026"}, {"title": "Summary of Revisions: Standards of Care in Diabetes—2024", "url": "https://diabetesjournals.org/care/article/47/Supplement_1/S5/153943/Summary-of-Revisions-Standards-of-Care-in-Diabetes"}, {"title": "10. Cardiovascular Disease and Risk Management", "url": "https://diabetesjournals.org/care/article/47/Supplement_1/S179/153957/10-Cardiovascular-Disease-and-Risk-Management"}], "facts": [{"fact": "GLP-1 RA / SGLT2i for ASCVD", "found_in": [1, 2, 3, 4, 5, 6, 7, 8]}, {"fact": "independent of HbA1c", "found_in": [4, 7, 8]}, {"fact": "independent of metformin", "found_in": [7]}, {"fact": "statin", "found_in": []}], "seconds": 4.8}, {"q": 3, "route": "answer", "task": "consult", "queries": ["IDSA guidelines acute otitis media pediatric amoxicillin dosing", "amoxicillin dosing adjustment renal insufficiency children"], "fallback_used": false, "sources": [{"title": "AMOXICILLIN AND CLAVULANATE POTASSIUM", "url": "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=70c5dcb1-ebad-4297-a3bd-88ab5a70d86c"}, {"title": "Antibiotic Use in Acute Upper Respiratory Tract Infections | AFP", "url": "https://www.aafp.org/afp/2022/1200/antibiotics-upper-respiratory-tract-infections"}, {"title": "Clinical Practice Guideline for the Diagnosis and ...", "url": "https://publications.aap.org/pediatrics/article/132/1/e262/31288/Clinical-Practice-Guideline-for-the-Diagnosis-and"}, {"title": "AUGMENTIN® (amoxicillin and clavulanate potassium) tablets ...", "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2024/050564s060,050575s051,050597s052,050720s037,050725s036,050726s027lbl.pdf"}, {"title": "Steering Away from Current Amoxicillin Dose Reductions in Hospitalized Patients with Impaired Kidney Function to Avoid Subtherapeutic Drug Exposure", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9494977"}, {"title": "AMOXIL (amoxicillin) capsules, tablets, or powder for oral ...", "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2015/50542s02950754s01950760s01950761s016lbl.pdf"}, {"title": "Acute Otitis Media and Acute Bacterial Rhinosinusitis", "url": "https://publications.aap.org/books/chapter-pdf/1283608/aap_9781610020770-part01_section01_ch01.pdf"}, {"title": "Principles of Appropriate Use of Antimicrobial Therapy for ...", "url": "https://publications.aap.org/redbook/book/755/chapter/14083980/Principles-of-Appropriate-Use-of-Antimicrobial"}, {"title": "Harmonization of Amoxicillin Dose, Duration, and Formulation for Acute Childhood Respiratory Infections", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10376083"}, {"title": "Amoxicillin and Clavulanate | Drug Lookup", "url": "https://publications.aap.org/pediatriccare/drug-monograph/18/5194/Amoxicillin-and-Clavulanate"}], "facts": [{"fact": "80–90 mg/kg/day", "found_in": [8]}, {"fact": "two divided doses", "found_in": [1, 2, 4, 6]}, {"fact": "renal adjustment threshold", "found_in": [1, 4, 6]}, {"fact": "duration", "found_in": [1, 2, 4, 6]}], "seconds": 3.8}, {"q": 4, "route": "answer", "task": "consult", "queries": ["acid-base disorder interpretation pH 7.28 PaCO2 28 HCO3 13 anion gap", "mixed acid-base disorder criteria metabolic acidosis respiratory alkalosis"], "fallback_used": false, "sources": [{"title": "Evaluation of respiratory alkalosis - Differential diagnosis of symptoms | BMJ Best Practice US", "url": "https://bestpractice.bmj.com/topics/en-us/463"}, {"title": "Overview of acid-base and electrolyte disorders - Summary of relevant conditions | BMJ Best Practice US", "url": "https://bestpractice.bmj.com/topics/en-us/1072"}, {"title": "Assessment of respiratory alkalosis", "url": "https://bestpractice.bmj.com/topics/en-gb/463"}, {"title": "A 84-Year-Old Man With Decreased Consciousness and ...", "url": "https://europepmc.org/articles/pmc10332947?pdf=render"}, {"title": "Understanding Acid-Base Disorders", "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5849971?term=%22Ulster+Med+J%22%5Bjour%5D"}, {"title": "Acid-Base Management for Open-Heart Surgery", "url": "https://www.ahajournals.org/doi/pdf/10.1161/01.cir.29.3.456"}, {"title": "[Procedural analysis of acid-base balance disorder: case serials in 4 patents].", "url": "https://www.ncbi.nlm.nih.gov/pubmed/28524033"}], "facts": [{"fact": "Winter's formula", "found_in": []}, {"fact": "anion gap formula", "found_in": []}, {"fact": "delta ratio / delta gap", "found_in": []}, {"fact": "normal anion gap range", "found_in": []}], "seconds": 4.0}, {"q": 5, "route": "answer", "task": "calculation", "queries": ["2024 AHA/ACC/HRS guideline atrial fibrillation anticoagulation CHA2DS2-VASc", "CHA2DS2-VASc score calculation criteria and interpretation", "anticoagulation recommendations for non-valvular atrial fibrillation based on CHA2DS2-VASc score"], "fallback_used": false, "sources": [{"title": "The CHA2DS2-VASc Score A Predictor of Thromboembolic Events and Mortality In Patients With an Implantable Monitoring Device Without Atrial Fibrillation", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5641434"}, {"title": "Impact of the CHA2DS2-VASc Score on Anticoagulation Recommendations for Atrial Fibrillation", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4555351"}, {"title": "Risk Stratification and Anticoagulation in Low-risk Non-valvular Atrial Fibrillation", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4253753"}, {"title": "Oral anticoagulation in patients with non-valvular atrial fibrillation and a CHA2DS2-VASc score of 1: a current opinion of the European Society of Cardiology Working Group on Cardiovascular Pharmacotherapy and European Society of Cardiology Council on Stroke.", "url": "https://pubmed.ncbi.nlm.nih.gov/31119266"}, {"title": "CHADS2 versus CHA2DS2-VASc score in assessing the stroke and thromboembolism risk stratification in patients with atrial fibrillation: a systematic review and meta-analysis", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3796700"}, {"title": "Stroke Prevention in Atrial Fibrillation: Global Guideline Comparison", "url": "https://reference.medscape.com/cc2/p10/guideline-essentials-stroke-prevention-patients-atrial-2023a1000qnh"}, {"title": "CHA2DS2-VASc Score Guides Oral Anticoagulation in Patients With SCAF - American College of Cardiology", "url": "https://www.acc.org/latest-in-cardiology/articles/2024/06/12/15/50/cha2ds2-vasc-score-guides-oral-anticoagulation-in-patients-with-scaf"}, {"title": "Differences Between the AAFP Atrial Fibrillation Guideline and the AHA/ACC/HRS Guideline | AFP", "url": "https://aafp.org/afp/2017/0901/p284"}, {"title": "Risks of Bleeding and Stroke Based on CHA2DS2‐VASc ...", "url": "https://www.ahajournals.org/doi/10.1161/JAHA.119.014574"}, {"title": "CHA2DS2-VASc Score and Stroke Prediction in Atrial ...", "url": "https://www.ahajournals.org/doi/10.1161/STROKEAHA.118.021453"}], "facts": [{"fact": "age 65–74 = 1 point", "found_in": [1, 10]}, {"fact": "threshold for women", "found_in": [6]}, {"fact": "CHA2DS2-VA (2024 ESC)", "found_in": [6]}, {"fact": "DOAC over warfarin", "found_in": []}, {"fact": "bleeding risk", "found_in": [3, 4, 6, 8]}], "seconds": 4.2}, {"q": 6, "route": "answer", "task": "documentation", "queries": ["CDC guidelines for acute pharyngitis documentation", "Centor criteria scoring and management", "SOAP note structure for acute pharyngitis"], "fallback_used": false, "sources": [{"title": "A Study to Determine if Addition of Palatal Petechiae to Centor Criteria Adds More Significance to Clinical Diagnosis of Acute Strep Pharyngitis in Children", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4959792"}, {"title": "Acute pharyngitis in children and adults: descriptive comparison of current recommendations from national and international guidelines and future perspectives", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10746578"}, {"title": "Optimal management of adults with pharyngitis – a multi-criteria decision analysis", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1431519"}, {"title": "Optimal management of adults with pharyngitis--a multi-criteria decision analysis - PubMed", "url": "https://pubmed.ncbi.nlm.nih.gov/16533386"}, {"title": "Acute Pharyngitis - StatPearls - NCBI Bookshelf", "url": "https://www.ncbi.nlm.nih.gov/sites/books/NBK559007"}, {"title": "Physicians’ knowledge and adherence to Centor Criteria for preventing acute rheumatic fever in Jeddah, Saudi Arabia", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12207700"}, {"title": "Diagnostic Methods, Clinical Guidelines, and Antibiotic Treatment for Group A Streptococcal Pharyngitis: A Narrative Review", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7593338"}, {"title": "Diagnosis and Treatment of Pharyngitis in Children", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7118881"}, {"title": "Core Elements of Outpatient Antibiotic Stewardship  | MMWR", "url": "https://www.cdc.gov/mmwr/volumes/65/rr/rr6506a1.htm"}, {"title": "Upper Respiratory Infections", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7127764"}], "facts": [{"fact": "Centor criteria", "found_in": [1, 3, 4, 5, 6, 7]}, {"fact": "rapid antigen test", "found_in": [1, 2, 6, 7, 8]}, {"fact": "backup culture rule", "found_in": []}, {"fact": "penicillin/amoxicillin first-line", "found_in": [5, 10]}, {"fact": "10-day course", "found_in": []}], "seconds": 6.0}, {"q": 7, "route": "answer", "task": "patient_education", "queries": ["American Heart Association hypertension patient education guidelines", "hypertension lifestyle management and medication adherence patient education"], "fallback_used": false, "sources": [{"title": "Key contents of health education and their impact on improving medication adherence among hypertensive patients: A systematic review and meta-analysis", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12425528"}, {"title": "Effect of Comprehensive Health Management on Medication Adherence and Healthy Lifestyle Behavior of Patients With Hypertension", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12463532"}, {"title": "Patient Education and Medication Adherence among Hypertensives in a Tertiary Hospital, South Western Nigeria", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7060389"}, {"title": "Effectiveness of Educational Interventions on Adherence to Lifestyle Modifications Among Hypertensive Patients: An Integrative Review", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7177836"}, {"title": "Hypertension knowledge, heart healthy lifestyle practices and medication adherence among adults with hypertension", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7220145"}, {"title": "Updates in the 2025 AHA/ACC Hypertension Guideline", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12995957"}, {"title": "Implications of the New 2017 American College of Cardiology/American Heart Association Guidelines for Hypertension. - Abstract", "url": "https://pubmed.ncbi.nlm.nih.gov/31220914"}, {"title": "Global Impact of the 2017 American College of Cardiology/American Heart Association Hypertension Guidelines | Circulation", "url": "https://www.ahajournals.org/doi/10.1161/circulationaha.117.032849"}, {"title": "Implementation of the 2017 American College of Cardiology/American Heart Association Guidelines on Hypertension in Clinical Practice - PubMed", "url": "https://pubmed.ncbi.nlm.nih.gov/34566506"}, {"title": "Harmonization of the American College of Cardiology/American Heart Association and European Society of Cardiology/European Society of Hypertension Blood Pressure/Hypertension Guidelines: Comparisons, Reflections, and Recommendations", "url": "https://www.ahajournals.org/doi/10.1161/Circulationaha.121.054602"}], "facts": [{"fact": "sodium target", "found_in": []}, {"fact": "DASH diet", "found_in": []}, {"fact": "weight loss", "found_in": []}, {"fact": "exercise amount", "found_in": []}, {"fact": "urgent threshold 180/120", "found_in": []}], "seconds": 3.7}, {"q": 8, "route": "answer", "task": "consult", "queries": ["SGLT2 inhibitors heart failure with preserved ejection fraction guidelines 2024", "SGLT2 inhibitors heart failure with preserved ejection fraction randomized controlled trials evidence", "SGLT2 inhibitors heart failure with preserved ejection fraction dosing renal adjustment"], "fallback_used": false, "sources": [{"title": "Effectiveness of SGLT2 Inhibitors in Improving Functional Capacity and Reducing Hospitalizations in Heart Failure With Preserved Ejection Fraction (HFpEF): A Systematic Review of Randomized Controlled Trials", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12524905"}, {"title": "Efficacy of Sodium-Glucose Cotransporter 2 (SGLT2) Inhibitors in Heart Failure With Preserved Ejection Fraction: A Systematic Review", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12165776"}, {"title": "The role of SGLT 2 inhibitors in heart failure with preserved ejection fraction (HFpEF): a systematic review and meta-analysis of randomized controlled trials", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12557931"}, {"title": "SGLT2 inhibitors among patients with heart failure with preserved ejection fraction: A meta-analysis of randomised controlled trials.", "url": "https://pubmed.ncbi.nlm.nih.gov/37773799"}, {"title": "Robustness of randomized controlled trial evidence for SGLT2 inhibitors in heart failure with preserved and mildly reduced ejection fraction.", "url": "https://pubmed.ncbi.nlm.nih.gov/41314931"}, {"title": "ACC/AHA Add Nine New Performance and Quality Measures to Updated 2024 Heart Failure Measure Set - American College of Cardiology", "url": "https://www.acc.org/latest-in-cardiology/articles/2024/08/07/10/16/acc-aha-add-nine-new-performance-and-quality-measures-to-updated-2024-hf-measure-set"}, {"title": "SGLT2 Inhibition in Heart Failure with Preserved Ejection Fraction — The New Frontier", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11270412"}, {"title": "USE OF SGLT2 INHIBITORS IN THE MANAGEMENT OF ...", "url": "https://www.acc.org/-/media/Non-Clinical/Files-PDFs-Excel-MS-Word-etc/Tools-and-Practice-Support/Clinical-Solutions/B23054-SGLT2is-Pocket-Guide.pdf"}, {"title": "Sodium-Glucose Cotransporter 2 (SGLT2) Inhibitors in Heart Failure With Preserved Ejection Fraction: A Systematic Review", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12277921"}, {"title": "SGLT-2 Inhibitors in Heart Failure: A Review of Current Evidence", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10172076"}], "facts": [{"fact": "EMPEROR-Preserved", "found_in": [2, 3, 4, 5]}, {"fact": "DELIVER", "found_in": [1, 3, 4, 5]}, {"fact": "no mortality reduction", "found_in": [3, 4]}, {"fact": "guideline class", "found_in": []}, {"fact": "10 mg dose", "found_in": [1]}], "seconds": 4.3}, {"q": 9, "route": "answer", "task": "consult", "queries": ["2025 AAAAI/ACAAI anaphylaxis guidelines management", "epinephrine dosing for anaphylaxis in adults", "anaphylaxis management algorithm hypotension wheezing"], "fallback_used": false, "sources": [{"title": "Epinephrine Administered in Anaphylaxis: The Evolution of 0.3 mg Dosage", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10052460"}, {"title": "Epinephrine in anaphylaxis", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10185359"}, {"title": "International recommendations on epinephrine auto-injector doses often differ from standard weight-based guidance: a review and clinical proposals", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9724388"}, {"title": "Anaphylaxis - Allergy and Immunology - Merck Manual Professional Edition", "url": "https://www.msdmanuals.com/en-pr/professional/immunology-allergic-disorders/allergic-autoimmune-and-other-hypersensitivity-disorders/anaphylaxis"}, {"title": "Use of multiple epinephrine doses in anaphylaxis: A systematic review and meta-analysis", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8588837"}, {"title": "Management of IgE-Mediated Food Allergies in K-12 ...", "url": "https://europepmc.org/articles/pmc12983177?pdf=render"}, {"title": "Anaphyllaxis management: Current concepts", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4173449"}, {"title": "A Clinical Practice Guideline for the Emergency Management of Anaphylaxis (2020)", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8996305"}, {"title": "Outpatient Emergencies: Anaphylaxis", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5381731"}, {"title": "Towards a common approach for managing food allergy ...", "url": "https://europepmc.org/article/pmc/11682877"}], "facts": [{"fact": "IM epinephrine dose", "found_in": [1, 2, 3, 4, 5]}, {"fact": "thigh injection site", "found_in": [2, 7]}, {"fact": "positioning", "found_in": []}, {"fact": "IV fluid bolus", "found_in": [7]}, {"fact": "airway management", "found_in": [4, 7, 9]}, {"fact": "bronchodilator", "found_in": [8]}, {"fact": "glucagon (β-blockers)", "found_in": []}], "seconds": 4.1}, {"q": 10, "route": "answer", "task": "teaching", "queries": ["SMLE nephrotic vs nephritic syndrome MCQs guidelines", "nephrotic vs nephritic syndrome differentiation criteria review", "high yield nephrotic nephritic syndrome questions with explanations"], "fallback_used": false, "sources": [{"title": "Minimal Change Disease - Abstract", "url": "https://europepmc.org/books/nbk560639"}, {"title": "Clinical Presentation & Management of Glomerular Diseases: Hematuria, Nephritic & Nephrotic Syndrome", "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6188440"}, {"title": "KDIGO-2025-Guideline-for-Nephrotic-Syndrome-in- ...", "url": "https://kdigo.org/wp-content/uploads/2025/04/KDIGO-2025-Guideline-for-Nephrotic-Syndrome-in-Children.pdf"}, {"title": "KDIGO-2024-Nephrotic-Syndrome-in-Children-Guideline- ...", "url": "https://kdigo.org/wp-content/uploads/2024/04/KDIGO-2024-Nephrotic-Syndrome-in-Children-Guideline-Public-Review-Draft.pdf"}, {"title": "Nephrotic syndrome with a nephritic component associated with toxoplasmosis in an immunocompetent young man.", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4001951"}, {"title": "Overview of Nephrotic Syndrome - Nephrology - MSD Manual Professional Edition", "url": "https://www.msdmanuals.com/professional/nephrology/glomerular-disorders/overview-of-nephrotic-syndrome"}, {"title": "Nephrotic Syndrome - Kidney Disorders", "url": "https://www.msdmanuals.com/home/kidney-disorders/kidney-filtering-disorders/nephrotic-syndrome"}, {"title": "Overview of Nephritic Syndrome - Nephrology - MSD Manual Professional Edition", "url": "https://www.msdmanuals.com/professional/nephrology/glomerular-disorders/overview-of-nephritic-syndrome"}], "facts": [{"fact": "nephrotic proteinuria threshold", "found_in": []}, {"fact": "hypoalbuminemia", "found_in": [2, 5, 6]}, {"fact": "RBC casts", "found_in": [8]}, {"fact": "minimal change disease", "found_in": [1, 2, 6]}, {"fact": "post-infectious / IgA", "found_in": [2, 8]}], "seconds": 4.2}], [{"q": 1, "route": "answer", "task": "consult", "queries": ["IDSA guidelines acute pyelonephritis adult women diagnosis", "differential diagnosis fever flank pain dysuria adult female", "acute pyelonephritis vs pyelitis vs renal abscess clinical features"], "fallback_used": false, "sources": [{"title": "Guidelines for antimicrobial treatment of uncomplicated acute bacterial cystitis and acute pyelonephritis in women. Infectious Diseases Society of America (IDSA).", "url": "https://pubmed.ncbi.nlm.nih.gov/10589881"}, {"title": "Clinical and diagnostic evaluation of flank pain in female patients: a retrospective cohort study of 3350 patients", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13321474"}, {"title": "International clinical practice guidelines for the treatment of acute uncomplicated cystitis and pyelonephritis in women: A 2010 update by the Infectious Diseases Society of America and the European Society for Microbiology and Infectious Diseases.", "url": "https://pubmed.ncbi.nlm.nih.gov/21292654"}, {"title": "Diagnosis and Management of Acute Pyelonephritis in Adults | AFP", "url": "https://www.aafp.org/afp/2005/0301/p933"}, {"title": "Diagnosis and Treatment of Acute Uncomplicated Cystitis | AFP", "url": "https://www.aafp.org/afp/2011/1001/p771"}, {"title": "Acute Pyelonephritis: Clinical Characteristics and the Role of the Surgical Treatment", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2672131"}, {"title": "Role of CT in Pyelonephritis: A Comprehensive Pictorial Review", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12374602"}, {"title": "Acute Pyelonephritis - StatPearls - NCBI Bookshelf", "url": "https://www.ncbi.nlm.nih.gov/sites/books/NBK519537"}, {"title": "Renal abscess complicating acute pyelonephritis in children: Two cases report and literature review.", "url": "https://pubmed.ncbi.nlm.nih.gov/38050281"}, {"title": "Clinical Characteristics, Microbiological Spectrum, Biomarkers, and Imaging Insights in Acute Pyelonephritis and Its Complicated Forms—A Systematic Review", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12844392"}], "facts": [{"fact": "urine culture", "found_in": [4, 5]}, {"fact": "fluoroquinolone regimen", "found_in": [4, 6]}, {"fact": "admission criteria", "found_in": [1, 4]}, {"fact": "pregnancy", "found_in": [3, 4, 8]}, {"fact": "imaging if no improvement 48–72 h", "found_in": []}], "seconds": 6.4}, {"q": 2, "route": "answer", "task": "consult", "queries": ["ADA Standards of Care 2024 type 2 diabetes management established ASCVD", "first-line pharmacotherapy type 2 diabetes HbA1c 8.5% ASCVD guidelines", "GLP-1 receptor agonist vs SGLT2 inhibitor first-line type 2 diabetes ASCVD"], "fallback_used": false, "sources": [{"title": "SGLT2 Inhibitors vs. GLP-1 Agonists to Treat the Heart, the Kidneys and the Brain", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10455499"}, {"title": "First-Line Therapy for Type 2 Diabetes With Sodium–Glucose Cotransporter-2 Inhibitors and Glucagon-Like Peptide-1 Receptor Agonists", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10155215"}, {"title": "Combining glucagon-like peptide-1 receptor agonists (GLP-1RAs) and sodium-glucose cotransporter-2 inhibitors (SGLT2is) in patients with type 2 diabetes mellitus (T2DM)", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10067319"}, {"title": "Use of Glucagon-Like Peptide-1 Receptor Agonists in Patients With Type 2 Diabetes and Cardiovascular Disease", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7744318"}, {"title": "Prescribing Patterns of SGLT2 Inhibitors and GLP‐1 Receptor Agonists in Patients With T2DM and ASCVD in South Korea", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12209748"}, {"title": "10. Cardiovascular Disease and Risk Management: Standards of Care in Diabetes—2026 | Diabetes Care | American Diabetes Association", "url": "https://diabetesjournals.org/care/article/49/Supplement_1/S216/163933/10-Cardiovascular-Disease-and-Risk-Management"}, {"title": "9. Pharmacologic Approaches to Glycemic Treatment: Standards of Care in Diabetes—2025 | Diabetes Care | American Diabetes Association", "url": "https://diabetesjournals.org/care/article/48/Supplement_1/S181/157569/9-Pharmacologic-Approaches-to-Glycemic-Treatment"}, {"title": "13. Older Adults: Standards of Care in Diabetes—2026 | Diabetes Care | American Diabetes Association", "url": "https://diabetesjournals.org/care/article/49/Supplement_1/S277/163921/13-Older-Adults-Standards-of-Care-in-Diabetes-2026"}, {"title": "Summary of Revisions: Standards of Care in Diabetes—2024", "url": "https://diabetesjournals.org/care/article/47/Supplement_1/S5/153943/Summary-of-Revisions-Standards-of-Care-in-Diabetes"}, {"title": "10. Cardiovascular Disease and Risk Management", "url": "https://diabetesjournals.org/care/article/47/Supplement_1/S179/153957/10-Cardiovascular-Disease-and-Risk-Management"}], "facts": [{"fact": "GLP-1 RA / SGLT2i for ASCVD", "found_in": [1, 2, 3, 4, 5, 6, 7, 8]}, {"fact": "independent of HbA1c", "found_in": [4, 7, 8]}, {"fact": "independent of metformin", "found_in": [7]}, {"fact": "statin", "found_in": []}], "seconds": 5.1}, {"q": 3, "route": "answer", "task": "consult", "queries": ["IDSA guidelines acute otitis media pediatric amoxicillin dosing", "amoxicillin dosing adjustment renal insufficiency children"], "fallback_used": false, "sources": [{"title": "AMOXICILLIN AND CLAVULANATE POTASSIUM", "url": "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=70c5dcb1-ebad-4297-a3bd-88ab5a70d86c"}, {"title": "Antibiotic Use in Acute Upper Respiratory Tract Infections | AFP", "url": "https://www.aafp.org/afp/2022/1200/antibiotics-upper-respiratory-tract-infections"}, {"title": "Clinical Practice Guideline for the Diagnosis and ...", "url": "https://publications.aap.org/pediatrics/article/132/1/e262/31288/Clinical-Practice-Guideline-for-the-Diagnosis-and"}, {"title": "AUGMENTIN® (amoxicillin and clavulanate potassium) tablets ...", "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2024/050564s060,050575s051,050597s052,050720s037,050725s036,050726s027lbl.pdf"}, {"title": "Steering Away from Current Amoxicillin Dose Reductions in Hospitalized Patients with Impaired Kidney Function to Avoid Subtherapeutic Drug Exposure", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9494977"}, {"title": "AMOXIL (amoxicillin) capsules, tablets, or powder for oral ...", "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2015/50542s02950754s01950760s01950761s016lbl.pdf"}, {"title": "Acute Otitis Media and Acute Bacterial Rhinosinusitis", "url": "https://publications.aap.org/books/chapter-pdf/1283608/aap_9781610020770-part01_section01_ch01.pdf"}, {"title": "Principles of Appropriate Use of Antimicrobial Therapy for ...", "url": "https://publications.aap.org/redbook/book/755/chapter/14083980/Principles-of-Appropriate-Use-of-Antimicrobial"}, {"title": "Harmonization of Amoxicillin Dose, Duration, and Formulation for Acute Childhood Respiratory Infections", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10376083"}, {"title": "Amoxicillin and Clavulanate | Drug Lookup", "url": "https://publications.aap.org/pediatriccare/drug-monograph/18/5194/Amoxicillin-and-Clavulanate"}], "facts": [{"fact": "80–90 mg/kg/day", "found_in": [8]}, {"fact": "two divided doses", "found_in": [1, 2, 4, 6]}, {"fact": "renal adjustment threshold", "found_in": [1, 4, 6]}, {"fact": "duration", "found_in": [1, 2, 4, 6]}], "seconds": 3.9}, {"q": 4, "route": "answer", "task": "consult", "queries": ["acid-base disorder interpretation pH 7.28 PaCO2 28 HCO3 13 anion gap", "mixed acid-base disorder criteria metabolic acidosis respiratory alkalosis"], "fallback_used": false, "sources": [{"title": "Evaluation of respiratory alkalosis - Differential diagnosis of symptoms | BMJ Best Practice US", "url": "https://bestpractice.bmj.com/topics/en-us/463"}, {"title": "Overview of acid-base and electrolyte disorders - Summary of relevant conditions | BMJ Best Practice US", "url": "https://bestpractice.bmj.com/topics/en-us/1072"}, {"title": "Assessment of respiratory alkalosis", "url": "https://bestpractice.bmj.com/topics/en-gb/463"}, {"title": "A 84-Year-Old Man With Decreased Consciousness and ...", "url": "https://europepmc.org/articles/pmc10332947?pdf=render"}, {"title": "Understanding Acid-Base Disorders", "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5849971?term=%22Ulster+Med+J%22%5Bjour%5D"}, {"title": "Acid-Base Management for Open-Heart Surgery", "url": "https://www.ahajournals.org/doi/pdf/10.1161/01.cir.29.3.456"}, {"title": "[Procedural analysis of acid-base balance disorder: case serials in 4 patents].", "url": "https://www.ncbi.nlm.nih.gov/pubmed/28524033"}], "facts": [{"fact": "Winter's formula", "found_in": []}, {"fact": "anion gap formula", "found_in": []}, {"fact": "delta ratio / delta gap", "found_in": []}, {"fact": "normal anion gap range", "found_in": []}], "seconds": 4.1}, {"q": 5, "route": "answer", "task": "calculation", "queries": ["2024 AHA/ACC/HRS guideline atrial fibrillation anticoagulation CHA2DS2-VASc", "CHA2DS2-VASc score calculation criteria and interpretation", "anticoagulation recommendations for non-valvular atrial fibrillation based on CHA2DS2-VASc score"], "fallback_used": false, "sources": [{"title": "The CHA2DS2-VASc Score A Predictor of Thromboembolic Events and Mortality In Patients With an Implantable Monitoring Device Without Atrial Fibrillation", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5641434"}, {"title": "Impact of the CHA2DS2-VASc Score on Anticoagulation Recommendations for Atrial Fibrillation", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4555351"}, {"title": "Risk Stratification and Anticoagulation in Low-risk Non-valvular Atrial Fibrillation", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4253753"}, {"title": "Oral anticoagulation in patients with non-valvular atrial fibrillation and a CHA2DS2-VASc score of 1: a current opinion of the European Society of Cardiology Working Group on Cardiovascular Pharmacotherapy and European Society of Cardiology Council on Stroke.", "url": "https://pubmed.ncbi.nlm.nih.gov/31119266"}, {"title": "CHADS2 versus CHA2DS2-VASc score in assessing the stroke and thromboembolism risk stratification in patients with atrial fibrillation: a systematic review and meta-analysis", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3796700"}, {"title": "Stroke Prevention in Atrial Fibrillation: Global Guideline Comparison", "url": "https://reference.medscape.com/cc2/p10/guideline-essentials-stroke-prevention-patients-atrial-2023a1000qnh"}, {"title": "CHA2DS2-VASc Score Guides Oral Anticoagulation in Patients With SCAF - American College of Cardiology", "url": "https://www.acc.org/latest-in-cardiology/articles/2024/06/12/15/50/cha2ds2-vasc-score-guides-oral-anticoagulation-in-patients-with-scaf"}, {"title": "Differences Between the AAFP Atrial Fibrillation Guideline and the AHA/ACC/HRS Guideline | AFP", "url": "https://aafp.org/afp/2017/0901/p284"}, {"title": "Risks of Bleeding and Stroke Based on CHA2DS2‐VASc ...", "url": "https://www.ahajournals.org/doi/10.1161/JAHA.119.014574"}, {"title": "CHA2DS2-VASc Score and Stroke Prediction in Atrial ...", "url": "https://www.ahajournals.org/doi/10.1161/STROKEAHA.118.021453"}], "facts": [{"fact": "age 65–74 = 1 point", "found_in": [1, 10]}, {"fact": "threshold for women", "found_in": [6]}, {"fact": "CHA2DS2-VA (2024 ESC)", "found_in": [6]}, {"fact": "DOAC over warfarin", "found_in": []}, {"fact": "bleeding risk", "found_in": [3, 4, 6, 8]}], "seconds": 4.2}, {"q": 6, "route": "answer", "task": "documentation", "queries": ["CDC guidelines for acute pharyngitis documentation", "Centor criteria scoring and management", "SOAP note structure for acute pharyngitis"], "fallback_used": false, "sources": [{"title": "A Study to Determine if Addition of Palatal Petechiae to Centor Criteria Adds More Significance to Clinical Diagnosis of Acute Strep Pharyngitis in Children", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4959792"}, {"title": "Acute pharyngitis in children and adults: descriptive comparison of current recommendations from national and international guidelines and future perspectives", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10746578"}, {"title": "Optimal management of adults with pharyngitis – a multi-criteria decision analysis", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1431519"}, {"title": "Optimal management of adults with pharyngitis--a multi-criteria decision analysis - PubMed", "url": "https://pubmed.ncbi.nlm.nih.gov/16533386"}, {"title": "Acute Pharyngitis - StatPearls - NCBI Bookshelf", "url": "https://www.ncbi.nlm.nih.gov/sites/books/NBK559007"}, {"title": "Physicians’ knowledge and adherence to Centor Criteria for preventing acute rheumatic fever in Jeddah, Saudi Arabia", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12207700"}, {"title": "Diagnostic Methods, Clinical Guidelines, and Antibiotic Treatment for Group A Streptococcal Pharyngitis: A Narrative Review", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7593338"}, {"title": "Diagnosis and Treatment of Pharyngitis in Children", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7118881"}, {"title": "Core Elements of Outpatient Antibiotic Stewardship  | MMWR", "url": "https://www.cdc.gov/mmwr/volumes/65/rr/rr6506a1.htm"}, {"title": "Upper Respiratory Infections", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7127764"}], "facts": [{"fact": "Centor criteria", "found_in": [1, 3, 4, 5, 6, 7]}, {"fact": "rapid antigen test", "found_in": [1, 2, 6, 7, 8]}, {"fact": "backup culture rule", "found_in": []}, {"fact": "penicillin/amoxicillin first-line", "found_in": [5, 10]}, {"fact": "10-day course", "found_in": []}], "seconds": 6.0}, {"q": 7, "route": "answer", "task": "patient_education", "queries": ["American Heart Association hypertension patient education guidelines", "hypertension lifestyle management and medication adherence patient education"], "fallback_used": false, "sources": [{"title": "Key contents of health education and their impact on improving medication adherence among hypertensive patients: A systematic review and meta-analysis", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12425528"}, {"title": "Effect of Comprehensive Health Management on Medication Adherence and Healthy Lifestyle Behavior of Patients With Hypertension", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12463532"}, {"title": "Patient Education and Medication Adherence among Hypertensives in a Tertiary Hospital, South Western Nigeria", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7060389"}, {"title": "Effectiveness of Educational Interventions on Adherence to Lifestyle Modifications Among Hypertensive Patients: An Integrative Review", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7177836"}, {"title": "Hypertension knowledge, heart healthy lifestyle practices and medication adherence among adults with hypertension", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7220145"}, {"title": "Updates in the 2025 AHA/ACC Hypertension Guideline", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12995957"}, {"title": "Implications of the New 2017 American College of Cardiology/American Heart Association Guidelines for Hypertension. - Abstract", "url": "https://pubmed.ncbi.nlm.nih.gov/31220914"}, {"title": "Global Impact of the 2017 American College of Cardiology/American Heart Association Hypertension Guidelines | Circulation", "url": "https://www.ahajournals.org/doi/10.1161/circulationaha.117.032849"}, {"title": "Implementation of the 2017 American College of Cardiology/American Heart Association Guidelines on Hypertension in Clinical Practice - PubMed", "url": "https://pubmed.ncbi.nlm.nih.gov/34566506"}, {"title": "Harmonization of the American College of Cardiology/American Heart Association and European Society of Cardiology/European Society of Hypertension Blood Pressure/Hypertension Guidelines: Comparisons, Reflections, and Recommendations", "url": "https://www.ahajournals.org/doi/10.1161/Circulationaha.121.054602"}], "facts": [{"fact": "sodium target", "found_in": []}, {"fact": "DASH diet", "found_in": []}, {"fact": "weight loss", "found_in": []}, {"fact": "exercise amount", "found_in": []}, {"fact": "urgent threshold 180/120", "found_in": []}], "seconds": 3.7}, {"q": 8, "route": "answer", "task": "consult", "queries": ["SGLT2 inhibitors heart failure with preserved ejection fraction guidelines 2024", "SGLT2 inhibitors heart failure with preserved ejection fraction randomized controlled trials evidence", "SGLT2 inhibitors heart failure with preserved ejection fraction dosing renal adjustment"], "fallback_used": false, "sources": [{"title": "Effectiveness of SGLT2 Inhibitors in Improving Functional Capacity and Reducing Hospitalizations in Heart Failure With Preserved Ejection Fraction (HFpEF): A Systematic Review of Randomized Controlled Trials", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12524905"}, {"title": "Efficacy of Sodium-Glucose Cotransporter 2 (SGLT2) Inhibitors in Heart Failure With Preserved Ejection Fraction: A Systematic Review", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12165776"}, {"title": "The role of SGLT 2 inhibitors in heart failure with preserved ejection fraction (HFpEF): a systematic review and meta-analysis of randomized controlled trials", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12557931"}, {"title": "SGLT2 inhibitors among patients with heart failure with preserved ejection fraction: A meta-analysis of randomised controlled trials.", "url": "https://pubmed.ncbi.nlm.nih.gov/37773799"}, {"title": "Robustness of randomized controlled trial evidence for SGLT2 inhibitors in heart failure with preserved and mildly reduced ejection fraction.", "url": "https://pubmed.ncbi.nlm.nih.gov/41314931"}, {"title": "ACC/AHA Add Nine New Performance and Quality Measures to Updated 2024 Heart Failure Measure Set - American College of Cardiology", "url": "https://www.acc.org/latest-in-cardiology/articles/2024/08/07/10/16/acc-aha-add-nine-new-performance-and-quality-measures-to-updated-2024-hf-measure-set"}, {"title": "SGLT2 Inhibition in Heart Failure with Preserved Ejection Fraction — The New Frontier", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11270412"}, {"title": "USE OF SGLT2 INHIBITORS IN THE MANAGEMENT OF ...", "url": "https://www.acc.org/-/media/Non-Clinical/Files-PDFs-Excel-MS-Word-etc/Tools-and-Practice-Support/Clinical-Solutions/B23054-SGLT2is-Pocket-Guide.pdf"}, {"title": "Sodium-Glucose Cotransporter 2 (SGLT2) Inhibitors in Heart Failure With Preserved Ejection Fraction: A Systematic Review", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12277921"}, {"title": "SGLT-2 Inhibitors in Heart Failure: A Review of Current Evidence", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10172076"}], "facts": [{"fact": "EMPEROR-Preserved", "found_in": [2, 3, 4, 5]}, {"fact": "DELIVER", "found_in": [1, 3, 4, 5]}, {"fact": "no mortality reduction", "found_in": [3, 4]}, {"fact": "guideline class", "found_in": []}, {"fact": "10 mg dose", "found_in": [1]}], "seconds": 4.3}, {"q": 9, "route": "answer", "task": "consult", "queries": ["2025 AAAAI/ACAAI anaphylaxis guidelines management", "epinephrine dosing for anaphylaxis in adults", "anaphylaxis management algorithm hypotension wheezing"], "fallback_used": false, "sources": [{"title": "Epinephrine Administered in Anaphylaxis: The Evolution of 0.3 mg Dosage", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10052460"}, {"title": "Epinephrine in anaphylaxis", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10185359"}, {"title": "International recommendations on epinephrine auto-injector doses often differ from standard weight-based guidance: a review and clinical proposals", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9724388"}, {"title": "Anaphylaxis - Allergy and Immunology - Merck Manual Professional Edition", "url": "https://www.msdmanuals.com/en-pr/professional/immunology-allergic-disorders/allergic-autoimmune-and-other-hypersensitivity-disorders/anaphylaxis"}, {"title": "Use of multiple epinephrine doses in anaphylaxis: A systematic review and meta-analysis", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8588837"}, {"title": "Management of IgE-Mediated Food Allergies in K-12 ...", "url": "https://europepmc.org/articles/pmc12983177?pdf=render"}, {"title": "Anaphyllaxis management: Current concepts", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4173449"}, {"title": "A Clinical Practice Guideline for the Emergency Management of Anaphylaxis (2020)", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8996305"}, {"title": "Outpatient Emergencies: Anaphylaxis", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5381731"}, {"title": "Towards a common approach for managing food allergy ...", "url": "https://europepmc.org/article/pmc/11682877"}], "facts": [{"fact": "IM epinephrine dose", "found_in": [1, 2, 3, 4, 5]}, {"fact": "thigh injection site", "found_in": [2, 7]}, {"fact": "positioning", "found_in": []}, {"fact": "IV fluid bolus", "found_in": [7]}, {"fact": "airway management", "found_in": [4, 7, 9]}, {"fact": "bronchodilator", "found_in": [8]}, {"fact": "glucagon (β-blockers)", "found_in": []}], "seconds": 4.2}, {"q": 10, "route": "answer", "task": "teaching", "queries": ["SMLE nephrotic vs nephritic syndrome MCQs guidelines", "nephrotic vs nephritic syndrome differentiation criteria review", "high yield nephrotic nephritic syndrome questions with explanations"], "fallback_used": false, "sources": [{"title": "Minimal Change Disease - Abstract", "url": "https://europepmc.org/books/nbk560639"}, {"title": "Clinical Presentation & Management of Glomerular Diseases: Hematuria, Nephritic & Nephrotic Syndrome", "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6188440"}, {"title": "KDIGO-2025-Guideline-for-Nephrotic-Syndrome-in- ...", "url": "https://kdigo.org/wp-content/uploads/2025/04/KDIGO-2025-Guideline-for-Nephrotic-Syndrome-in-Children.pdf"}, {"title": "KDIGO-2024-Nephrotic-Syndrome-in-Children-Guideline- ...", "url": "https://kdigo.org/wp-content/uploads/2024/04/KDIGO-2024-Nephrotic-Syndrome-in-Children-Guideline-Public-Review-Draft.pdf"}, {"title": "Nephrotic syndrome with a nephritic component associated with toxoplasmosis in an immunocompetent young man.", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4001951"}, {"title": "Overview of Nephrotic Syndrome - Nephrology - MSD Manual Professional Edition", "url": "https://www.msdmanuals.com/professional/nephrology/glomerular-disorders/overview-of-nephrotic-syndrome"}, {"title": "Nephrotic Syndrome - Kidney Disorders", "url": "https://www.msdmanuals.com/home/kidney-disorders/kidney-filtering-disorders/nephrotic-syndrome"}, {"title": "Overview of Nephritic Syndrome - Nephrology - MSD Manual Professional Edition", "url": "https://www.msdmanuals.com/professional/nephrology/glomerular-disorders/overview-of-nephritic-syndrome"}], "facts": [{"fact": "nephrotic proteinuria threshold", "found_in": []}, {"fact": "hypoalbuminemia", "found_in": [2, 5, 6]}, {"fact": "RBC casts", "found_in": [8]}, {"fact": "minimal change disease", "found_in": [1, 2, 6]}, {"fact": "post-infectious / IgA", "found_in": [2, 8]}], "seconds": 5.1}]]}
+{"timestamp": "2026-10-12T10:08:34+00:00", "repeats": 1, "facts_total": 49, "facts_found": [40], "runs": [[{"q": 1, "route": "answer", "task": "consult", "queries": ["2023 IDSA guidelines acute pyelonephritis diagnosis and management", "differential diagnosis flank pain fever dysuria adult female", "sepsis criteria acute pyelonephritis"], "sources": [{"title": "Clinical and diagnostic evaluation of flank pain in female patients: a retrospective cohort study of 3350 patients", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13321474"}, {"title": "Dysuria: Evaluation and Differential Diagnosis in Adults | AFP", "url": "https://www.aafp.org/afp/2015/1101/p778"}, {"title": "Predictors of septic shock in obstructive acute pyelonephritis", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4031390"}, {"title": "Diagnosis and Management of Acute Pyelonephritis in Adults | AFP", "url": "https://www.aafp.org/afp/2005/0301/p933"}, {"title": "Factors associated with severe sepsis or septic shock in complicated pyelonephritis", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5671861"}, {"title": "Acute Pyelonephritis - StatPearls - NCBI Bookshelf", "url": "https://www.ncbi.nlm.nih.gov/sites/books/NBK519537"}, {"title": "Acute Pyelonephritis: Clinical Characteristics and the Role of the Surgical Treatment", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2672131"}, {"title": "Diagnosis and Treatment of Acute Pyelonephritis in Women | AFP", "url": "https://www.aafp.org/afp/2011/0901/p519"}, {"title": "Clinical Practice Guidelines for the Antibiotic Treatment of Community-Acquired Urinary Tract Infections", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5895837"}, {"title": "Common differential diagnosis of low back pain in contemporary medical practice: a narrative review", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10876847"}], "facts": [{"fact": "urine culture", "found_in": [2, 4, 6, 7, 8]}, {"fact": "fluoroquinolone regimen", "found_in": [4, 9]}, {"fact": "admission criteria", "found_in": [4, 5, 6, 7, 9]}, {"fact": "pregnancy", "found_in": [2, 4, 6]}, {"fact": "imaging if no improvement 48–72 h", "found_in": [9]}], "seconds": 10.7}, {"q": 2, "route": "answer", "task": "consult", "queries": ["ADA 2024 guidelines first-line management type 2 diabetes established ASCVD", "GLP-1 receptor agonist vs SGLT2 inhibitor first-line type 2 diabetes ASCVD", "HbA1c 8.5% type 2 diabetes treatment algorithm 2024"], "sources": [{"title": "SGLT2 Inhibitors vs. GLP-1 Agonists to Treat the Heart, the Kidneys and the Brain", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10455499"}, {"title": "First-Line Therapy for Type 2 Diabetes With Sodium–Glucose Cotransporter-2 Inhibitors and Glucagon-Like Peptide-1 Receptor Agonists", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10155215"}, {"title": "Combining glucagon-like peptide-1 receptor agonists (GLP-1RAs) and sodium-glucose cotransporter-2 inhibitors (SGLT2is) in patients with type 2 diabetes mellitus (T2DM)", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10067319"}, {"title": "Use of Glucagon-Like Peptide-1 Receptor Agonists in Patients With Type 2 Diabetes and Cardiovascular Disease", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7744318"}, {"title": "ISPAD Clinical Practice Consensus Guidelines 2024: Type 2 Diabetes in Children and Adolescents", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11854986"}, {"title": "Prescribing Patterns of SGLT2 Inhibitors and GLP‐1 Receptor Agonists in Patients With T2DM and ASCVD in South Korea", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12209748"}, {"title": "Treatment strategy for children and adolescents with type 2 diabetes-based on ISPAD Clinical Practice Consensus Guidelines 2022", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10288292"}, {"title": "9. Pharmacologic Approaches to Glycemic Treatment", "url": "https://diabetesjournals.org/care/article/47/Supplement_1/S158/153955/9-Pharmacologic-Approaches-to-Glycemic-Treatment"}, {"title": "10. Cardiovascular Disease and Risk Management: Standards of Care in Diabetes—2025 | Diabetes Care | American Diabetes Association", "url": "https://diabetesjournals.org/care/article/48/Supplement_1/S207/157549/10-Cardiovascular-Disease-and-Risk-Management"}, {"title": "13. Older Adults: Standards of Care in Diabetes—2024", "url": "https://diabetesjournals.org/care/article/47/Supplement_1/S244/153944/13-Older-Adults-Standards-of-Care-in-Diabetes-2024"}], "facts": [{"fact": "GLP-1 RA / SGLT2i for ASCVD", "found_in": [1, 2, 3, 4, 6, 9]}, {"fact": "independent of HbA1c", "found_in": [4]}, {"fact": "independent of metformin", "found_in": []}, {"fact": "statin", "found_in": []}], "seconds": 6.2}, {"q": 3, "route": "answer", "task": "consult", "queries": ["AAP guidelines amoxicillin dosing acute otitis media children", "amoxicillin dosing adjustment renal impairment children"], "sources": [{"title": "Antibiotic dosing for acute otitis media in children: a weighty issue.", "url": "https://pubmed.ncbi.nlm.nih.gov/20042912"}, {"title": "Antibiotic treatment of acute and recurrent otitis media in children: an Italian intersociety Consensus", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11844117"}, {"title": "AMOXICILLIN ORAL SUSP 250mg/5mL 150mL", "url": "https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?setid=330a6a2e-1224-557c-e054-00144ff8d46c&type=pdf"}, {"title": "Developing Community-Specific Recommendations for ...", "url": "https://publications.aap.org/pediatrics/article/114/2/342/64644/Developing-Community-Specific-Recommendations-for"}, {"title": "AMOXICILLIN AND CLAVULANATE POTASSIUM", "url": "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=70c5dcb1-ebad-4297-a3bd-88ab5a70d86c"}, {"title": "New insights into the treatment of acute otitis media", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10231305"}, {"title": "Amoxicillin Dosage | Pediatrics", "url": "https://publications.aap.org/pediatrics/article/110/1/195/64090/Amoxicillin-Dosage"}, {"title": "Augmented Renal Clearance Implies a Need for Increased Amoxicillin-Clavulanic Acid Dosing in Critically Ill Children", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4604416"}], "facts": [{"fact": "80–90 mg/kg/day", "found_in": [1, 2, 4, 6]}, {"fact": "two divided doses", "found_in": [3, 5, 6]}, {"fact": "renal adjustment threshold", "found_in": [3, 5]}, {"fact": "duration", "found_in": [3, 6]}], "seconds": 5.4}, {"q": 4, "route": "answer", "task": "consult", "queries": ["acid-base disorder interpretation pH 7.28 PaCO2 28 HCO3 13", "anion gap calculation and interpretation normal range", "mixed acid-base disorder criteria respiratory metabolic"], "sources": [{"title": "The role of the anion gap in detecting and managing mixed metabolic acid-base disorders.", "url": "https://pubmed.ncbi.nlm.nih.gov/6488577"}, {"title": "Acid-Base Disorders - Nephrology - MSD Manual Professional Edition", "url": "https://www.msdmanuals.com/professional/nephrology/acid-base-regulation-and-disorders/acid-base-disorders"}, {"title": "Breathing and balance: Clinical insights and management strategies of respiratory acid‐base disorders", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12242095"}, {"title": "Simple and mixed acid-base disorders: a practical approach.", "url": "https://pubmed.ncbi.nlm.nih.gov/6774200"}, {"title": "Acid-Base Disorders in Patients with Chronic Obstructive Pulmonary Disease: A Pathophysiological Review", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3303884"}, {"title": "Anion-gap metabolic acidemia: case-based analyses.", "url": "https://pubmed.ncbi.nlm.nih.gov/32873962"}, {"title": "Interpretation of Arterial Blood Gases (ABGs)", "url": "https://www.thoracic.org/professionals/clinical-resources/critical-care/clinical-education/abgs.php"}, {"title": "Biochemistry, Anion Gap - StatPearls - NCBI Bookshelf", "url": "https://www.ncbi.nlm.nih.gov/sites/books/NBK539757"}, {"title": "Update on value of the anion gap in clinical diagnosis and laboratory evaluation.", "url": "https://pubmed.ncbi.nlm.nih.gov/11369334"}, {"title": "Anion Gap and Non-Anion Gap Metabolic Acidosis", "url": "https://pubmed.ncbi.nlm.nih.gov/28846305"}], "facts": [{"fact": "Winter's formula", "found_in": [2, 7]}, {"fact": "anion gap formula", "found_in": [2, 10]}, {"fact": "delta ratio / delta gap", "found_in": [2, 3]}, {"fact": "normal anion gap range", "found_in": [6, 10]}], "seconds": 6.7}, {"q": 5, "route": "answer", "task": "calculation", "queries": ["2024 AHA/ACC/HRS guideline atrial fibrillation anticoagulation CHA2DS2-VASc", "CHA2DS2-VASc score calculation criteria and interpretation", "anticoagulation recommendations for non-valvular atrial fibrillation based on CHA2DS2-VASc score"], "sources": [{"title": "The CHA2DS2-VASc Score A Predictor of Thromboembolic Events and Mortality In Patients With an Implantable Monitoring Device Without Atrial Fibrillation", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5641434"}, {"title": "Impact of the CHA2DS2-VASc Score on Anticoagulation Recommendations for Atrial Fibrillation", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4555351"}, {"title": "Risk Stratification and Anticoagulation in Low-risk Non-valvular Atrial Fibrillation", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4253753"}, {"title": "Oral anticoagulation in patients with non-valvular atrial fibrillation and a CHA2DS2-VASc score of 1: a current opinion of the European Society of Cardiology Working Group on Cardiovascular Pharmacotherapy and European Society of Cardiology Council on Stroke.", "url": "https://pubmed.ncbi.nlm.nih.gov/31119266"}, {"title": "CHADS2 versus CHA2DS2-VASc score in assessing the stroke and thromboembolism risk stratification in patients with atrial fibrillation: a systematic review and meta-analysis", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3796700"}, {"title": "Stroke Prevention in Atrial Fibrillation: Global Guideline Comparison", "url": "https://reference.medscape.com/cc2/p10/guideline-essentials-stroke-prevention-patients-atrial-2023a1000qnh"}, {"title": "CHA2DS2-VASc Score Guides Oral Anticoagulation in Patients With SCAF - American College of Cardiology", "url": "https://www.acc.org/latest-in-cardiology/articles/2024/06/12/15/50/cha2ds2-vasc-score-guides-oral-anticoagulation-in-patients-with-scaf"}, {"title": "Differences Between the AAFP Atrial Fibrillation Guideline and the AHA/ACC/HRS Guideline | AFP", "url": "https://aafp.org/afp/2017/0901/p284"}, {"title": "Risks of Bleeding and Stroke Based on CHA2DS2‐VASc ...", "url": "https://www.ahajournals.org/doi/10.1161/JAHA.119.014574"}, {"title": "CHA2DS2-VASc Score and Stroke Prediction in Atrial ...", "url": "https://www.ahajournals.org/doi/10.1161/STROKEAHA.118.021453"}], "facts": [{"fact": "age 65–74 = 1 point", "found_in": [1, 10]}, {"fact": "threshold for women", "found_in": [6]}, {"fact": "CHA2DS2-VA (2024 ESC)", "found_in": [6]}, {"fact": "DOAC over warfarin", "found_in": []}, {"fact": "bleeding risk", "found_in": [3, 4, 6, 8]}], "seconds": 3.8}, {"q": 6, "route": "answer", "task": "documentation", "queries": ["CDC guidelines for acute pharyngitis management 2024", "Centor criteria scoring and interpretation", "SOAP note structure for acute pharyngitis"], "sources": [{"title": "Diagnostic Accuracy of Centor Score for Diagnosis of Group A Streptococcal Pharyngitis among Adults in Primary Care Clinics in Malaysia", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9438850"}, {"title": "Adherence to NICE Guidelines and Centor Criteria in Acute Sore Throat Management: An Audit Cycle", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12533547"}, {"title": "IDSA Clinical Practice Guideline Update on Group A Streptococcal (GAS) Pharyngitis", "url": "https://www.idsociety.org/practice-guideline/streptococcal-pharyngitis2"}, {"title": "Large-Scale Validation of the Centor and McIsaac Scores to Predict Group A Streptococcal Pharyngitis", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3627733"}, {"title": "Acute Pharyngitis - StatPearls - NCBI Bookshelf", "url": "https://www.ncbi.nlm.nih.gov/sites/books/NBK559007"}, {"title": "Centor scores associated poorly with rapid antigen test findings in children with sore throat", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11554731"}, {"title": "Acute pharyngitis in children and adults: descriptive comparison of current recommendations from national and international guidelines and future perspectives", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10746578"}, {"title": "Centor criteria in children in a paediatric emergency department: for what it is worth", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3641432"}, {"title": "Clinical Guidance for Scarlet Fever | Group A Strep | CDC", "url": "https://www.cdc.gov/group-a-strep/hcp/clinical-guidance/scarlet-fever.html"}, {"title": "Clinical Guidance for Group A Streptococcal Pharyngitis | Group A Strep | CDC", "url": "https://www.cdc.gov/group-a-strep/hcp/clinical-guidance/strep-throat.html"}], "facts": [{"fact": "Centor criteria", "found_in": [1, 2, 3, 4, 6, 8]}, {"fact": "rapid antigen test", "found_in": [1, 6]}, {"fact": "backup culture rule", "found_in": []}, {"fact": "penicillin/amoxicillin first-line", "found_in": [5]}, {"fact": "10-day course", "found_in": []}], "seconds": 8.4}, {"q": 7, "route": "answer", "task": "patient_education", "queries": ["American Heart Association hypertension patient education guidelines", "simple explanation of hypertension for patients in Arabic", "lifestyle management for newly diagnosed hypertension"], "sources": [{"title": "Clinical inquiries. What lifestyle changes should we recommend for the patient with newly diagnosed hypertension?", "url": "https://pubmed.ncbi.nlm.nih.gov/17090361"}, {"title": "The Role of Lifestyle Modifications in Preventing and Managing Systemic Hypertension: Current Guidelines and Future Directions", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11837816"}, {"title": "Hypertension management and lifestyle changes following screening for hypertension in an Asian low socioeconomic status community: a prospective study - PubMed", "url": "https://pubmed.ncbi.nlm.nih.gov/24162320"}, {"title": "Updates in the 2025 AHA/ACC Hypertension Guideline", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12995957"}, {"title": "Use of lifestyle interventions in primary care for individuals with newly diagnosed hypertension, hyperlipidaemia or obesity: a retrospective cohort study - PMC", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9340092"}, {"title": "Lifestyle management of hypertension: International Society of Hypertension position paper endorsed by the World Hypertension League and European Society of Hypertension", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10713007"}, {"title": "Implications of the New 2017 American College of Cardiology/American Heart Association Guidelines for Hypertension. - Abstract", "url": "https://pubmed.ncbi.nlm.nih.gov/31220914"}, {"title": "Global Impact of the 2017 American College of Cardiology/American Heart Association Hypertension Guidelines | Circulation", "url": "https://www.ahajournals.org/doi/10.1161/circulationaha.117.032849"}, {"title": "Implementation of the 2017 American College of Cardiology/American Heart Association Guidelines on Hypertension in Clinical Practice - PubMed", "url": "https://pubmed.ncbi.nlm.nih.gov/34566506"}, {"title": "Harmonization of the American College of Cardiology/American Heart Association and European Society of Cardiology/European Society of Hypertension Blood Pressure/Hypertension Guidelines: Comparisons, Reflections, and Recommendations", "url": "https://www.ahajournals.org/doi/10.1161/Circulationaha.121.054602"}], "facts": [{"fact": "sodium target", "found_in": []}, {"fact": "DASH diet", "found_in": [1]}, {"fact": "weight loss", "found_in": [1, 2]}, {"fact": "exercise amount", "found_in": []}, {"fact": "urgent threshold 180/120", "found_in": []}], "seconds": 6.6}, {"q": 8, "route": "answer", "task": "consult", "queries": ["SGLT2 inhibitors heart failure with preserved ejection fraction guidelines 2024", "SGLT2 inhibitors heart failure with preserved ejection fraction efficacy trials", "SGLT2 inhibitors heart failure with preserved ejection fraction dosing recommendations"], "sources": [{"title": "SGLT2 Inhibitors and Heart Failure with Preserved Ejection Fraction.", "url": "https://pubmed.ncbi.nlm.nih.gov/36216487"}, {"title": "Emerging Horizons in Heart Failure with Preserved Ejection Fraction: The Role of SGLT2 Inhibitors", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8873330"}, {"title": "Emerging concepts in heart failure management and treatment: focus on SGLT2 inhibitors in heart failure with preserved ejection fraction", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9828870"}, {"title": "SGLT2 Inhibition in Heart Failure with Preserved Ejection Fraction — The New Frontier", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11270412"}, {"title": "ACC/AHA Add Nine New Performance and Quality Measures to Updated 2024 Heart Failure Measure Set - American College of Cardiology", "url": "https://www.acc.org/latest-in-cardiology/articles/2024/08/07/10/16/acc-aha-add-nine-new-performance-and-quality-measures-to-updated-2024-hf-measure-set"}, {"title": "SGLT-2 Inhibitors for Cardiovascular Outcomes in Heart Failure With Preserved Ejection Fraction | AFP", "url": "https://www.aafp.org/afp/2023/0100/fpin-ci-sglt-2-inhibitors-heart-failure"}, {"title": "Effectiveness of SGLT2 Inhibitors in Improving Functional Capacity and Reducing Hospitalizations in Heart Failure With Preserved Ejection Fraction (HFpEF): A Systematic Review of Randomized Controlled Trials", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12524905"}, {"title": "SGLT2 inhibitors among patients with heart failure with preserved ejection fraction: A meta-analysis of randomised controlled trials", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10545009"}, {"title": "Efficacy of Sodium-Glucose Cotransporter 2 (SGLT2) Inhibitors in Heart Failure With Preserved Ejection Fraction: A Systematic Review", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12165776"}, {"title": "USE OF SGLT2 INHIBITORS IN THE MANAGEMENT OF ...", "url": "https://www.acc.org/-/media/Non-Clinical/Files-PDFs-Excel-MS-Word-etc/Tools-and-Practice-Support/Clinical-Solutions/B23054-SGLT2is-Pocket-Guide.pdf"}], "facts": [{"fact": "EMPEROR-Preserved", "found_in": [1, 2, 3, 4, 8]}, {"fact": "DELIVER", "found_in": [2, 3, 4, 8]}, {"fact": "no mortality reduction", "found_in": [4]}, {"fact": "guideline class", "found_in": []}, {"fact": "10 mg dose", "found_in": [6]}], "seconds": 7.1}, {"q": 9, "route": "answer", "task": "consult", "queries": ["AAAAI/ACAAI anaphylaxis guidelines 2020 immediate management", "epinephrine dosing for anaphylaxis in adults", "anaphylaxis management algorithm hypotension and wheezing"], "sources": [{"title": "Epinephrine Administered in Anaphylaxis: The Evolution of 0.3 mg Dosage", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10052460"}, {"title": "Epinephrine in anaphylaxis", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10185359"}, {"title": "International recommendations on epinephrine auto-injector doses often differ from standard weight-based guidance: a review and clinical proposals", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9724388"}, {"title": "Anaphylaxis - Allergy and Immunology - Merck Manual Professional Edition", "url": "https://www.msdmanuals.com/en-pr/professional/immunology-allergic-disorders/allergic-autoimmune-and-other-hypersensitivity-disorders/anaphylaxis"}, {"title": "Use of multiple epinephrine doses in anaphylaxis: A systematic review and meta-analysis", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8588837"}, {"title": "A Clinical Practice Guideline for the Emergency Management of Anaphylaxis (2020)", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8996305"}, {"title": "Updated Anaphylaxis Guidelines | NEJM Clinician", "url": "https://clinician.nejm.org/updated-anaphylaxis-guidelines-nejm-jw.NA51354"}, {"title": "World allergy organization anaphylaxis guidance 2020", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7607509"}, {"title": "Preventing and Managing Adverse Reactions | Vaccines & Immunizations | CDC", "url": "https://www.cdc.gov/vaccines/hcp/imz-best-practices/preventing-managing-adverse-reactions.html"}, {"title": "Saudi-MoH-Protocol-for-Management-of-Anaphylaxis- ...", "url": "https://www.moh.gov.sa/Ministry/MediaCenter/Publications/Documents/Saudi-MoH-Protocol-for-Management-of-Anaphylaxis-V1.2.pdf"}], "facts": [{"fact": "IM epinephrine dose", "found_in": [1, 2, 3, 4, 5, 10]}, {"fact": "thigh injection site", "found_in": [2]}, {"fact": "positioning", "found_in": [10]}, {"fact": "IV fluid bolus", "found_in": [10]}, {"fact": "airway management", "found_in": [4, 10]}, {"fact": "bronchodilator", "found_in": [10]}, {"fact": "glucagon (β-blockers)", "found_in": [10]}], "seconds": 9.9}, {"q": 10, "route": "answer", "task": "teaching", "queries": ["SMLE nephrotic vs nephritic syndrome MCQs guidelines", "nephrotic syndrome vs nephritic syndrome key differences high yield", "nephrotic vs nephritic syndrome MCQs with explanations"], "sources": [{"title": "Educational Case: Membranous Nephropathy - PMC", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6295683"}, {"title": "Educational Case: Nephrotic Syndrome in Older Adult", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7436787"}, {"title": "Question Sets and Answers", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7120678"}, {"title": "Fast Five Quiz: Nephrotic Syndrome", "url": "https://reference.medscape.com/viewarticle/fast-five-quiz-how-much-do-you-know-about-nephrotic-syndrome-2025a1000dm9"}, {"title": "Nephritis and Nephrosis", "url": "https://publications.aap.org/books/chapter-pdf/795383/aap_9781581105650-part03-ch117.pdf"}, {"title": "Histology, Nephron - StatPearls - NCBI Bookshelf - NIH", "url": "https://www.ncbi.nlm.nih.gov/sites/books/NBK554411"}, {"title": "76: Nephrotic Syndrome", "url": "https://publications.aap.org/aapbooks/book/676/chapter/8136578/Nephrotic-Syndrome"}, {"title": "DIFFERENCE IN COLOR OF HEMATURIA IN THE ...", "url": "https://publications.aap.org/pediatrics/article/21/3/375/40380/DIFFERENCE-IN-COLOR-OF-HEMATURIA-IN-THE-NEPHROTIC"}, {"title": "Overview of Kidney Filtering Disorders - Kidney Disorders - MSD Manual Consumer Version", "url": "https://www.msdmanuals.com/home/kidney-disorders/kidney-filtering-disorders/overview-of-kidney-filtering-disorders"}, {"title": "Overview of Nephritic Syndrome - Nephrology - MSD Manual Professional Edition", "url": "https://www.msdmanuals.com/professional/nephrology/glomerular-disorders/overview-of-nephritic-syndrome"}], "facts": [{"fact": "nephrotic proteinuria threshold", "found_in": [2]}, {"fact": "hypoalbuminemia", "found_in": [1, 2, 7]}, {"fact": "RBC casts", "found_in": [10]}, {"fact": "minimal change disease", "found_in": [2]}, {"fact": "post-infectious / IgA", "found_in": [4, 10]}], "seconds": 7.0}]]}

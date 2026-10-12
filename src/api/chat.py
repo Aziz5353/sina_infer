@@ -1,8 +1,7 @@
 import logging
 
-from fastapi import APIRouter, HTTPException, Request
+from fastapi import APIRouter, Request
 from fastapi.responses import StreamingResponse
-from langgraph.graph.state import CompiledStateGraph
 
 from src.model.chat_request import ChatRequest
 from src.inference.state import SinaState
@@ -22,32 +21,16 @@ async def chat(request: Request, req: ChatRequest):
         f"history={[h.model_dump() for h in req.history]}"
     )
 
-    chat_graph: CompiledStateGraph | None = getattr(request.app.state, "graph", None)
-    if chat_graph is None:
-        logger.error("Could not retrieve server graph")
-        raise HTTPException(
-            status_code=500,
-            detail="Server graph was not initiated successfully.",
-        )
-
-    try:
-        initial_state = SinaState(
-            message=req.message,
-            history=[h.model_dump() for h in req.history],
-        )
-
-        logger.debug("chat | starting streaming response")
-        return StreamingResponse(
-            run_model_stream(
-                chat_graph=chat_graph,
-                graph_state=initial_state,
-            ),
-            media_type="text/event-stream",
-        )
-
-    except Exception:
-        logger.exception("Chat request failed")
-        raise HTTPException(
-            status_code=500,
-            detail="Chat request failed. Check logs for details.",
-        )
+    # The graph is built in the app lifespan before any request is served; failures
+    # inside the graph surface while streaming and are recorded by run_model_stream.
+    initial_state = SinaState(
+        message=req.message,
+        history=[h.model_dump() for h in req.history],
+    )
+    return StreamingResponse(
+        run_model_stream(
+            chat_graph=request.app.state.graph,
+            graph_state=initial_state,
+        ),
+        media_type="text/event-stream",
+    )

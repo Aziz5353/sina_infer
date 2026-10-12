@@ -1,7 +1,7 @@
 import logging
 
 from langchain_openai import ChatOpenAI
-from langchain_tavily import TavilySearch
+from langchain_tavily import TavilyExtract, TavilySearch
 
 from src.config.settings import settings
 
@@ -9,69 +9,34 @@ logger = logging.getLogger(__name__)
 
 
 class PipelineDefinition:
-    analyzer_llm: ChatOpenAI
-    contextualize_llm: ChatOpenAI
-    assess_llm: ChatOpenAI
-    generate_llm: ChatOpenAI
-    clarify_llm: ChatOpenAI
-    refuse_llm: ChatOpenAI
+    plan_llm: ChatOpenAI
+    answer_llm: ChatOpenAI
     search: TavilySearch
-
-    def __init__(self) -> None:
-        self._initialized = False
+    extract: TavilyExtract
 
     def init(self) -> None:
-        if self._initialized:
-            return
-
         # Qwen3/3.5 on vLLM otherwise writes its chain of thought into `content`.
         extra_body = {"chat_template_kwargs": {"enable_thinking": False}}
 
-        self.analyzer_llm = ChatOpenAI(
+        # Routing and query writing must be stable from run to run.
+        self.plan_llm = ChatOpenAI(
             api_key=settings.OPENAI_API_KEY,
             base_url=settings.OPENAI_BASE_URL,
             extra_body=extra_body,
-            model=settings.ANALYZER_MODEL,
-        )
-        self.contextualize_llm = ChatOpenAI(
-            api_key=settings.OPENAI_API_KEY,
-            base_url=settings.OPENAI_BASE_URL,
-            extra_body=extra_body,
-            model=settings.CONTEXTUALIZE_MODEL,
+            model=settings.PLAN_MODEL,
             temperature=0,
         )
-        self.assess_llm = ChatOpenAI(
+        self.answer_llm = ChatOpenAI(
             api_key=settings.OPENAI_API_KEY,
             base_url=settings.OPENAI_BASE_URL,
             extra_body=extra_body,
-            model=settings.ASSESS_MODEL,
-        )
-        self.generate_llm = ChatOpenAI(
-            api_key=settings.OPENAI_API_KEY,
-            base_url=settings.OPENAI_BASE_URL,
-            extra_body=extra_body,
-            model=settings.GENERATE_MODEL,
-            temperature=settings.GENERATE_TEMPERATURE,
-            streaming=True,
-        )
-        self.clarify_llm = ChatOpenAI(
-            api_key=settings.OPENAI_API_KEY,
-            base_url=settings.OPENAI_BASE_URL,
-            extra_body=extra_body,
-            model=settings.CLARIFY_MODEL,
-            streaming=True,
-        )
-        self.refuse_llm = ChatOpenAI(
-            api_key=settings.OPENAI_API_KEY,
-            base_url=settings.OPENAI_BASE_URL,
-            extra_body=extra_body,
-            model=settings.REFUSE_MODEL,
+            model=settings.ANSWER_MODEL,
+            temperature=settings.ANSWER_TEMPERATURE,
             streaming=True,
         )
         logger.info("pipeline | LLM clients initialized")
 
-        # The whitelist is also passed on every call (see nodes/search.py) so the
-        # restriction does not depend on this instance alone.
+        # Results are also checked against the whitelist in nodes/retrieve.py.
         self.search = TavilySearch(
             tavily_api_key=settings.TAVILY_API_KEY,
             max_results=settings.SEARCH_MAX_RESULTS,
@@ -79,12 +44,17 @@ class PipelineDefinition:
             search_depth="advanced",
             include_raw_content=False,
         )
+        # Pulls the passages most relevant to the query from the top-ranked pages,
+        # so the answer is not limited to the short search snippets.
+        self.extract = TavilyExtract(
+            tavily_api_key=settings.TAVILY_API_KEY,
+            extract_depth="basic",
+            chunks_per_source=3,
+        )
         logger.info(
             f"pipeline | search domains={settings.SEARCH_ALLOWED_DOMAINS} "
             f"max_results={settings.SEARCH_MAX_RESULTS}"
         )
-
-        self._initialized = True
 
 
 pipeline = PipelineDefinition()

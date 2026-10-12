@@ -8,34 +8,24 @@ def _csv(value: str) -> list[str]:
     return [item.strip() for item in value.split(",") if item.strip()]
 
 
+def _bool(value: str) -> bool:
+    return value.strip().lower() in ("1", "true", "yes", "on")
+
+
 class Settings:
     def __init__(self):
         load_dotenv()
         self.OPENAI_API_KEY = os.environ["OPENAI_API_KEY"]
         self.OPENAI_BASE_URL = os.environ["OPENAI_BASE_URL"]
-        self.ANALYZER_MODEL = os.environ["ANALYZER_MODEL"]
-        self.CONTEXTUALIZE_MODEL = os.environ["CONTEXTUALIZE_MODEL"]
-        self.CONTEXTUALIZE_HISTORY_TURNS = int(os.environ.get("CONTEXTUALIZE_HISTORY_TURNS", "6"))
-        self.ASSESS_MODEL = os.environ["ASSESS_MODEL"]
-        self.GENERATE_MODEL = os.environ["GENERATE_MODEL"]
-        self.GENERATE_TEMPERATURE = float(os.environ.get("GENERATE_TEMPERATURE", "0.1"))
-        self.CLARIFY_MODEL = os.environ["CLARIFY_MODEL"]
-        self.REFUSE_MODEL = os.environ["REFUSE_MODEL"]
+        self.PLAN_MODEL = os.environ["PLAN_MODEL"]
+        self.ANSWER_MODEL = os.environ["ANSWER_MODEL"]
+        self.ANSWER_TEMPERATURE = float(os.environ.get("ANSWER_TEMPERATURE", "0.1"))
+        self.HISTORY_TURNS = int(os.environ.get("HISTORY_TURNS", "6"))
         self.TAVILY_API_KEY = os.environ["TAVILY_API_KEY"]
         self.LOG_LEVEL = os.environ.get("LOG_LEVEL", "INFO").upper()
-        self.LOG_TO_FILE = os.environ.get("LOG_TO_FILE", "false").strip().lower() in (
-            "1",
-            "true",
-            "yes",
-            "on",
-        )
+        self.LOG_TO_FILE = _bool(os.environ.get("LOG_TO_FILE", "false"))
 
-        self.SAVE_CONVERSATIONS = os.environ.get("SAVE_CONVERSATIONS", "false").strip().lower() in (
-            "1",
-            "true",
-            "yes",
-            "on",
-        )
+        self.SAVE_CONVERSATIONS = _bool(os.environ.get("SAVE_CONVERSATIONS", "false"))
         # Only used to name the conversations file, e.g. data/conversations_gpt-5.1.csv
         generation_model_name = os.environ.get("GENERATION_MODEL_NAME", "").strip()
         default_csv_name = (
@@ -59,9 +49,10 @@ class Settings:
                 "(as a JSON list); Sina does not search the open web."
             )
         self.SEARCH_MAX_RESULTS = int(os.environ.get("SEARCH_MAX_RESULTS", "5"))
-        self.SEARCH_MIN_RESULTS = int(os.environ.get("SEARCH_MIN_RESULTS", "2"))
         self.SEARCH_QUERIES_PER_TURN = int(os.environ.get("SEARCH_QUERIES_PER_TURN", "3"))
-        self.MAX_SEARCH_ATTEMPTS = int(os.environ.get("MAX_SEARCH_ATTEMPTS", "2"))
+        self.SEARCH_MAX_SOURCES = int(os.environ.get("SEARCH_MAX_SOURCES", "10"))
+        self.SEARCH_EXTRACT_TOP_K = int(os.environ.get("SEARCH_EXTRACT_TOP_K", "4"))
+        self.SEARCH_EXTRACT_MAX_CHARS = int(os.environ.get("SEARCH_EXTRACT_MAX_CHARS", "3000"))
 
         # Clarify Settings
         self.MAX_CLARIFYING_QUESTIONS = int(os.environ.get("MAX_CLARIFYING_QUESTIONS", "4"))
