@@ -1,0 +1,62 @@
+﻿id,query,expected_output
+MED-001,What is the current first-line management of newly diagnosed type 2 diabetes with HbA1c 8.5% and established ASCVD?,"Lifestyle changes and diabetes education for all patients.
+Because ASCVD is present, start a GLP-1 RA with proven CV benefit (semaglutide, liraglutide, dulaglutide) or an SGLT2 inhibitor with proven CV benefit (empagliflozin, canagliflozin), regardless of HbA1c and regardless of metformin use.
+HbA1c 8.5% is ≥1.5% above the <7% target, so start combination therapy (e.g., metformin + GLP-1 RA or SGLT2i, or GLP-1 RA + SGLT2i).
+Add a high-intensity statin, aspirin for secondary prevention, and BP control <130/80.
+Check eGFR and urine albumin before choosing doses. (ADA Standards of Care 2026)"
+MED-002,ما جرعة amoxicillin للأطفال في acute otitis media؟ وهل تحتاج تعديلًا في القصور الكلوي؟,"الجرعة: amoxicillin بجرعة عالية 80–90 mg/kg/day مقسمة على جرعتين (كل 12 ساعة)، دون تجاوز جرعة البالغين القصوى.
+المدة: 10 أيام لمن هم أقل من سنتين أو في الحالات الشديدة، 7 أيام لعمر 2–5 سنوات، و5–7 أيام لعمر 6 سنوات فأكثر.
+إذا تناول الطفل amoxicillin خلال آخر 30 يومًا أو لديه التهاب ملتحمة قيحي: amoxicillin-clavulanate بجرعة 90/6.4 mg/kg/day.
+القصور الكلوي: نعم، لكن فقط في القصور الشديد (GFR أقل من 30). في هذه الحالة تُطال الفترة بين الجرعات: كل 12 ساعة إذا كان GFR بين 10 و30، وكل 24 ساعة إذا كان أقل من 10. لا حاجة للتعديل في القصور الخفيف أو المتوسط. يُنصح بمراجعة صيدلي أطفال."
+MED-003,"Interpret these ABG results: pH 7.28, PaCO2 28, HCO3 13, Na 138, Cl 102. What is the acid-base disorder?","High anion gap metabolic acidosis with appropriate respiratory compensation.
+- pH 7.28 + low HCO3 = metabolic acidosis
+- Anion gap = 138 − (102 + 13) = 23 (high)
+- Winter's formula: 1.5 × 13 + 8 = 27.5 ± 2; PaCO2 28 = appropriate compensation
+- Delta ratio = 11/11 = 1 → no additional metabolic disorder
+Check lactate, ketones, creatinine, osmolar gap and salicylates to find the cause."
+MED-004,"Calculate CHA2DS2-VASc for a 72-year-old woman with hypertension and diabetes, and advise on anticoagulation.","CHA2DS2-VASc = 4 (hypertension 1, diabetes 1, age 65–74 1, female 1), assuming atrial fibrillation.
+Oral anticoagulation is recommended. A DOAC (apixaban, rivaroxaban, edoxaban or dabigatran) is preferred over warfarin, dosed by renal function.
+Aspirin is not an alternative. Assess bleeding risk to fix modifiable factors, not to withhold anticoagulation."
+MED-005,"Write a SOAP note for a 35M with 2 days of sore throat, fever 38.5, tonsillar exudate, tender anterior nodes, no cough.","S: 35-year-old male with 2 days of sore throat and fever. No cough.
+O: Temp 38.5°C. Tonsillar exudate. Tender anterior cervical lymph nodes.
+A: Acute pharyngitis, likely group A strep. Centor score 4. Differential: viral pharyngitis, mononucleosis.
+P: Rapid strep test ± throat culture. If positive: penicillin V 500 mg BID or amoxicillin 500 mg BID for 10 days. Paracetamol/ibuprofen and fluids. Return if difficulty swallowing or breathing, drooling, or no improvement in 48–72 hours."
+MED-006,اشرح لمريض مصاب حديثًا بارتفاع ضغط الدم ما هو المرض وكيف يتعامل معه، بلغة عربية بسيطة.,"ضغط الدم هو قوة دفع الدم على جدران الشرايين. يكون مرتفعًا إذا بقي فوق 140/90 تقريبًا عند القياس المتكرر.
+غالبًا لا يسبب أعراضًا، لكنه إذا لم يُعالج قد يضر القلب والدماغ والكلى والعينين. الخبر الجيد أنه يمكن التحكم فيه.
+كيف تتعامل معه:
+- قلّل الملح، وانتبه للخبز والمخللات والوجبات السريعة.
+- أكثِر من الخضار والفواكه.
+- امشِ 30 دقيقة معظم أيام الأسبوع.
+- خفّف وزنك إن كان زائدًا، وتوقف عن التدخين والشيشة.
+- خذ دواءك يوميًا حتى لو شعرت أنك بخير، ولا توقفه دون استشارة الطبيب.
+- قِس ضغطك في البيت وسجّل القراءات، وراجع طبيبك بانتظام.
+اذهب للطوارئ فورًا إذا كان الضغط مرتفعًا جدًا مع ألم في الصدر أو ضيق تنفس أو صداع شديد أو ضعف أو تنميل في جهة من الجسم."
+MED-007,What does the evidence say about SGLT2 inhibitors in heart failure with preserved ejection fraction?,"Two large trials show benefit: EMPEROR-Preserved (empagliflozin, HR 0.79) and DELIVER (dapagliflozin, HR 0.82). Both reduced the combined outcome of cardiovascular death or heart failure hospitalization, mainly by cutting hospitalizations.
+There was no clear reduction in mortality. Symptoms and quality of life improved modestly. Benefit was seen with or without diabetes.
+Guidelines: ESC 2023 gives a Class I recommendation; ACC/AHA 2022 gives Class 2a.
+Side effects: genital infections, volume depletion, rare euglycemic DKA."
+MED-008,"Adult with suspected anaphylaxis after a bee sting: hypotensive, wheezing, facial swelling. Step-by-step immediate management?","1. Call for help.
+2. Give IM epinephrine 0.5 mg (1 mg/mL) in the outer thigh immediately. Repeat every 5 minutes if needed.
+3. Lay the patient flat with legs raised (sit up if breathing is difficult).
+4. High-flow oxygen. Assess the airway early because of facial swelling; prepare for intubation.
+5. IV access and fluid bolus 500–1000 mL for hypotension.
+6. Salbutamol for wheezing.
+7. If no response after 2 doses: IV epinephrine infusion and ICU support.
+8. Antihistamines only after epinephrine. Steroids are not routine.
+9. Observe for a delayed reaction. Discharge with 2 epinephrine auto-injectors and an allergy referral."
+MED-009,"Give me 5 high-yield MCQs on nephrotic vs nephritic syndrome with explanations, SMLE style.","(Expected: 5 clinical-vignette questions, 4 options each, answer + explanation. Example set:)
+1. A 4-year-old has periorbital edema, proteinuria 4+, low albumin, normal BP. Most likely diagnosis? A) Minimal change disease B) PSGN C) IgA nephropathy D) Alport syndrome. Answer: A. Most common nephrotic syndrome in children; responds to steroids.
+2. A 9-year-old has cola-colored urine and hypertension 2 weeks after a sore throat. Which lab finding is expected? A) Low C3 B) High C3 C) Anti-PLA2R antibodies D) Proteinuria >3.5 g/day. Answer: A. Post-streptococcal GN lowers complement.
+3. A 20-year-old has visible hematuria 1–2 days after a cold, with normal complement. Diagnosis? A) PSGN B) IgA nephropathy C) Minimal change disease D) Membranous nephropathy. Answer: B. Hematuria at the same time as the infection with normal C3.
+4. A 55-year-old with nephrotic syndrome and positive anti-PLA2R develops flank pain and hematuria. Most likely complication? A) Renal vein thrombosis B) Kidney stone C) Pyelonephritis D) Renal cell carcinoma. Answer: A. Membranous nephropathy has the highest clotting risk.
+5. Which finding is typical of nephritic, not nephrotic, syndrome? A) Fatty casts B) RBC casts C) Hyperlipidemia D) Proteinuria >3.5 g/day. Answer: B. RBC casts mean glomerular inflammation."
+MED-010,"28F, 3 days of fever, dysuria, and right flank pain. Temp 38.9, HR 112. What is the differential and the most likely diagnosis?","Most likely diagnosis: acute right pyelonephritis. Fever and tachycardia meet SIRS criteria, so assess for sepsis.
+Differential:
+- Obstructed infected kidney (stone with infection), a urologic emergency
+- Renal or perinephric abscess
+- Lower UTI (cystitis), which does not explain the fever and flank pain
+- Ectopic pregnancy, PID or tubo-ovarian abscess, ovarian torsion
+- Appendicitis, cholecystitis, uncomplicated kidney stone
+Next steps: pregnancy test, urinalysis and urine culture, blood cultures, CBC, creatinine and lactate.
+Imaging (ultrasound or CT) if obstruction or abscess is suspected, or if there is no improvement in 48–72 hours.
+Start IV antibiotics and fluids given the tachycardia; admit if septic, pregnant or unable to take oral medication."

@@ -16,7 +16,12 @@ class PipelineDefinition:
 
     def init(self) -> None:
         # Qwen3/3.5 on vLLM otherwise writes its chain of thought into `content`.
-        extra_body = {"chat_template_kwargs": {"enable_thinking": False}}
+        # OpenAI rejects `chat_template_kwargs`, so it is only sent when enabled.
+        extra_body = (
+            {"chat_template_kwargs": {"enable_thinking": False}}
+            if settings.DISABLE_THINKING
+            else None
+        )
 
         # Routing and query writing must be stable from run to run.
         self.plan_llm = ChatOpenAI(

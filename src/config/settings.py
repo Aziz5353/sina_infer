@@ -20,6 +20,8 @@ class Settings:
         self.PLAN_MODEL = os.environ["PLAN_MODEL"]
         self.ANSWER_MODEL = os.environ["ANSWER_MODEL"]
         self.ANSWER_TEMPERATURE = float(os.environ.get("ANSWER_TEMPERATURE", "0.1"))
+        # vLLM only: OpenAI rejects the `chat_template_kwargs` this sends.
+        self.DISABLE_THINKING = _bool(os.environ.get("DISABLE_THINKING", "false"))
         self.HISTORY_TURNS = int(os.environ.get("HISTORY_TURNS", "6"))
         self.TAVILY_API_KEY = os.environ["TAVILY_API_KEY"]
         self.LOG_LEVEL = os.environ.get("LOG_LEVEL", "INFO").upper()

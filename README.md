@@ -94,6 +94,7 @@ Optional:
 | --- | --- | --- |
 | `ANSWER_TEMPERATURE` | `0.1` | Keep low for faithful, source-grounded answers (plan always runs at 0) |
 | `HISTORY_TURNS` | `6` | How many recent history turns plan sees |
+| `DISABLE_THINKING` | `false` | Set `true` for Qwen3/3.5 on vLLM so its chain of thought stays out of the answer. Leave it off for OpenAI, which rejects the `chat_template_kwargs` argument this sends (400 error). |
 | `SEARCH_MAX_RESULTS` | `5` | Tavily results per query |
 | `SEARCH_QUERIES_PER_TURN` | `3` | Max queries per search round |
 | `SEARCH_MAX_SOURCES` | `10` | Sources passed to the answer after dedupe and ranking |
