@@ -1531,3 +1531,124 @@ Why the other options are wrong:
 [4] Nephrotic syndrome with a nephritic component associated with toxoplasmosis in an immunocompetent young man. — https://pmc.ncbi.nlm.nih.gov/articles/PMC4001951  
 
 _This is decision support only; the treating physician's clinical judgment prevails._",42.05,
+2026-10-21T11:25:51+00:00,"28F, 3 days of fever, dysuria, and right flank pain. Temp 38.9, HR 112. What is the differential and the most likely diagnosis?",,"A 28-year-old female presents with 3 days of fever, dysuria, and right flank pain. Her temperature is 38.9°C and heart rate is 112 bpm. What is the differential diagnosis for this presentation, and what is the most likely diagnosis?",en,answer,patient_case,consult,"{""age"": ""28"", ""sex"": ""female"", ""pregnancy_status"": null, ""chief_complaint"": ""fever, dysuria, and right flank pain"", ""symptoms"": [""fever"", ""dysuria"", ""right flank pain""], ""duration"": ""3 days"", ""vitals"": ""Temp 38.9°C, HR 112 bpm"", ""exam_findings"": [], ""labs_imaging"": [], ""medications"": [], ""allergies"": [], ""comorbidities"": []}",,"[""Fever 38.9°C with tachycardia 112 bpm and flank pain suggesting possible acute pyelonephritis or evolving sepsis""]","[""acute pyelonephritis guidelines IDSA 2020"", ""differential diagnosis fever dysuria flank pain young woman"", ""urinary tract infection sepsis criteria flank pain tachycardia""]","[{""url"": ""https://reference.medscape.com/viewarticle/847159_4"", ""title"": ""Dysuria and Discharge After a New Sexual Partner - Page 4"", ""score"": 0.82220376}, {""url"": ""https://pmc.ncbi.nlm.nih.gov/articles/PMC9445484"", ""title"": ""Familial Mediterranean fever: a differential diagnosis for the surgical abdomen"", ""score"": 0.7722049}, {""url"": ""https://www.ncbi.nlm.nih.gov/books/NBK436013"", ""title"": ""Complicated Urinary Tract Infections - StatPearls - NCBI - NIH"", ""score"": 0.73207545}, {""url"": ""https://www.aafp.org/afp/2015/1101/p778.pdf"", ""title"": ""Dysuria: Evaluation and Differential Diagnosis in Adults - AAFP"", ""score"": 0.7023877}, {""url"": ""https://pubmed.ncbi.nlm.nih.gov/24767880"", ""title"": ""Renal infarction versus pyelonephritis in a woman presenting with fever and flank pain."", ""score"": 0.7001783}, {""url"": ""https://pmc.ncbi.nlm.nih.gov/articles/PMC4561874"", ""title"": ""Risk Factors for Development of Septic Shock in Patients with Urinary Tract Infection"", ""score"": 0.68874115}, {""url"": ""https://www.idsociety.org/globalassets/idsa/practice-guidelines/cuti/clinical-question-3.pdf"", ""title"": ""Clinical Practice Guideline by Infectious Diseases"", ""score"": 0.6821721}, {""url"": ""https://pmc.ncbi.nlm.nih.gov/articles/PMC2840933"", ""title"": ""Approach to a Patient with Urosepsis"", ""score"": 0.67347145}, {""url"": ""https://www.idsociety.org/practice-guideline/complicated-urinary-tract-infections"", ""title"": ""IDSA 2025 Guideline Update on Complicated Urinary Tract Infections"", ""score"": 0.6364215}, {""url"": ""https://www.aafp.org/afp/2020/0801/p173"", ""title"": ""Acute Pyelonephritis in Adults: Rapid Evidence Review | AFP"", ""score"": 0.6353361}]","## ⚠️ Red flags / urgent action
+
+- Fever 38.9°C and tachycardia 112 bpm with dysuria and flank pain meets SIRS criteria (T ≥38°C, HR ≥90) and suggests acute upper UTI with risk of urosepsis.[3][8]  
+- Immediate actions:
+  - Prompt assessment for sepsis: blood pressure, respiratory rate, oxygen saturation, mental status, urine output, and labs (CBC, creatinine, electrolytes, lactate, blood cultures).[3][6][8]
+  - Urgent urinalysis and urine culture to confirm UTI source and guide therapy.[4][6][10]
+  - Early empiric antibiotics targeting pyelonephritis/complicated UTI; tailor once culture results available.[3][7][9][10]
+  - Consider emergency evaluation/hospital admission if hypotension, tachypnea, altered mental status, or organ dysfunction are present or develop.[3][6][8][10]
+
+## Case summary
+
+28‑year‑old woman with 3 days of high fever, dysuria, and right flank pain, febrile to 38.9°C and tachycardic to 112 bpm. No other information provided; assume not pregnant and no known structural urinary tract abnormality.
+
+## Differential diagnosis
+
+1. **Acute pyelonephritis (most likely)**  
+   - Supporting:
+     - Typical triad: fever, flank pain, and lower urinary tract symptoms (dysuria) matches common presentation of acute pyelonephritis/upper UTI.[1][3][5][8][10]
+     - UTI symptoms with systemic features (fever, tachycardia) are characteristic of upper tract involvement and early urosepsis.[3][8][10]
+     - AAFP and IDSA discussions of pyelonephritis describe high fever, UTI symptoms, and costovertebral angle/flank tenderness as a common clinical definition.[1][4][10]
+   - Against:
+     - None specifically from the limited data.
+
+2. **Acute complicated UTI with evolving urosepsis**  
+   - Supporting:
+     - Urosepsis is the severe end of the UTI spectrum; patients often present with fever, tachycardia, flank pain, dysuria, and may progress to hypotension and organ dysfunction.[3][6][8]
+     - Her current vital signs already fulfill SIRS criteria (fever + tachycardia), which are “alerting symptoms” for sepsis in UTI.[6][8]
+   - Against:
+     - No hypotension or organ dysfunction reported yet; still best considered the severity spectrum of the same primary diagnosis (pyelonephritis with risk of sepsis).
+
+3. **Acute uncomplicated cystitis**  
+   - Supporting:
+     - Dysuria is the hallmark of lower UTI.[1][4]
+   - Against:
+     - Significant flank pain and high fever favor pyelonephritis over isolated cystitis; guidelines emphasize flank pain and systemic symptoms (fever, nausea) as upper tract/red flag features.[1][4][10]
+
+4. **Nephrolithiasis with secondary infection (infected obstructing stone)**  
+   - Supporting:
+     - Flank pain, hematuria, and fever can occur with stones; differential for flank pain with fever and UTI symptoms includes hydronephrosis/obstructing stone.[1][4][8][10]
+   - Against:
+     - Typical stone pain is sudden, severe, and colicky, often radiating to the groin; this is not described here.[1]  
+     - No hematuria reported (though not ruled out).
+
+5. **Perinephric or renal abscess**  
+   - Supporting:
+     - Presents with fever and flank pain, often following or on top of UTI.[8][10]
+   - Against:
+     - Usually subacute and often >1 week after initial UTI; this is only 3 days.[8]
+
+6. **Acute renal infarction**  
+   - Supporting:
+     - Recognized as a mimic of pyelonephritis with fever and flank pain; case reports note that acute renal infarction can present like pyelonephritis.[5]
+   - Against:
+     - Dysuria is less typical for renal infarction; more consistent with UTI.[5]  
+     - Renal infarction is rare compared with pyelonephritis.
+
+7. **Gynecologic pelvic infection (e.g., PID, cervicitis) with referred pain**  
+   - Supporting:
+     - Dysuria and abdominal/pelvic pain can occur with cervicitis/PID; must be considered in young sexually active women, especially with vaginal discharge or cervical motion tenderness.[1][4]
+   - Against:
+     - No vaginal discharge, pelvic pain, or sexual history provided; flank localization and systemic features make urinary source more likely.[1][4]
+
+8. **Familial Mediterranean fever or other autoinflammatory/abdominal conditions**  
+   - Supporting:
+     - FMF can cause recurrent fevers and abdominal pain; dysuria may coexist.[2]
+   - Against:
+     - FMF typically presents with recurrent episodes of serositis and systemic inflammation, not an isolated 3‑day first episode of flank pain with dysuria.[2]
+
+## Suggestions
+
+### Most likely diagnosis
+
+- **Acute pyelonephritis (upper urinary tract infection), with concern for early urosepsis.**  
+  The combination of high fever, tachycardia, dysuria, and flank pain in a young woman is classically described for acute pyelonephritis.[1][3][5][8][10]
+
+### Key investigations
+
+- **Urgent:**
+  - Urinalysis and urine culture with susceptibility testing in all suspected pyelonephritis cases.[4][6][10]
+  - Basic blood tests: CBC, serum creatinine, electrolytes; renal function is specifically recommended in suspected pyelonephritis.[4][6][10]
+  - Blood cultures if high fever or risk of complications (covered here by systemic features).[4][6][10]
+- **Imaging:**
+  - In an otherwise healthy young woman with uncomplicated pyelonephritis and clinical stability, initial imaging is *not* routinely required.[10]
+  - Obtain contrast‑enhanced CT abdomen/pelvis or alternative imaging if:
+    - She appears septic, obstruction is suspected, or there is failure to improve within 48–72 hours on appropriate therapy, to evaluate for obstruction, abscess, or alternative diagnoses such as renal infarction.[5][8][10]
+
+### Management (high‑level, without unsourced doses)
+
+- Start empiric antibiotic therapy appropriate for **acute pyelonephritis/uncomplicated cUTI**, then tailor based on culture and susceptibility. First‑line oral options in women when the organism is susceptible include a fluoroquinolone (e.g., ciprofloxacin or levofloxacin for 5–7 days) or trimethoprim‑sulfamethoxazole for 14 days.[7][9][10]  
+  - Where local resistance to empiric oral agents is >10%, an initial broad‑spectrum parenteral dose (e.g., ceftriaxone, ertapenem, or an aminoglycoside) in addition to oral therapy is recommended.[10]
+  - For complicated UTI/pyelonephritis, IDSA suggests total duration: 5–7 days for a fluoroquinolone or 7 days for a non‑fluoroquinolone agent when clinically improving on effective therapy.[7][9]
+- Assess volume status and provide IV fluids if indicated, especially if concern for sepsis.[3][6][8]
+- Analgesia and antipyretics as needed (per local protocols).
+
+### Disposition / follow‑up
+
+- **Consider hospital admission** if any of the following:
+  - Hypotension or need for IV fluids/vasopressors, altered mental status, inability to tolerate oral intake, pregnancy, or suspicion of obstructing stone/complicated anatomy.[3][6][8][10]
+- **Outpatient management** reasonable only if:
+  - Hemodynamically stable, able to take oral therapy, no red‑flag comorbidities, and reliable follow‑up; this aligns with outpatient treatment trials of pyelonephritis in women.[7][9][10]
+- Reassess within 24–48 hours; lack of clinical improvement should prompt imaging and reconsideration of diagnosis (obstruction, abscess, renal infarction) and therapy.[5][8][10]
+
+### What would change the assessment
+
+- New hypotension, tachypnea, confusion, oliguria, or lab evidence of organ dysfunction would upgrade concern to overt urosepsis/septic shock and mandate aggressive resuscitation and inpatient care.[3][6][8]
+- Imaging evidence of obstruction, stone, abscess, or wedge‑shaped perfusion defects would shift the leading diagnosis toward infected obstructing stone, perinephric abscess, or renal infarction respectively.[5][8][10]
+- Vaginal discharge, cervical motion tenderness, or STI risk factors would increase the likelihood of concomitant or alternative genital tract infection (PID/cervicitis).[1][4]
+
+## Sources
+[1] Dysuria and Discharge After a New Sexual Partner - Page 4 — https://reference.medscape.com/viewarticle/847159_4  
+[2] Familial Mediterranean fever: a differential diagnosis for the surgical abdomen — https://pmc.ncbi.nlm.nih.gov/articles/PMC9445484  
+[3] Complicated Urinary Tract Infections - StatPearls - NCBI - NIH — https://www.ncbi.nlm.nih.gov/books/NBK436013  
+[4] Dysuria: Evaluation and Differential Diagnosis in Adults - AAFP — https://www.aafp.org/afp/2015/1101/p778.pdf  
+[5] Renal infarction versus pyelonephritis in a woman presenting with fever and flank pain. — https://pubmed.ncbi.nlm.nih.gov/24767880  
+[6] Risk Factors for Development of Septic Shock in Patients with Urinary Tract Infection — https://pmc.ncbi.nlm.nih.gov/articles/PMC4561874  
+[7] Clinical Practice Guideline by Infectious Diseases — https://www.idsociety.org/globalassets/idsa/practice-guidelines/cuti/clinical-question-3.pdf  
+[8] Approach to a Patient with Urosepsis — https://pmc.ncbi.nlm.nih.gov/articles/PMC2840933  
+[9] IDSA 2025 Guideline Update on Complicated Urinary Tract Infections — https://www.idsociety.org/practice-guideline/complicated-urinary-tract-infections  
+[10] Acute Pyelonephritis in Adults: Rapid Evidence Review | AFP — https://www.aafp.org/afp/2020/0801/p173  
+
+_This is decision support only; the treating physician's clinical judgment prevails._",36.56,

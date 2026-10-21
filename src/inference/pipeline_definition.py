@@ -38,6 +38,9 @@ class PipelineDefinition:
             model=settings.ANSWER_MODEL,
             temperature=settings.ANSWER_TEMPERATURE,
             streaming=True,
+            # Off by default with a custom base_url; without it streamed calls report
+            # no token counts (LangSmith, logs).
+            stream_usage=True,
         )
         logger.info("pipeline | LLM clients initialized")
 

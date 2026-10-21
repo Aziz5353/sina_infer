@@ -107,6 +107,11 @@ Optional:
 | `SAVE_CONVERSATIONS` | `false` | Append one row per `/chat` turn to a CSV for offline evaluation (see [Conversation dataset](#conversation-dataset)) |
 | `GENERATION_MODEL_NAME` | | Names the CSV `data/conversations_<name>.csv` |
 | `CONVERSATIONS_CSV_PATH` | `data/conversations.csv` | Where that CSV is written (overrides the name above) |
+| `LANGSMITH_TRACING` | `false` | Send traces to LangSmith (see [Tracing](#tracing-langsmith)) |
+| `LANGSMITH_API_KEY` | | LangSmith API key |
+| `LANGSMITH_PROJECT` | `default` | LangSmith project the traces go to |
+| `LANGSMITH_ENDPOINT` | `https://api.smith.langchain.com` | Set `https://eu.api.smith.langchain.com` for an EU-region account |
+| `LANGSMITH_WORKSPACE_ID` | | Only for an API key that spans several workspaces |
 
 Do **not** commit `.env`; keys belong only in the local file.
 
@@ -149,6 +154,7 @@ If answers often say the sources did not cover something, widen `SEARCH_ALLOWED_
 - `INFO` logs carry no clinical text: only route, task, language, counts (case fields, missing items, red flags, queries, sources, citations), search domains, answer length and durations.
 - Full messages, case objects, queries, prompts and answers are logged only at `DEBUG`. With `LOG_TO_FILE=true`, `logs/app-debug.log` contains them, so treat that file as sensitive.
 - With `SAVE_CONVERSATIONS=true`, the conversations CSV stores full messages and answers. Treat it as sensitive.
+- With `LANGSMITH_TRACING=true`, full prompts, messages, sources and answers are sent to LangSmith. Treat the project as sensitive.
 
 Each node writes one log line per request. Useful greps:
 
@@ -157,6 +163,19 @@ docker logs sina-infer | grep "plan |"      # route (and the model's route), tas
 docker logs sina-infer | grep "retrieve |"  # queries, results, sources, domains, PHI scrubs
 docker logs sina-infer | grep "answer |"    # sections, sources vs cited, context size, answer length
 ```
+
+## Tracing (LangSmith)
+
+Set `LANGSMITH_TRACING=true` and `LANGSMITH_API_KEY`. LangChain and LangGraph then trace every `/chat` turn on their own, with no code beyond the env vars. Each turn is one `sina_chat` trace in `LANGSMITH_PROJECT`:
+
+```
+sina_chat
+├── plan       state in/out → ChatOpenAI (PLAN_MODEL, structured output): prompt, parsed PlanOutput, tokens, latency
+├── retrieve   state in/out → one TavilySearch per query, TavilyExtract: queries, raw results
+└── answer     state in/out → ChatOpenAI (ANSWER_MODEL, streamed): full prompt with sources, answer, tokens, latency
+```
+
+Filter by model with the `ls_model_name` metadata on LLM runs, e.g. to compare GPT and Qwen turns.
 
 ## Conversation dataset
 

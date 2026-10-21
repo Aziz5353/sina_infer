@@ -22,6 +22,7 @@ async def run_model_stream(
         async for mode, payload in chat_graph.astream(
             graph_state,
             stream_mode=["custom", "values"],
+            config={"run_name": "sina_chat"},  # root trace name in LangSmith
         ):
             if mode == "values":
                 final_state = payload
